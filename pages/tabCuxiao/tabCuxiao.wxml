@@ -1,0 +1,53 @@
+<view class='contents'>
+  <!--分类导航  -->
+  <view class='nav'>
+    <block wx:for='{{navList}}'>
+      <view class='itemClass' bindtap='getItemCode'>
+        <image class='itemImg' src='{{item.imgUrl}}' data-sys='{{item.sysShopTypeInfos}}' data-code='{{item.code}}' data-typeName='{{item.typeName}}' data-typeCode='{{item.typeCode}}'></image>
+        <text class='itemText'  data-sys='{{item.sysShopTypeInfos}}'  data-code='{{item.code}}' data-typeName='{{item.typeName}}' data-typeCode='{{item.typeCode}}'>{{item.typeName}}</text>
+      </view>
+    </block>
+  </view>
+  <!--颜色分割条  -->
+  <view class='slectColor'></view>
+  <view id='flexs' class="{{scrollTop >= tops?'flex':''}} hei">
+    <swiper class='shop_swiper' autoplay="true" interval="5000" duration="1000" circular='true' class='lbImg'>
+      <block wx:for="{{corporateList}}" wx:key="imgurl">
+        <swiper-item>
+          <image src="{{item.cover}}" width='100%' bindtap='goChannel' height='150' class='lbImg' data-activecode='{{item.code}}' data-activename='{{item.activeName}}' />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class='shopModule'>
+      <view class='publicStyle'>
+        <image src='https://www.shanxingniao.com/imgServer/images/xiaochengxu/xinlingshou/c/openShops.jpg' class='pubImg' data-name='全名开店，发!' bindtap='switchModule'></image>
+      </view>
+      <view class='publicStyle manageMyStore'>
+        <image src='https://www.shanxingniao.com/imgServer/images/xiaochengxu/xinlingshou/c/guanliShop.jpg' class='pubImg' data-name='管理我的店' bindtap='switchModule'></image>
+      </view>
+      <view class='publicStyle'>
+        <image src='https://www.shanxingniao.com/imgServer/images/xiaochengxu/xinlingshou/c/goodShop.jpg' class='pubImg' data-name='优质的店' bindtap='switchModule'></image>
+      </view>
+    </view>
+  </view>
+  <!-- <view style='width:100%;height:240rpx;background:#fff;' wx:if="{{scrollTop >= tops}}"></view> -->
+</view>
+<!--模块群  -->
+<view class='modules' bindtap='switchModule'>
+  <!--颜色分割条  -->
+  <view class='slectColor'></view>
+  <!--附近的店有数据的时候展示  -->
+  <view class='downStatus' hidden='{{downStatus}}'>
+    <!--选择分类  -->
+    <view class='select'>
+      <view class='payShop' style='height:60rpx'>
+        <text data-name='附近的店'>— 附近的店 —</text>
+      </view>
+    </view>
+    <!--店目录  -->
+    <import src="../template/template.wxml" />
+    <template is="store" data='{{shopItemInfo}}'></template>
+  </view>
+</view>
+<!-- 置顶 -->
+<image class='isTop' src='../../images/isTop.png' bindtap='isTop'></image>

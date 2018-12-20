@@ -1,0 +1,25 @@
+<!-- 轮播图 -->
+ <swiper class='shop_swiper' indicator-dots autoplay="true" interval="3000" duration="1000" circular='true'  class='lbImg' bindtap='goActiveInfo'>
+    <block wx:for="{{lbList}}" wx:key="">
+      <swiper-item>
+        <image src="{{item.imgUrl}}" width='100%' height='150' class='lbImg' data-activecode="{{item.sysAdvertActivityInfo.activityCode}}"/>
+      </swiper-item>
+    </block>
+  </swiper>
+<!-- 当地产业 -->
+<view class='center'>
+  <view class='text' wx:for='{{industry}}' wx:key>{{item.industryName}}</view>
+</view>
+ <!--分类导航  -->
+  <view class='nav'>
+    <block wx:for='{{navList}}'>
+      <view class='itemClass' bindtap='getItemCode'>
+        <image class='itemImg' src='{{item.imgUrl}}' data-sys='{{item.sysShopTypeInfos}}' data-code='{{item.code}}' data-typeName='{{item.typeName}}' data-typeCode='{{item.typeCode}}'></image>
+        <text class='itemText'  data-sys='{{item.sysShopTypeInfos}}'  data-code='{{item.code}}' data-typeName='{{item.typeName}}' data-typeCode='{{item.typeCode}}'>{{item.typeName}}</text>
+      </view>
+    </block>
+  </view>
+<!-- 店铺列表 -->
+  <view class='titles'>- 城市商户 -</view>
+  <import src="../template/template.wxml" />
+  <template is="store" data='{{shopItemInfo,loc}}'></template>

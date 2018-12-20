@@ -1,0 +1,17 @@
+<!--pages/lifeWisdom/lifeWisdom.wxml-->
+<!-- <text>pages/lifeWisdom/lifeWisdom.wxml</text> -->
+
+<view class='main'>
+  <view wx:for='{{getLifeWisdomList}}' class='wisdomView'>
+    <view class='lifeList' data-articlecode='{{item.code}}' bindtap='goLifeInfo'>
+        <image src='{{item.imageUrl}}' class='lifeImg'></image>
+        <view class='lifeText'>
+          <view class='conter'>{{item.mainContent}}</view>
+          <view class='author'>
+            <text>{{item.source}}</text>
+            <text>{{item.author}}</text>
+          </view>
+        </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,83 @@
+<!--pages/index/searchShopName/searchShopName.wxml-->
+<!-- <text>pages/index/searchShopName/searchShopName.wxml</text> -->
+<view class='main'>
+  <!-- 搜索框 -->
+  <view class='sea'>
+    <!-- 附近&&全城 -->
+    <view class='scope'>
+      <picker bindchange="bindPickerChange" value="{{add}}" range="{{scope}}">
+        <view class="picker">
+          {{scope[add]}}{{scope[add] == "附近"?"6公里":""}}
+        </view>
+      </picker>
+    </view>
+    <view class='search'>
+      <image class='searImg' src='../../../images/ss.png'></image>
+      <input placeholder='搜索商家、品类或商圈' bindconfirm='statusText' bindinput='jt' class='int' confirm-type="搜索" type='text'></input>
+    </view>
+    <view class='seek' bindtap='statusTextS'>搜索</view>
+  </view>
+  <!-- 排序分类 -->
+  <!-- <view class='paixuClass' >
+    <block wx:for='{{paiXuList}}'>
+      <view bindtap='selectPaixuItem' class='{{item.status ? "selectTabClass" : "tabT"}}' data-tabIndex='{{index}}'>{{item.name}}</view>
+    </block>
+  </view> -->
+  <view style='width:100%;background:#fff;'>
+    <!-- <import src="../../template/template.wxml"/>
+    <template is='classFily' data='{{classList,Citys,Sort,pull,claId,tabList,tabListSingle,wid,imges}}'></template> -->
+  </view>
+  <view wx:if='{{shopItemInfo.length <= 0}}'>
+    <!-- 搜索标签 -->
+    <block wx:for="{{tabList}}" wx:key>
+      <view class='title' wx:if='{{item.sysShopTypeInfos.length > 0}}'>
+        <image src='{{item.icon}}'></image>
+        <text>{{item.typeName}}</text>
+      </view>
+      <view class='content' wx:if='{{item.sysShopTypeInfos.length > 0}}'>
+        <block wx:for="{{item.sysShopTypeInfos}}" wx:for-item="ite">
+          <view data-kind='{{item.typeCode}}' data-cla='{{ite.typeName}}' class='alne' bindtap='bindclass'>{{ite.typeName}}</view>
+        </block>
+      </view>
+    </block>
+  </view>
+
+  <!-- 搜索结果 -->
+  <view class='wai' hidden='{{!nearImgStatus}}'>
+    <view class='shopItem' wx:for='{{shopItemInfo}}' bindtap='getShopCode' data-code='{{item.shopInfo.code}}'>
+      <image src='http://www.shanniao.vip/imgServer/images/lijian.jpg' class='shopImg csd' wx:if='{{item.shopInfo.sysShopImgInfoList[0].imgUrl == null}}'></image> 
+      <image src='{{item.shopInfo.sysShopImgInfoList[0].imgUrl}}' style='width:130rpx' class='shopImg'></image>
+
+      <view class='shopInfo'>
+        <view class='infoText'>
+          <view class='up'>
+            <text class='shopName'>{{item.shopInfo.name}}</text>
+            <text class='shopStatus'>{{item.shopInfo.sysShopBussinessInfo.isOpen == 1 ? "营业" : "停业"}}</text>
+          </view>
+          <view class='money'>
+            <text class='wire colorB'>正在促销</text>
+            <text class='colorB'>曝光度{{item.shopInfo.buyCountByMonth * 42}}</text>
+            <text class='Mright'>{{item.shopInfo.distance/1000}}km</text>
+          </view>
+          <text class='shopText st kk'>线上促销，到店消费/服务</text>
+          <view class='moneys'>
+            {{item.shopInfo.address}}
+          </view>
+          <view class='Imgs'>
+            <block wx:for="{{item.productInfoList}}" wx:key="" wx:for-item="ite">
+              <view class='Dimg'>
+                <image src='{{ite.cover}}'></image>
+                <text class='DimgT1'>{{ite.name}}</text>
+                <text class='DimgT2'>￥{{ite.productPrice/100}}</text>
+              </view>
+            </block>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='near' hidden='{{nearImgStatus}}'>
+    <image src='../../../images/nearShop.png' class='nearShop'></image>
+    <text class='nearText'>附近没有开通店</text>
+  </view>
+</view>

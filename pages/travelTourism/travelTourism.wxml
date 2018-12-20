@@ -1,0 +1,29 @@
+<!-- banner -->
+<swiper class='shop_swiper' indicator-dots autoplay="true" interval="3000" duration="1000" circular='true' hidden='{{luboActive}}' class='lbImg' bindtap='goActiveInfo'>
+  <block wx:for="{{lbList}}" wx:key="">
+    <swiper-item>
+      <image src="{{item.sysAdvertData.imgUrl}}" width='100%' height='150' class='lbImg' />
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 导航分类 -->
+<view class='nearbyShop'>— 附近的店 —</view>
+<!-- 附近的店 -->
+<import src='../travelTemplate/travelTemplate.wxml' />
+<template is='store' data="{{shopItemInfo,off}}" />
+
+
+
+
+
+<!-- 导航分类 -->
+<!-- <view class='pullDown pullDownClick'>
+  <view class='pullDownOne'>全部 <image src='../../images/xiala.png'></image></view>
+  <view class='pullDownTwo'>全部 <image src='../../images/xiala.png'></image></view>
+  <view class='pullDownTwo'>全部 <image src='../../images/xiala.png'></image></view>
+</view>
+<view class='pullPosition'>
+  <view class='pillClass'>
+    <scroll-view class='scrollHei pullClassScroll' scroll='y'></scroll-view>
+  </view>
+</view> -->

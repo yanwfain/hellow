@@ -1,0 +1,278 @@
+@import '../template/template.wxss';
+.bbb{
+  width: 100rpx;
+  height: 100rpx;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
+/* pages/snIndex/snIndex.wxss */
+/*  主体  */
+.main{
+  height: 100%;
+}
+
+/*轮播图外框  */
+.swip{
+  padding: 4rpx;
+  background: #f4f4f4;
+}
+
+.lbImg{
+  width: 100%;
+  height: 150rpx;
+}
+/* 广告置顶 */
+.flex{
+  position: fixed;
+  top:0;
+  width: 100%;
+  height: 150rpx;
+  background: #f4f4f4;
+  display: block;
+}
+
+/*分类导航*/
+.nav{
+  display: flex;
+  padding: 0 15rpx 5rpx;
+   /* justify-content:space-between;  */
+  background: white;
+  flex-wrap: wrap;
+  /* height: 440rpx; */
+}
+.itemClass{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin-right: 40rpx; */
+  margin-top: 13rpx;
+  margin-left: 30rpx;
+  justify-content: center;
+}
+.itemClass:nth-child(1),.itemClass:nth-child(6),.itemClass:nth-child(11){
+  margin-left: 0;
+}
+.itemImg{
+  width: 75rpx;
+  height: 75rpx;
+  margin-bottom: 0rpx;
+}
+.itemText{
+  font-size: 24rpx;
+  color: #333333;
+  width:120rpx;
+    /* border:1rpx solid black;   */
+  text-align:center;
+}
+
+/*
+  颜色分割条
+*/
+.slectColor{
+  background: #f4f4f4;
+  height: 8rpx;
+}
+
+/*
+  选择分类
+*/
+.select{
+  background: #fff;
+  display: flex;
+  border-bottom: 1px solid #e5e5e5; 
+}
+.payShop,.locationShop{
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999999;
+  width: 50%;
+  font-size: 30rpx;
+}
+.text{
+  display:block;
+  height:72rpx;
+  line-height:72rpx;
+}
+.selectText{
+  color: #FF5C61;
+  border-bottom: 1px solid #FF5C61;
+  display:block;
+  height:60rpx;
+  line-height:60rpx;
+}
+
+/*
+  店目录
+*/
+
+/*空态图  */
+.imgFlex1{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding-top: 30rpx;
+}
+.imgFlex2{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding-top: 91rpx;
+}
+.kong{
+  width:332rpx;
+  height:221rpx;
+}
+.imgInfo{
+  font-size: 32rpx;
+  color: #999999;
+  margin: 60rpx 0 80rpx;
+}
+.nearInfo{
+  font-size: 32rpx;
+  color: #FF5C61;
+}
+
+/*
+  促销活动
+*/
+.jion{
+  display: flex;
+  align-items: center;
+}
+
+.jionImg{
+  width: 100%;
+  height: 210rpx;
+}
+
+/*模块群  */
+.modules{
+  display: flex;
+  flex-direction: column;
+}
+
+.upmo{
+  display:flex;
+  flex:1;
+  padding:10rpx 18rpx;
+  background: white;
+}
+
+.mul{
+  display: flex;
+  flex: 1;
+} 
+
+.lifeWisdom,.nearbySales{
+  width: 100%;
+  height: 160rpx;
+  border-radius: 10rpx;
+}
+
+.lifeWisdom{
+  margin-right: 15rpx;
+}
+
+.nearbySales{
+  margin-left: 15rpx;
+}
+
+.shopModule{
+  display: flex;
+  flex: 1;
+}
+
+.publicStyle{
+  display: flex;
+  flex: 1;
+}
+
+.pubImg{
+  width: 100%;
+  height: 90rpx;
+  display: block;
+}
+
+.manageMyStore{
+  border-left: 1rpx solid #e5e5e5;
+  border-right: 1rpx solid #e5e5e5;
+}
+
+/*生活智慧  */
+/* pages/lifeWisdom/lifeWisdom.wxss */
+.mam{
+  background: white;
+}
+
+.mamText{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20rpx;
+  border-bottom:1rpx solid #e5e5e5;
+}
+
+.wisdomView{
+  display: flex;
+  flex-direction: column;
+  padding: 30rpx;
+  border-bottom: 1rpx solid #E6E6E6;
+}
+
+.lifeList{
+  display: flex;
+  align-items: center;
+}
+
+.lifeImg{
+  display: block;
+  width: 230rpx;
+  height: 150rpx;
+  margin-right: 25rpx;
+}
+
+.lifeText{
+  display: flex;
+  flex: 1;
+  height: 135rpx;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical; 
+  -webkit-line-clamp:3; 
+  font-size: 32rpx;
+  color: #333333;
+}
+
+/*客服按钮  */
+.jump-to-top{
+  position: fixed;
+  width: 100rpx; 
+  height: 100rpx;
+   right: 30rpx; 
+   bottom: 50rpx;
+}
+.contact-button{
+  background:url('http://cdn-xcx.imeiyebang.com/xiaochengxu/images/contact-button.png');
+  border-radius:50%;
+  width:120rpx;
+  height:120rpx;
+  background-size: 120rpx 120rpx;
+  border:1rpx solid transparent !important;
+}
+button[class="contact-button"]::after {
+  border: none;
+}
+/* 返回顶部 */
+.isTop{
+  opacity: .5;
+  width: 100rpx;
+  height: 100rpx;
+  position: fixed;
+  bottom: 100rpx;
+  right: 50rpx;
+}

@@ -1,0 +1,60 @@
+/* pages/mine/addaddress/addaddress.wxss */
+page{
+  background: #F4F4F4;
+}
+.form_padding{
+  padding-left: 30rpx;
+  background: white
+}
+.add_container {
+  height: 97rpx;
+  display: flex;
+  box-sizing: border-box; 
+  align-items: center;
+  border-bottom: 1rpx #e6e6e6 solid;
+}
+
+.left_text {
+  display: flex;
+  width: 120rpx;
+  font-size: 30rpx;
+  color: #333;
+  text-align: left;
+}
+.input_style{
+  padding-left:40rpx;
+  color:#333;
+  font-size: 30rpx;
+}
+.holder{
+  color:#999999;
+  font-size: 30rpx;
+}
+.pick_style{
+}
+.pick_style view{
+  padding-left: 40rpx
+}
+.address_city{
+  display: flex;
+  width: 100%;
+  font-size: 30rpx;
+  height: 70rpx;  
+  align-items: center
+}
+.address_detail{
+  width: 70%;
+  height: 145rpx;
+  background: white;
+  padding: 23rpx 0 30rpx  160rpx;
+  color:#333;
+  font-size: 30rpx;
+}
+.submit{
+  width: 560rpx;
+  font-size: 30rpx;
+  margin-top: 30rpx;
+  border-radius: 6rpx;
+  color: white;
+  background: #ff5c61;
+}

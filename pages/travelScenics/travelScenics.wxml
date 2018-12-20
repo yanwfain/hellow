@@ -1,0 +1,14 @@
+<!-- 搜索框 -->
+<view class='searchBox'>
+  <view class='shopname' bindtap='goCity'>
+    <image class='down' src='../../images/dinwei.png'></image>
+    <text class='name'>{{city}}</text>
+  </view>
+  <view class='search' bindtap='search'>
+    <image class='searImg' src='../../images/ss.png'></image>
+    <input placeholder='搜索景点名称或路线' class='searchInput'></input>
+  </view>
+</view>
+<!-- 结果 -->
+<import src='../travelTemplate/travelTemplate.wxml'/>
+<template is="travelList" data="{{offcialList,entrance,off}}"></template>

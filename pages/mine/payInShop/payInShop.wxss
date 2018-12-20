@@ -1,0 +1,58 @@
+/* pages/mine/payInShop/payInShop.wxss */
+page{
+  background: white;
+}
+.shopImage{
+  width: 560rpx;
+  height: 320rpx;
+  border-radius: 6rpx
+}
+.wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 64rpx
+}
+.shopName{
+  font-family: PingFangSC-Medium;
+  font-size: 36rpx;
+  color: #333333;
+  text-align: center;
+  margin-top: 32rpx;
+}
+.Money{
+  display:flex;
+  margin-top:70rpx;
+  font-size:35rpx;
+  color:#333333;
+  width:560rpx;
+  border-bottom:1rpx solid #e6e6e6;
+  align-items:center;
+  padding-bottom:30rpx;
+  margin-bottom:20rpx;
+}
+.inputMoney{
+  margin-left: 40rpx;
+}
+.inputMoneyplaceholder{
+  color: #999999;
+}
+.submit{
+  width: 560rpx;
+  font-size: 36rpx;
+  margin-top: 55rpx;
+  border-radius: 6rpx;
+  color: white;
+  background: #ff5c61;
+}
+.downprice{
+  font-size: 20rpx;
+  color: #999999;
+}
+.gotoindex{
+  color: #ccc;
+  font-size: 26rpx;
+  margin-top: 40rpx;
+  text-align: center;
+}

@@ -1,0 +1,44 @@
+<view>
+  <!-- 轮播 -->
+  <!-- <import src='../travelTemplate/travelTemplate.wxml'/>
+  <template is="banner" data="{{banner,classData,Bind}}"></template> -->
+  <view>
+    <swiper class='banner' indicator-dots='true' autoplay='true' interval='5000' circular='true'>
+    <block wx:for="{{bannerl}}">
+      <swiper-item>
+        <image class='bannImg' src='{{item.imgUrl}}'></image>
+      </swiper-item>
+    </block>
+    </swiper>
+  </view>
+  <!-- 导航 -->
+  <view class='funNav commWidth'>
+    <view class='navView'>
+      <image bindtap='goTravelOfficials' data-code='1' data-true='true' data-scenicCode='{{scenicCode}}'src='http://www.shanxingniao.com/imgServer/images/use_test/nongyeshengtai/ngwicon1.jpg'></image>
+      <view>庄园介绍</view>
+    </view>
+    <view class='navView'>
+      <image bindtap='goTravelOfficials' src='http://www.shanxingniao.com/imgServer/images/use_test/nongyeshengtai/ngwicon2.jpg'></image> 
+      <view>产品列表</view>
+    </view>
+    <view class='navView'>
+      <image bindtap='goTravelOfficials' src='http://www.shanxingniao.com/imgServer/images/use_test/nongyeshengtai/ngwicon3.jpg'></image>
+      <view>促销列表</view>
+    </view>
+    <view class='navView'>
+      <image bindtap='goTravelOfficials' src='http://www.shanxingniao.com/imgServer/images/use_test/nongyeshengtai/ngwicon4.jpg'></image>
+      <view>联系我们</view>
+    </view>
+    <!-- <view class='navView'>
+      <image bindtap='goTravelOfficials' data-code='2' src='http://www.shanxingniao.com/imgServer/images/use_test/leshuiyou/lsygwicon5.jpg'></image>
+      <view>景区招商</view>
+    </view> -->
+  </view> 
+  <!-- 分类导航 -->
+  <import src='../travelTemplate/travelTemplate.wxml'/>
+  <template is="classNav" data="{{navList}}"></template>
+  <!-- 旅游列表 -->
+  <view class='classTitle'>— 庄园精品 —</view>
+  <import src='../travelTemplate/travelTemplate.wxml'/>
+  <template is="travelList" data="{{offcialList,entrance}}"></template>
+</view>

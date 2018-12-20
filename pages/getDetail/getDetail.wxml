@@ -1,0 +1,22 @@
+<view class='mans'>
+  <image class='imgs' src='../../images/logos.png'></image>
+  <view class='sys'>及及投放金明细</view>
+  <view class='sys'>-130000</view>
+  <view class='fontColor sys' >交易成功</view>
+  <view class='cons'>
+    <text class='fontColor'>使用说明：</text>
+    <text>投放banner</text>
+  </view>
+  <view class='cons'>
+    <text class='fontColor'>创建时间：</text>
+    <text>2018-10-19-21：16</text>
+  </view>
+  <view class='cons'>
+    <text class='fontColor'>发放明细：</text>
+    <text>及及在身边平台</text>
+  </view>
+  <view class='cons'>
+    <text class='fontColor'>接收明细：</text>
+    <text>新人奖礼金</text>
+  </view>
+</view>

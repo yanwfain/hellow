@@ -1,0 +1,37 @@
+.title{
+  width: 690rpx;
+  padding: 60rpx 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content:space-between;
+}
+.titleTxt{
+  line-height: 40rpx;
+  padding: 10rpx;
+  font-size: 24rpx;
+  color: #333;
+  border: 1px solid #ff5c61;
+  border-radius:3px;
+}
+.color{
+  color: #ff5c61;
+  font-size: 28rpx;
+  font-weight: 900;
+}
+/* 内容 */
+.content{
+  width: 690rpx;
+  margin: 0 auto;
+  padding-bottom: 250px;
+}
+.titleh{
+  text-align: center;
+  width: 100%;
+  font-size: 30rpx;
+  line-height: 50rpx;
+}
+.txt{
+  font-size: 28rpx;
+  color: #666;
+  line-height: 45rpx;
+}

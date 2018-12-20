@@ -1,0 +1,64 @@
+/* pages/lifeWisdom/lifeWisdom.wxss */
+page{
+  background: white;
+}
+
+.wisdomView{
+  display: flex;
+  flex-direction: column;
+  padding: 30rpx;
+  border-bottom: 1rpx solid #E6E6E6;
+}
+
+.lifeList{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.lifeImg{
+  display: block;
+  width: 230rpx;
+  height: 150rpx;
+  margin-right: 25rpx;
+  
+}
+
+.lifeText{
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  height: 150rpx;
+  width: 376rpx;
+  font-size: 32rpx;
+  color: #333333;
+  font-weight: 600;
+  position: relative;
+}
+.conter{
+  width: 100%;
+  line-height: 38rpx;
+  height: 76rpx;
+  overflow: hidden;
+}
+.author{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size:32rpx;
+  color:#333333;
+  font-weight:400;
+  position: absolute;
+  bottom: 0;
+}
+.zuozhe{
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+  color: #666666;
+  margin-top: 10rpx;
+  justify-content: flex-end;
+}
+
+.zuozhe text:nth-child(1){
+  margin-right: 20rpx;
+}

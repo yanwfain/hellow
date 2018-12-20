@@ -1,0 +1,135 @@
+/* pages/index/shopCar.wxss */
+page{
+  padding-bottom: 100rpx;
+}
+.item_ans{ 
+  width: 100%;
+  display: flex; 
+  flex-grow: row no-wrap;
+  justify-content: center; 
+  align-items: center;
+  padding: 30rpx;
+  box-sizing: border-box; 
+  background: #fff;
+  margin-bottom: 16rpx;
+}
+.wx-checkbox-input{
+  width:38rpx!important; 
+  height:38rpx!important;
+  border-radius: 50%!important;
+  color: #fff!important;
+}
+checkbox-group{
+  margin-right: 32rpx;
+}
+.wx-checkbox-input.wx-checkbox-input-checked{
+  background: #31A56E!important;
+  border: 1rpx solid #31A56E;
+}
+.avatar{
+  width: 140rpx;
+  height: 140rpx;
+  position: relative;
+  padding-right: 24rpx;
+  }
+
+.avatar .img{
+  width: 100%;
+  height: 100%;
+}
+.avatar .doyen{
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  bottom: -2px;
+  right: 20rpx;
+}
+.expertInfo{
+  font-size: 12rpx;
+  flex-grow: 2;
+  color: #B0B0B0;
+  justify-content: center;
+  align-items: center;
+}
+.expertInfo .name{
+  font-size: 26rpx;
+  color:#000;
+  margin-bottom: 6rpx;
+}
+
+.expertInfo .tag{
+  color: #999;
+  font-size: 20rpx;
+  margin-bottom: 23rpx;
+}
+
+.askBtn{ 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.askBtn image{
+  width: 44rpx;
+  height: 44rpx; 
+}
+.askBtn .price{
+  color: #fe5a5f;
+  font-size: 24rpx;
+}
+.askBtn .price text{
+  font-size: 34rpx;
+  font-weight: 600;
+}
+.scoll_h{height: 100%;}
+.askBtn .minAdd{
+  width: 134rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.askBtn .change{
+  font-size: 28rpx;
+  color: #333;
+}
+
+.settlement{
+  line-height: 98rpx;
+  width: 100%;
+  display: flex;
+  font-size: 34rpx;
+}
+.bill_bottom{
+  width: 100%;
+  font-size: 34rpx; 
+  position: fixed;
+  bottom: 0;
+}
+.bill_bottom .options{
+  display: flex; 
+  background: #e7e8d1;
+  color: #fe5a5f;
+  font-size: 20rpx;
+  padding: 10rpx
+}
+.settlement .allSelect{
+  background: #fff;
+  width: 70%;
+  padding: 0 30rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.settlement .allSelect text{
+  color: #fe5a5f;
+}
+.settlement .balance{
+  color: #fff;
+  background: #fe5a5f;
+  width: 30%;
+  text-align: center;
+}
+.settlement .balance_no{
+  color: #fff;
+  background: #cccccc;
+  width: 30%;
+  text-align: center;
+}

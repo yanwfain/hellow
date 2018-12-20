@@ -1,0 +1,55 @@
+@import '../travelTemplate/travelTemplate.wxss';
+/* navs */
+.navs{
+  display: flex;
+  width: 690rpx;
+  margin-left: 17rpx;
+}
+/* 导航 */
+.funNav{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+.funNav image{
+  width: 120rpx;
+  height: 120rpx;
+  /* margin-top: 20rpx; */
+  border-radius: 5px;
+}
+.navView{
+  width: 20%;
+  text-align: center;
+  font-size: 24rpx;
+  color: #333;
+}
+.navView view{
+  line-height: 48rpx;
+}
+/* 公告 */
+.endlongSwiper{
+  width: 690rpx;
+  height: 60rpx;
+  align-items: center;
+  margin: 0 auto;
+  display: flex;
+}
+.endlongSwiper swiper{
+  width: 650rpx;
+  height: 60rpx;
+  margin-left: 10rpx;
+}
+.endlongSwiper swiper text{
+  font-size: 28rpx;
+  color: #666;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 64rpx;
+}
+.endlongSwiper image{
+  width: 30rpx;
+  height: 30rpx;
+}

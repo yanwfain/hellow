@@ -1,0 +1,29 @@
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}" wx:key="">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+<view class='introduce'>
+  <view class='introShop'>
+    <view class='title'>{{shop.name}}</view>
+    <view class='regular'>本店不开发票，商品自己组织配送</view>
+  </view>
+  <image class='logo' src='../../../images/logo.png'></image>
+</view>
+<view class='bgColor'></view>
+<view class='shopDoor'>
+  <image src='../../../images/shuline.png'></image>
+  <view class='shopPlace'>
+    <text>门店地址：{{shop.address}}</text>
+    <text>配送时间：{{shop.sysShopBussinessInfo
+.openingHours+"--"+shop.sysShopBussinessInfo
+.closingHours}}</text>
+    <text>营业时间：{{shop.sysShopBussinessInfo
+.openingHours}}</text>
+    <text>商家服务：{{shop.desc}}</text>
+    <text>商家电话：{{shop.servicePhone}}</text>
+  </view>
+</view>

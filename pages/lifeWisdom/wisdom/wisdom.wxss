@@ -1,0 +1,36 @@
+/* pages/lifeWisdom/wisdom/wisdom.wxss */
+page{
+  background: white;
+}
+
+.main{
+   padding: 30rpx;
+}
+
+.wisdomView{
+  display: flex;
+  flex-direction: column;
+}
+
+.infoLable{
+  font-size: 36rpx;
+  color: #333333;
+}
+
+.infoImg{
+  width: 100%;
+  height: 420rpx;
+  margin: 30rpx 0;
+}
+
+.infoText{
+  font-size: 30rpx;
+  color: #333333;
+}
+
+.wisImg{
+  width: 100%;
+  height: 100rpx;
+  display: block;
+  margin: 30rpx 0;
+}

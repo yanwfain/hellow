@@ -1,0 +1,104 @@
+page{
+  padding-bottom: 100rpx;
+}
+.not_address{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #cbcccb;
+  font-size: 30rpx;
+  margin-top: 460rpx;
+}
+.not_address image{
+  width: 40rpx;
+  height: 48rpx;
+  margin-bottom: 34rpx;
+}
+
+.add_bottom{
+  font-size: 34rpx;
+  position: fixed;
+  bottom: 0;
+  background: #fff;
+  width: 100%;
+  text-align: center;
+  line-height: 98rpx;
+  box-shadow:14rpx 12rpx 50rpx -1rpx #666;
+}
+.add_bottom image{
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align: middle;
+  margin-right: 18rpx;
+}
+.add_bottom text{
+  vertical-align: middle;
+}
+
+/* 新增收获地址显示 */
+.address_container{
+  width: 100%;
+}
+.add_address{
+  margin-bottom:16rpx;
+  padding-left:30rpx;
+  width:100%;
+  background:#fff;
+}
+ .add_space{
+  display: flex;
+  background: #fff;
+  align-items: center; 
+  padding-bottom:30rpx;
+  border-bottom:1rpx #f6f6f6 solid;
+}
+radio{
+  margin-right: 32rpx;
+}
+.addressBox{
+  width: 513rpx;
+  margin-left: 32rpx;
+}
+.addImg{
+  width: 30rpx;
+  height: 30rpx;
+  padding-right:15rpx;
+  /* margin-top: 20rpx; */
+}
+.recAddress{
+  font-size: 30rpx;
+}
+.add_people{
+  font-size: 28rpx;
+  color: #999;
+}
+.tel_people{
+  margin-left: 32rpx;
+}
+.address_edit_container{
+  display: flex; 
+  height: 113rpx;
+  align-items: center;
+  background: #fff;
+  padding-left: 30rpx;
+}
+.eidt_text{
+  display: flex;
+  align-items: center;
+  color: #999999;
+  font-size:30rpx 
+}
+.edit_margin{
+  display: flex;
+  align-items: center;
+  color: #999999;
+  font-size:30rpx;
+  margin-left: 240rpx
+}
+.eidt_delete{
+  display: flex;
+  align-items: center;
+  color: #999999;
+  font-size:30rpx;
+  margin-left: 40rpx
+}

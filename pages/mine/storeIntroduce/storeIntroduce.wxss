@@ -1,0 +1,57 @@
+page{
+  color: #333;
+  background: #fff;
+}
+swiper{
+  width: 100%!important;
+  height: 422rpx!important;
+}
+.slide-image{
+  width: 100%;
+  height: 100%;
+}
+.introduce{
+  padding: 40rpx 30rpx;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.introduce .logo{
+  width: 80rpx;
+  height: 32rpx;
+}
+.introduce .title{
+  font-size: 46rpx;
+  font-weight: 800;
+  margin-bottom: 6rpx;
+}
+.introduce .regular{
+  font-size: 28rpx;
+  color: #999;
+}
+.bgColor{
+  background: #f3f4f3;
+  height: 16rpx;
+  width: 100%;
+}
+.shopDoor{
+  display: flex;
+  background: #fff;
+  padding: 32rpx 30rpx;
+}
+.shopDoor image{
+  width: 16rpx;
+  height: 356rpx;
+  margin-right: 27rpx;
+}
+.shopDoor .shopPlace{
+  display: flex;
+  flex-direction: column;
+  font-size: 28rpx;
+  margin-top:40rpx;
+}
+.shopDoor .shopPlace text{
+  margin-bottom: 24rpx;
+  font-size: 28rpx;
+}

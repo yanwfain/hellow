@@ -1,0 +1,43 @@
+<!-- 分类 -->
+<view class='title'>
+  <picker bindchange="bindPickerChange" value="{{add}}" range="{{scope}}">
+        <view class="picker">
+          {{scope[add]}}
+          <image src='../../../images/xiala.png' class='xiala'></image>
+        </view>
+      </picker>
+</view>
+
+
+<view class='main' wx:if='{{add == 0}}'>
+  <view class='coo'>
+    <view class='collection' wx:for='{{collectionList}}' data-objcode='{{item.objCode}}' bindtap='goShop'>
+        <image src='{{item.sysShopImgInfos[0].imgUrl}}' class='mycollectionImg' wx:if="{{item.sysShopImgInfos[0].length != 0}}"></image>
+        <image src='http://www.shanniao.vip/imgServer/images/lijian.jpg?t=121354413' class='mycollectionImg' wx:else></image>
+        <view class='mycollectionText'>{{item.sysShopInfo[0].name}}</view>
+        <image src='../../../images/collection.png' class='xingImg'></image>
+    </view>
+  </view>
+</view>
+
+<view class='main' wx:if='{{add == 1}}'>
+  <view class='coo'>
+    <view class='collection' wx:for='{{collectionList}}' data-objcode='{{item.objCode}}' bindtap='goShop'>
+        <image src='{{item.customerActivityInfos[0].cover}}' class='mycollectionImg' wx:if="{{item.customerActivityInfos[0].length != 0}}"></image>
+        <image src='http://www.shanniao.vip/imgServer/images/lijian.jpg?t=121354413' class='mycollectionImg' wx:else></image>
+        <view class='mycollectionText'>{{item.customerActivityInfos[0].activeName}}</view>
+        <image src='../../../images/collection.png' class='xingImg'></image>
+    </view>
+  </view>
+</view>
+
+<view class='main' wx:if='{{add == 2}}'>
+  <view class='coo'>
+    <view class='collection' wx:for='{{collectionList}}' data-objcode='{{item.objCode}}' data-shopCode='{{item.retailProductInfos[0].shopCode}}' bindtap='goShop'>
+        <image src='{{item.retailProductInfos[0].imgUrl}}' class='mycollectionImg' wx:if="{{item.retailProductInfos[0].length != 0}}"></image>
+        <image src='http://www.shanniao.vip/imgServer/images/lijian.jpg?t=121354413' class='mycollectionImg' wx:else></image>
+        <view class='mycollectionText'>{{item.retailProductInfos[0].name}}</view>
+        <image src='../../../images/collection.png' class='xingImg'></image>
+    </view>
+  </view>
+</view>

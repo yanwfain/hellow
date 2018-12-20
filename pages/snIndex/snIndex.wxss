@@ -1,0 +1,407 @@
+@import '../template/template.wxss';
+page{
+  background: white;
+}
+.flix{
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  background: #fff;
+}
+/* 搜索 */
+.searchBox{
+
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  padding: 5rpx 20rpx 5rpx 20rpx;
+}
+.searchBox .search{
+  height: 58rpx;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular;
+  color: #999999;
+  border-top-left-radius: 30rpx;
+  border-bottom-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+  border-bottom-right-radius: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 20rpx;
+  background: #f4f4f4;
+  flex: 1.7;
+}
+.shopname{
+  height: 74rpx;
+  /* width: 35%; */
+  font-size: 32rpx;
+  /* color: white; */
+  /* padding-left: 10rpx; */
+   display: flex; 
+   flex: 1;
+   align-items: center; 
+  margin-right: 20rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.name{
+  width: 200rpx;
+  color: #222222;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  overflow:hidden;
+  font-size: 32rpx;
+}
+.searchBox .search .searImg{
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 20rpx
+}
+.scan_parent{
+  width: 10%;
+  height: 74rpx;
+  font-size: 20rpx;
+  color: white;
+  padding-left: 10rpx;
+  display: flex;
+  align-items: center;
+  background: #ff5c61;
+  border-top-left-radius: 6rpx;
+  border-bottom-left-radius: 6rpx;
+  border-right: 1rpx solid white;
+}
+.down{
+  width: 24rpx;
+  height: 32rpx;
+  display: block;
+  margin-right: 10rpx;
+}
+.scanImg{
+  width: 38rpx;
+  height: 38rpx;
+  margin-left: 10rpx
+}
+.searchBox .search input{
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 38rpx;
+  padding-left: 20rpx;
+  width: 100%;
+}
+
+/*
+  contents
+*/
+.contents{
+  background: white;
+}
+/*分类导航*/
+.nav{
+  display: flex;
+  justify-content: space-around;
+  padding: 0 15rpx 5rpx;
+  margin: 20rpx 0;
+  background: white;
+  flex-wrap: wrap;
+  /* height: 440rpx; */
+}
+.itemClass{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin-right: 40rpx; */
+  margin-top: 13rpx;
+  margin-left: 30rpx;
+  justify-content: center;
+}
+.itemClass:nth-child(1),.itemClass:nth-child(6),.itemClass:nth-child(11){
+  margin-left: 0;
+}
+.itemImg{
+  width: 75rpx;
+  height: 75rpx;
+  margin-bottom: 0rpx;
+}
+.itemText{
+  font-size: 24rpx;
+  color: #333333;
+  width:120rpx;
+    /* border:1rpx solid black;   */
+  text-align:center;
+}
+/*
+  颜色分割条
+*/
+
+
+/* 滑动导航 */
+.scrollClass{
+  padding:30rpx 20rpx ;
+}
+.hei{
+  height: 130rpx;
+
+}
+.scroll-view{
+  overflow:auto;
+  width:690rpx;
+  padding: 10rpx 30rpx;
+}
+.scroll-view view{
+  display: inline-block;
+  padding: 5rpx 0;
+}
+.scrollItemClass{
+  font-size: 32rpx;
+  color: #333333;
+  margin-left: 26rpx;
+}
+
+.selectScrollClass{
+  color: #FF5C61;
+  font-size: 32rpx;
+  margin-left: 26rpx;
+
+}
+
+.left:nth-child(1){
+  margin-left: 0;
+}
+
+/* 排序 */
+.paixuClass{
+  display: flex;
+  padding: 0 30rpx 10rpx;
+}
+.tabT{
+  color: #666666;
+  font-size: 26rpx;
+  padding: 8rpx 15rpx;
+  border-radius:28rpx;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+.selectTabClass{
+  padding: 8rpx 15rpx;
+  background:rgba(255,92,97,0.2097);
+  border-radius:28rpx;
+  color: #FF5C61;
+  font-size: 26rpx;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+/*模块群  */
+.modules{
+  display: flex;
+  flex-direction: column;
+}
+
+.upmo{
+  display:flex;
+  flex:1;
+  padding:10rpx 18rpx;
+  background: white;
+}
+
+.mul{
+  display: flex;
+  flex: 1;
+} 
+
+.lifeWisdom,.nearbySales{
+  width: 100%;
+  height: 160rpx;
+  border-radius: 10rpx;
+}
+
+.lifeWisdom{
+  margin-right: 15rpx;
+}
+
+.nearbySales{
+  margin-left: 15rpx;
+}
+
+.shopModule{
+  display: flex;
+  flex: 1;
+}
+
+.publicStyle{
+  display: flex;
+  flex: 1;
+}
+
+.pubImg{
+  width: 100%;
+  height: 94rpx;
+  display: block;
+}
+
+.manageMyStore{
+  border-left: 1rpx solid #e5e5e5;
+  border-right: 1rpx solid #e5e5e5;
+}
+
+/*附近的促销、附近的店  */
+.nearStatus{
+  display: flex;
+  border-bottom:1rpx solid #e5e5e5;
+}
+
+.nearCuxiao,.nearShop{
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.cuxiaoText,.shText{
+  height:71rpx;
+  line-height: 71rpx;
+  font-size: 30rpx;
+  color: #A7A7A7;
+}
+
+.selectClass{
+  color: #FF5C61;
+  border-bottom: 1rpx solid #FF5C61;
+}
+
+/*展示列表--附近促销  */
+
+
+/*生活智慧  */
+.mam{
+  background: white;
+}
+
+.mamText{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20rpx;
+  border-bottom:1rpx solid #e5e5e5;
+}
+
+/* 生活智慧 */
+
+
+.wisdomView{
+  display: flex;
+  flex-direction: column;
+  padding: 30rpx;
+  border-bottom: 1rpx solid #E6E6E6;
+}
+
+.lifeList{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.lifeImg{
+  display: block;
+  width: 230rpx;
+  height: 150rpx;
+  margin-right: 25rpx;
+  
+}
+
+.lifeText{
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  height: 150rpx;
+  width: 376rpx;
+  font-size: 32rpx;
+  color: #333333;
+  font-weight: 600;
+  position: relative;
+}
+.conter{
+  width: 100%;
+  line-height: 38rpx;
+  height: 76rpx;
+  overflow: hidden;
+}
+.author{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size:32rpx;
+  color:#333333;
+  font-weight:400;
+  position: absolute;
+  bottom: 0;
+}
+.zuozhe{
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+  color: #666666;
+  margin-top: 10rpx;
+  justify-content: flex-end;
+}
+
+.zuozhe text:nth-child(1){
+  margin-right: 20rpx;
+}
+.downStatus{
+  background: #fff;
+}
+/* 店铺视频 */
+.videoF{
+  width: 100%;
+  height: 250rpx;
+  margin: 10rpx 0; 
+  position: relative;
+}
+.videoFs{
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  top: 95rpx;
+  left: 345rpx;
+}
+.isTop{
+  opacity: .5;
+  width: 100rpx;
+  height: 100rpx;
+  position: fixed;
+  bottom: 100rpx;
+  right: 50rpx;
+}
+/* 用户信息 */
+.buttons{
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  text-align: center;
+}
+.buttons view{
+  display: inline-block;
+  width: 250rpx;
+  height: 270rpx;
+  background: linear-gradient(to top, rgba(254, 141, 135, .7),rgba(254, 102, 98, .7));
+  border-radius: 10rpx;
+  margin-top: 600rpx;
+}
+.buttons view image{
+  height: 140rpx;
+  width: 140rpx;
+  margin: 30rpx auto;
+  border-radius: 200rpx;
+  display: block;
+}
+.getUser{
+  font-size: 24rpx;
+  color: white;
+  background: #ff5c61;
+}

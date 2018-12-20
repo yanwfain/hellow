@@ -1,0 +1,16 @@
+@import '../template/template.wxss';
+.option{
+  width: 690rpx;
+  margin: 20rpx auto;
+  font-size: 30rpx;
+  display: flex;
+  justify-content:space-between;
+}
+.optionTxt{
+  padding: 8rpx 25rpx;
+  border-radius:20px;
+}
+.color{
+  background:#ff5c61;
+  color: #fff;
+}

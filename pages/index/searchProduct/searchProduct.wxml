@@ -1,0 +1,34 @@
+<!--pages/index/searchProduct/searchProduct.wxml-->
+<!-- 搜索框 -->
+  <view class='searchBox'>
+    <view class='search'>
+      <image class='searImg' src='../../../images/search.png'></image>
+      <input placeholder='请输入商品名称' bindconfirm='search' confirm-type='search'></input>
+    </view>
+  </view>
+<block wx:for="{{expertList}}" wx:key="*this">
+  <view class="item_ans" bindtap='details' data-code='{{item.code}}'>
+    <view class="avatar">
+      <image class="img" src="{{item.cover}}"></image>
+    </view>
+    <view class="expertInfo">
+      <view class="name">{{item.name}}</view>
+      <view class="tag">纵享丝滑，下雨天音乐和红茶更配哦</view>
+      <view class="flavor">
+        <text class='taste'>{{item.typeName}}</text>
+        <text class='fit' hidden='{{item.isHot=="0"}}'>{{item.isHotZ}}</text>
+      </view>
+      <view class="askBtn">
+        <view class="price">¥
+          <text class="saletext">{{item.salePrice/100}}</text>
+          <text class='throughline'>{{item.originPrice?item.originPrice/100:""}}</text>
+        </view>
+        <view class='minAdd'>
+          <image catchtap='minus' hidden='{{item.count==0}}' data-index='{{index}}' src='../../../images/reduce.png'></image>
+          <view class='change' hidden='{{item.count==0}}'>{{item.count}}</view>
+          <image src='../../../images/jia.png' catchtap='plusPro' data-index='{{index}}'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</block>

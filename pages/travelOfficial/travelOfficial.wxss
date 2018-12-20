@@ -1,0 +1,24 @@
+@import '../travelTemplate/travelTemplate.wxss';
+
+/* 导航 */
+.funNav{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+.funNav image{
+  width: 120rpx;
+  height: 120rpx;
+  margin-top: 20rpx;
+  border-radius: 5px;
+}
+.navView{
+  width: 20%;
+  text-align: center;
+  font-size: 24rpx;
+  color: #333;
+}
+.navView view{
+  line-height: 48rpx;
+}

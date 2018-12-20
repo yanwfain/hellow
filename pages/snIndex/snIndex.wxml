@@ -1,0 +1,55 @@
+<!-- 搜索框 -->
+<view class='searchBox'>
+  <view class='shopname' bindtap='selectShop' data-locationName='{{locationName}}'>
+    <image class='down' src='../../images/dinwei.png'></image>
+    <text class='name'>{{locationName}}</text>
+  </view>
+  <view class='search' bindtap='search'>
+    <image class='searImg' src='../../images/ss.png'></image>
+    搜索商家、品类或商圈
+  </view>
+</view>
+<!-- 滚动固定定位块 -->
+<view class='main'>
+  <!--轮播图  -->
+  <swiper class='shop_swiper' indicator-dots autoplay="true" interval="3000" duration="1000" circular='true' hidden='{{luboActive}}' class='lbImg' bindtap='goActiveInfo'>
+    <block wx:for="{{lbList}}" wx:key="">
+      <swiper-item>
+        <image src="{{lbk == 'true'?item.sysAdvertData.imgUrl:item.coverFirst}}" width='100%' height='150' class='lbImg' data-activecode="{{lbk == 'true'?item.sysAdvertActivityInfo.activityCode:item.code}}" data-activename="{{lbk == 'true'?'':item.activeName}}"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- nav 导航 -->
+  <import src="../template/template.wxml" />
+  <template is='navList' data='{{navList}}'></template>
+  <view>
+    <import src="../template/template.wxml" />
+    <template is='classFily' data='{{classList,Citys,Sort,pull,claId,tabList,tabListSingle,wid,imges}}'></template>
+  </view>
+  <!--附近促销  -->
+  <import src="../template/template.wxml" />
+  <template is='{{listStatus?"":"activityList"}}' data='{{shopItemInfo}}'></template>
+  <!-- 生活智慧 -->
+  <view class='main' hidden='{{!listStatus}}'>
+    <view class='mamText'>生活智慧</view>
+    <view wx:for='{{getLifeWisdomList}}' class='wisdomView'>
+      <view class='lifeList' data-articlecode='{{item.code}}' bindtap='goLifeInfo'>
+        <image src='{{item.imageUrl}}' class='lifeImg'></image>
+        <view class='lifeText'>
+          <view class='conter'>{{item.mainContent}}</view>
+          <view class='author'>
+            <text>{{item.source}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 置顶 -->
+<image class='isTop' src='../../images/isTop.png' bindtap='isTop'></image>
+<view class='buttons' wx:if="{{!hasUserInfo}}" catchtouchmove='preventD'>
+  <view class='butt'>
+    <image src='../../images/logos.png'></image>
+    <button size='mini' class='getUser' open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 请求微信授权 </button>
+  </view>
+</view>

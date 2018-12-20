@@ -1,0 +1,118 @@
+<!--pages/mine/mine.wxml-->
+<view class='mineBox'>
+  <image class='bgImg' src='../../images/minebg.png'></image>
+  <!-- <image class='avatar' src='{{userInfo.avatarUrl}}'></image> -->
+  <!-- <text class="nickName">{{userInfo.nickName}}</text> -->
+  <view class='userInfor'>
+    <!--  -->
+    <button wx:if="{{wxuser==null}}" open-type='getUserInfo' class='getUser' bindgetuserinfo='getWxUserInfo'>获取基本用户信息</button>
+    <image class='userImg' src='{{wxuser.avatarUrl}}'></image>
+    <text class='userName'>{{wxuser.nickName}}</text>
+  </view>
+</view>
+<!-- 我的列表 -->
+<view class='userList'>
+  <view class='userOrder' bindtap='goGold'>
+    <view class='userOrderLeft'>
+      <image class='orderLeft' src='../../images/gold.png'></image>
+      <text class='shop'>我的广告投放金：<text style='color:#ff5c61;font-weight:900;font-size:32rpx;'>{{balance?balance:0}}</text></text><image class='orderLeft' src='../../images/gold.png'></image>
+    </view>
+    <view class='rights'>
+      <view>管理</view>
+      <image class='orderRight' src='../../images/jiantou.png'></image>
+    </view>
+
+  </view>
+  <view class='userOrder' bindtap='tishi'   data-id='0' >
+    <view class='userOrderLeft'>
+      <image class='orderLeft' src='../../images/invite.png'></image>
+      <text class='shop'>我的开店邀请码：<text style='font-weight:900;font-size:32rpx;'>{{invitatuonNum}}</text></text>
+    </view>
+    <view class='rights' >
+      <view style='color:#ff5c61;border: 1rpx solid #ff5c61;'>提示！</view>
+      <image class='orderRight' src='../../images/jiantou.png'></image>
+    </view>
+  </view>
+
+   <view class='nav'>
+    <block wx:for='{{navList}}'>
+      <view class='itemClass' bindtap='{{item.click}}' data-types='{{item.types}}'>
+        <image class='itemImg' src='{{item.icon}}' ></image>
+        <text class='itemText'>{{item.name}}</text>
+      </view>
+    </block>
+  </view>
+  <!-- <view class='userOrder' bindtap=''>
+    <view class='userOrderLeft'>
+      <image class='orderLeft11' src='' style='margin-right:35rpx'></image>
+      <text class='shop' style='font-weight:900'></text>
+    </view>
+    <image class='orderRight' src='../../images/jiantou.png'></image>
+  </view>
+  <view class='userOrder' bindtap=''>
+    <view class='userOrderLeft'>
+      <image class='orderLeft11' src=''></image>
+      <text class='shop' style='font-weight:900'></text>
+    </view>
+    <image class='orderRight' src='../../images/jiantou.png'></image>
+  </view>
+  <view class='userOrder' bindtap=''>
+    <view class='userOrderLeft'>
+      <image class='orderLeft11' src=''></image>
+      <text class='shop'></text>
+    </view>
+    <image class='orderRight' src='../../images/jiantou.png'></image>
+  </view>
+  <view class='userOrder' bindtap=''>
+    <view class='userOrderLeft'>
+      <image class='orderLeft1' src=''></image>
+      <text class='shop'></text>
+    </view>
+    <image class='orderRight' src='../../images/jiantou.png'></image>
+  </view>
+  <view class='userOrder' bindtap="">
+    <view class='userOrderLeft'>
+      <image class='orderLeft' src=''></image>
+      <text class='shop'></text>
+    </view>
+    <image class='orderRight' src='../../images/jiantou.png'></image>
+  </view>
+  <view class='userOrder' bindtap="">
+    <view class='userOrderLeft'>
+      <image class='orderLeft' src=''></image>
+      <text class='shop'></text>
+    </view>
+    <image class='orderRight' src='../../images/jiantou.png'></image>
+  </view>
+  <view class='userOrder' bindtap='' data-types='1'>
+    <view class='userOrderLeft'>
+      <image class='orderLeft11' src=''></image>
+      <text class='shop'></text>
+    </view>
+    <image class='orderRight' src='../../images/jiantou.png'></image>
+  </view>
+  <view class='userOrder' bindtap='' data-types='2'>
+    <view class='userOrderLeft'>
+      <image class='orderLeft11' src=''></image>
+      <text class='shop'></text>
+    </view>
+    <image class='orderRight' src='../../images/jiantou.png'></image>
+  </view>
+  <view class='userOrder' bindtap=''>
+    <view class='userOrderLeft'>
+      <image class='orderLeft11' src='' style='margin-right:35rpx;'></image>
+      <text class='shop'></text>
+    </view>
+    <image class='orderRight' src='../../images/jiantou.png'></image>
+  </view> -->
+</view>
+<!-- <view class='switch'>切换账号</view> -->
+<!-- 弹出层 -->
+<view class='tance' wx:if='{{sh == 0}}' bindtap='tishi' data-id='1'>
+  <view class='tanceView'>
+    <text>
+      他人使用您的邀请码开店，平台奖励给您：\n1、680广告投放金；\n2、对方每增加1笔广告投放金的10%；\n3、对方每1笔线上销售额的0.5%；\n4、奖励政策持续20年。
+    </text>
+  </view>
+</view>
+<view style='weight100rpx;height:400rpx;'></view>

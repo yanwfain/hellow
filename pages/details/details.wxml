@@ -1,0 +1,69 @@
+<!-- <swiper indicator-dots="{{indicatorDots}}"autoplay="true" interval="{{interval}}" duration="{{duration}}" circular='true'>
+  <block wx:for="{{product.coverList}}" wx:key="imgUrls">
+    <swiper-item>
+      <image src="{{item}}" mode='aspectFit' class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper> -->
+<image src='{{product.cover}}' class='coverImg'></image>
+<!-- 名称 -->
+<view class='goodsTitle'>
+  <view class='title'>{{product.name}}</view>
+   <view class='synopsis'>{{product.productDesc}}</view> 
+  <view class='commodity'>
+    <view>¥<text class='salePrice'>{{product.salePrice/100}}</text>
+    <text class='throughline'>{{product.originPrice?product.originPrice/100:""}}</text></view>
+    <text class='sold'>已售{{product.salesVolume}}</text>
+  </view>
+</view>
+<!-- 商品详情 -->
+<view class='details'>
+  <view class='detailsImg'>
+    <!-- <image src='../../images/left1.png'></image> -->
+    <text>商品详情</text>
+    <!-- <image src='../../images/right1.png'></image> -->
+  </view>
+  <view class='spec'>
+    <text>规格：{{product.specStr}}</text>
+    <!-- <text>重量：{{weight}}</text>
+    <text>包装：{{packing}}</text>
+    <text>保质期：{{quality}}</text>
+    <text>储存方法：{{way}}</text>
+    <text>生产地：{{production}}</text>
+    <text>生产日期：{{date}}</text> -->
+  </view>
+</view>
+<!-- 图文详情 -->
+<view class='details'>
+  <block wx:for='{{product.productImgInfos}}' wx:key>
+    <image mode="aspectFill" src='{{item.imgUtl}}'></image>
+    <text>{{item.imgDes}}</text>
+  </block>
+</view>
+
+
+
+
+
+
+
+<!-- 底部 -->
+<view class='fixedCar'>
+  <view class='bottomBtnStyle fixed_item' bindtap='goToIndex'>
+      <image src='../../images/shopImg.png'></image>
+      <text>店铺 </text>
+  </view>
+  <view class='fixed_item fenXiangBtn'>
+    <button plain="让生意，及所能及" class='sharImg sharBtnClass' open-type='share' hover-class="other-button-hover">分享</button>
+    <view class='bottomBtnStyle'>
+        <image src='../../images/fenxiang.png'></image>
+        <text>分享</text>
+    </view>
+  </view>
+  <view class='bottomBtnStyle fixed_item' bindtap='goOpenShop'>
+      <image src='../../images/kaidian.png'></image>
+      <text>{{off === 0 ?"收藏":"取消收藏"}}</text>
+  </view>
+  <view class='car fixed_item' bindtap='addToShopCar'>加入购物车({{count}})</view>
+  <!-- <view class="{{canIBuy?'buy':'buy_no'}}" bindtap='selectBuy'>立即购买</view> -->
+</view>

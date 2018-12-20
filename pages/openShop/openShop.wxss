@@ -1,0 +1,104 @@
+/* pages/openShop/openShop.wxss */
+Page{
+  background: white;
+}
+.logos{
+  width: 250rpx;
+  height: 250rpx;
+  border-radius: 250rpx;
+  display: block;
+  margin:  100rpx  auto;
+}
+.main{
+  padding: 0rpx 96rpx 0 96rpx;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+}
+
+.formViem{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #e5e5e5;
+  padding-bottom: 10rpx;
+  margin-bottom: 40rpx;
+}
+
+.formViem:last-child{
+  margin-bottom: 0;
+}
+
+.formInput{
+  flex: 1;
+}
+
+.formText{
+  margin-right: 50rpx;
+}
+
+.textStyle{
+  font-size: 28rpx;
+  color: #333333;
+}
+
+.selectImg{
+  width: 25rpx;
+  height: 16rpx;
+  display: block;
+}
+
+.selectText{
+  height: 40rpx;
+}
+
+.checkoutserver{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24rpx;
+}
+
+.checkboxStatus{
+  zoom: 66%;
+  margin-right: 20rpx;
+}
+
+.goXY{
+  color: blue;
+}
+
+.submit{
+  color: white;
+  margin-top: 70rpx;
+  background: linear-gradient(to right,#FE8D87,#FF6662);
+}
+
+.successStatus{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.successImg{
+  width: 559rpx;
+  height: 419rpx;
+  display: block;
+  margin-bottom: 51rpx;
+}
+
+.successText{
+  font-size: 32rpx;
+  color: #999999;
+}
+
+.redText{
+  font-size: 32rpx;
+  color: #FF5C61;
+  margin:28rpx 20rpx 0;
+}
+
+

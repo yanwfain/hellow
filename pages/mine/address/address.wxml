@@ -1,0 +1,44 @@
+<!-- if 未添加收获地址时显示 -->
+<view class='not_address' hidden='{{hidden}}'>
+  <image src='../../../images/place.png'></image>
+  <text>您未添加收获地址</text>
+</view>
+<!-- if 新增收获地址显示 -->
+<!-- <view class='container'> -->
+<radio-group class="address_container" bindchange="checkboxChange">
+  <view class='add_address' wx:for-items="{{addressList}}">
+    <view class='add_space'>
+      <radio hidden='{{showChoose}}'value="{{index}}" checked="{{checkboxStatus}}"></radio>
+      <view class='addressBox'>
+        <text class='recAddress'>{{item.addrProvince+item.addrCity+item.addrArea+item.customerAddress}}</text>
+        <view class='add_people'>
+          <text class='consignee'>{{item.customerName}}</text>
+          <text class='tel_people'>{{item.customerMobile}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view class='address_edit_container'>
+      <view class='eidt_text' catchtap='defaultAddress' data-index='{{index}}'>
+        <image class='addImg' src="{{item.isDefault == 1?'../../../images/checked.png':'../../../images/circle.png'}}"></image>
+        设为默认
+      </view>
+      <view class='edit_margin' catchtap='edit' data-index='{{index}}'>
+        <image class='addImg' src='../../../images/edit.png'></image>
+        编辑
+      </view>
+      <view class='eidt_delete' catchtap='deleteAddress' data-index='{{index}}'>
+        <image class='addImg' src='../../../images/delete.png'></image>
+        删除
+      </view>
+
+    </view>
+  </view>
+</radio-group>
+
+<!-- </view>   -->
+<!-- 底部新增收获地址 -->
+<view class='add_bottom' bindtap='addAddress'>
+  <image src='../../../images/add.png'></image>
+  <text>新增收货地址</text>
+</view>

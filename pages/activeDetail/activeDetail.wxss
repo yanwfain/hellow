@@ -1,0 +1,186 @@
+@import '../template/template.wxss';
+
+.main {
+  background: white;
+}
+
+.bottomBtn {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top: 1rpx solid #e5e5e5;
+  background: white;
+}
+
+.flexItem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12rpx 0;
+}
+
+.flexItemImg {
+  width: 40rpx;
+  height: 40rpx;
+  display: block;
+}
+
+.flexItemText {
+  font-size: 28rpx;
+  color: #999;
+  margin-top: 10rpx;
+}
+
+.flexItemRight {
+  flex: 2;
+  color: white;
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #fe8d87, #ff6662);
+}
+
+.btnPosition {
+  position: relative;
+}
+
+.positionBtn {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.active {
+  padding: 30rpx 30rpx 0 30rpx;
+}
+
+.activeInfo {
+  /* padding: 23rpx; */
+  display: flex;
+  flex-flow: column;
+  background: white;
+}
+
+.activeImg {
+  width: 690rpx;
+  height: 406rpx;
+  display: block;
+}
+
+.imgCenter {
+  margin-bottom: 20rpx;
+}
+
+.imgCenter:last-child {
+  margin-bottom: 0;
+}
+
+.activeName {
+  color: #333;
+  font-weight: 400;
+  font-size: 26rpx;
+  margin-top: 15rpx;
+  position: relative;
+}
+
+.txt {
+  position: absolute;
+  right: -75rpx;
+  top: 0;
+  color: #fe5a5f;
+  font-size: 30rpx;
+  border: 1rpx solid #fe5a5f;
+  border-radius: 2px;
+}
+
+.fontW {
+  font-size: 32rpx;
+  font-weight: 900;
+}
+
+.activeTime {
+  color: #999;
+  font-size: 26rpx;
+  margin: 15rpx 0;
+}
+
+/* .activeAddress{
+  margin: 23rpx 0 33rpx;
+} */
+
+.activeAddress, .activeContent {
+  color: #999;
+  font-size: 26rpx;
+}
+
+.activeAddress {
+  margin: 15rpx 0;
+}
+
+.hint {
+  color: #0c335c;
+}
+
+/* 地图导航 */
+
+.seas {
+  display: flex;
+  justify-content: center;
+  padding: 20rpx 0;
+  /* background: #f4f4f4; */
+  margin-bottom: 40rpx;
+}
+
+.seas image {
+  width: 100%;
+  height: 130rpx;
+}
+
+.recommend {
+  width: 100%;
+  text-align: center;
+  color: #666;
+  font-size: 28rpx;
+  line-height: 62rpx;
+  font-weight: 300;
+  margin-top: 40rpx;
+}
+
+/* 文字轮播 */
+
+.txtBanner {
+  width: 690rpx;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.txtBannerView {
+  width: 335rpx;
+}
+
+.swipers {
+  width: 100%;
+  height: 150rpx;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.fontSizeTxt {
+  vertical-align: middle;
+  font-size: 26rpx;
+  line-height: 50rpx;
+  color: #666;
+  text-align: center;
+  display: -webkit-box;
+  -webkit-line-clamp:3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

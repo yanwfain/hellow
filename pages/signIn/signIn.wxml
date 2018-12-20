@@ -1,0 +1,11 @@
+<view class='mineBox' style="background">
+ <image src='{{photoImg}}' class='photoImg'></image>
+<view class='fonts'>连续签到：{{ind}}天</view>
+</view>
+<view class='signInCon'>
+  <block wx:for='{{signIn}}' wx:key=''>
+    <view class="signIn {{item.signInIs == 1? 'signInBack ':''}} {{index == 0 ?'signInLeft ':''}} {{index == 6?'signInright':''}}" >
+      <view class="sign {{off?'':'signBack'}}" bindtap='goSing' wx:if='{{index == ind}}'>{{off?'签到':'已签到'}}</view>
+    </view>
+  </block>
+</view>

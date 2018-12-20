@@ -1,0 +1,74 @@
+/* 头部 */
+.adveTitle{
+  width: 100vw;
+  height: 250rpx;
+  padding-top: 30rpx;
+  background: #FF5C61;
+  color: #fff;
+  overflow: hidden;
+  font-weight: 900;
+  position: relative;
+
+}
+.adveTitle text{
+  position: absolute;
+  padding:10rpx 15rpx;
+  border: 1rpx solid white;
+  border-radius: 100px;
+  bottom: 20rpx;
+  right: 20rpx;
+  color: #fff;
+  font-size: 30rpx;
+}
+.adveTitle view{
+  width: 100vw;
+  text-align: center;
+  margin-top: 20rpx;
+}
+.adveOne{
+  font-size: 40rpx;
+}
+.adveTwo{
+  font-size: 38rpx;
+}
+/* 收益部分 */
+.earnings{
+  width: 100%;
+  display: flex;
+  font-weight: 400;
+  font-size: 28rpx;
+}
+.earnings view{
+  width: 34%;
+  border: 1rpx solid #ddd;
+  text-align: center;
+  line-height: 60rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+/* 列表 */
+.list view{
+  width: 98vw;
+  padding-left: 2vw;
+  font-weight: 400;
+  font-size: 34rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+.listOne text{
+  line-height: 100rpx;
+}
+.lietOneT{
+  float: right;
+  color: #999;
+}
+.adk{
+  margin-top: 20rpx;
+}
+.adk view{
+  font-size: 28rpx;
+  line-height: 36rpx;
+  color: #666;
+}
+

@@ -1,0 +1,132 @@
+/* pages/index/searchProduct/searchProduct.wxss */
+
+/* 搜索框 */
+.searchBox{
+  background: #f4f4f4;
+  padding: 20rpx 20rpx;
+}
+.searchBox .search{
+  background: #fff;
+  height: 74rpx;
+  display: flex;
+  align-items: center;
+  padding-left: 20rpx
+}
+.searchBox .search .searImg{
+  width: 38rpx;
+  height: 38rpx;
+}
+.searchBox .search input{
+  font-size: 28rpx;
+  text-align: left;
+  line-height: 38rpx;
+  padding-left: 20rpx;
+  width: 100%
+}
+.item_ans{ 
+  width: 100%;
+  display: flex; 
+  flex-grow: row no-wrap;
+  justify-content: center; 
+  align-items: center;
+  padding: 30rpx;
+  box-sizing: border-box; 
+  border-bottom: 1px solid #F2F2F2;
+  background: white
+}
+.avatar{
+  width: 164rpx;
+  height: 164rpx;
+  position: relative;
+  padding-right: 24rpx;
+  }
+
+.avatar .img{
+  width: 100%;
+  height: 100%;
+  border-radius: 6rpx
+}
+.avatar .doyen{
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  bottom: -2px;
+  right: 20rpx;
+}
+.expertInfo{
+  font-size: 12rpx;
+  flex-grow: 2;
+  color: #B0B0B0;
+  justify-content: center;
+  align-items: center;
+}
+.expertInfo .name{
+  font-size: 30rpx;
+  color:#000;
+  margin-bottom: 6rpx;
+  font-weight: 600;
+}
+
+.expertInfo .tag{
+  color: #999;
+  font-size: 20rpx;
+  margin-bottom: 10rpx;
+}
+.expertInfo .flavor text{
+  font-size: 24rpx;
+  margin-bottom: 6rpx;
+}
+.expertInfo .flavor{
+  margin-bottom: 12rpx;
+}
+.expertInfo .flavor .taste{
+  background: #fff7e4;
+  color: #FCB100;
+}
+.expertInfo .flavor .taste,.expertInfo .flavor .fit{
+  padding: 2rpx 8rpx;
+  font-size: 20rpx;
+  border-radius: 4px;
+  
+}
+.expertInfo .flavor .fit{
+  background: #ecf8f4;
+  color: #73d0ad;
+  margin-left: 20rpx; 
+}
+.askBtn{ 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.askBtn image{
+  width: 44rpx;
+  height: 44rpx; 
+}
+
+.askBtn .minAdd{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.askBtn .change{
+  font-size: 28rpx;
+  color: #333;
+  padding: 0 20rpx;
+  width: 40rpx;
+  text-align: center;
+}
+.askBtn .price{
+  color: #fe5a5f;
+  font-size: 24rpx;
+}
+.saletext{
+  font-size: 34rpx;
+  font-weight: 600;
+}
+.throughline{
+  text-decoration: line-through;
+  color:#bbbbbb;
+  font-size: 24rpx;
+  margin-left: 16rpx
+}

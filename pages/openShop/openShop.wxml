@@ -1,0 +1,49 @@
+<!--pages/openShop/openShop.wxml-->
+<!-- <text>pages/openShop/openShop.wxml</text> -->
+<image src='../../images/logos.png' class='logos'></image>
+<view class='main'>
+    <!--form表单  -->
+    <form class='form' bindsubmit="formSubmit" wx:if='{{hidden}}'>
+        <view class='formViem textStyle'> 
+            <text class='formText'>手机号</text> 
+            <input type='number' placeholder='请输入手机号' class='formInput' name="mobile" bindinput='bindPhoneInput' maxlength='11'></input>
+        </view>
+        <view class='formViem textStyle'>
+            <text class='formText'>店类型</text>
+            <picker bindchange="bindPickerChange" range="{{shopNames}}" class='formInput' name='shopType'>
+              <view class='selectText'>
+                {{shopNames[index]}}
+              </view>
+            </picker>
+            <input type='text' value='{{shopNames[index]}}' hidden='true' name='shopTypeName'></input>
+            <image src='../../images/xiala.png' class='selectImg'></image>
+        </view>
+        <view class='formViem textStyle'>
+            <text class='formText'>开店邀请码</text>
+            <input type='number' placeholder='请输入开店邀请码(选填)' class='formInput' name='authCode'></input>
+        </view>
+        <view class='formViem textStyle'>
+            <input type='number' placeholder='请输入验证码' class='formInput' name='vCode'></input>
+             <view bindtap="getSmsCode" disabled="{{clickable}}">{{yanzhengma}}</view> 
+        </view>
+        <view class='checkoutserver'>
+              <checkbox-group name="checkboxStatus">
+                <label><checkbox value="true" class='checkboxStatus'/></label>
+              </checkbox-group>
+              <view>
+                  <text>我已详细阅读</text>
+                  <text class='goXY' bindtap='goXY'>《服务协议》</text>
+              </view>
+        </view> 
+        <view>
+            <button formType="submit" class='submit'>提交</button>
+        </view>
+    </form> 
+
+    <!--提交成功展示图  -->
+    <view class='successStatus' wx:else>
+        <image src='http://www.shanxingniao.com/imgServer/images/xiaochengxu/xinlingshou/c/xiaodiantianjiawancheng.png' class='successImg'></image>
+        <view class='successText'>提交成功</view>
+        <view class='successText' bindtap='Bshop'>前往<text class='redText'>商户端</text>去完善店信息</view>
+    </view>
+</view>

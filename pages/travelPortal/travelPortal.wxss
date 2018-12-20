@@ -1,0 +1,42 @@
+@import '../travelTemplate/travelTemplate.wxss';
+/* 行业入口 */
+.portal{
+  width:720rpx;
+  margin:15rpx 0 0 13rpx;
+}
+.portalFor{
+  width:100%;
+  border-radius: 5px;
+  border: #666 1rpx solid;
+  margin-bottom: 20rpx;
+}
+.portalTitle{
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #666;
+  line-height: 50rpx;
+  text-indent: 1em;
+}
+.portalButton{
+  width: 705rpx;
+  text-align: right;
+  font-size: 26rpx;
+  color: #ff5c61;
+  line-height: 50rpx;
+}
+
+.portalImg{
+  border-radius: 5px;
+  width: 690rpx;
+  height: 300rpx;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20rpx;
+}
+.title{
+  text-align: center;
+  font-size: 28rpx;
+  font-weight: 400;
+  color: #666;
+  width: 100%;
+}

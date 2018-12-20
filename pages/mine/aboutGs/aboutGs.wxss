@@ -1,0 +1,65 @@
+/* pages/mine/aboutGs/aboutGs.wxss */
+
+.main{
+  padding: 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.lableImg{
+  height: 328rpx;
+  width: 100%;
+}
+
+.lable{
+  font-weight: 600;
+  margin: 40rpx 0;
+  flex: 1;
+  padding: 0 0 0 43rpx;
+}
+
+.content{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20rpx;
+}
+
+.content:nth-of-type(4) .contentLable,.content:nth-of-type(5) .contentLable{
+  align-items:start;
+}
+
+.content:nth-of-type(4) .contentLable image,.content:nth-of-type(5) .contentLable image{
+  width: 25%;
+}
+
+.content:nth-of-type(4) .contentLable text,.content:nth-of-type(5) .contentLable text{
+  font-size: 28rpx;
+  color: #333333;
+}
+
+.contentLable{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10rpx;
+}
+
+.contentLable image{
+  width: 28rpx;
+  height: 28rpx;
+  border: 1rpx solid burlywood;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+
+.contentLable text{
+  font-size: 32rpx;
+  color: #333333;
+  font-weight: 600;
+}
+
+.contenText{
+  font-size: 28rpx;
+  color: #333333;
+  margin-left: 52rpx;
+}

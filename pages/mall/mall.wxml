@@ -1,0 +1,15 @@
+<!--轮播图  -->
+<import src="../template/template.wxml" />
+<template is="shopBanner" data='{{lbList}}'></template>
+<!-- 列表 -->
+<view class='titleFont'>— 附近商场 —</view>
+<import src="../template/template.wxml" />
+<template is="stores" data='{{shopItemInfos}}'></template>
+<!-- 列表 -->
+<view class='titleFont'>— 附近商场促销 —</view>
+<!-- 排序 -->
+<view class='option'>
+  <view wx:for="{{navClass}}" bindtap='cut' data-name='{{item.name}}' data-controller='{{item.controller}}' class="optionTxt {{item.controller == navClassTitle ? 'color':''}}">{{item.name}}</view>
+</view>
+<import src="../template/template.wxml" />
+<template is="activityList" data='{{shopItemInfo}}'></template>

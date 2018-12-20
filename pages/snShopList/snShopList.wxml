@@ -1,0 +1,43 @@
+<!--pages/snShopList/snShopList.wxml-->
+<!-- <text>pages/snShopList/snShopList.wxml</text> -->
+
+ <view class='main'> 
+
+       <view class='sea'>
+        <view class='search'>
+            <image class='searImg' src='../../images/ss.png'></image>
+            <input placeholder='请输入店铺名称' bindconfirm='statusText' class='int'  confirm-type="搜索" type='text'></input> 
+        </view>
+      </view>
+      <view class='wai' hidden='{{!status}}'>
+        <view class='shopItem' wx:for='{{shopItemInfo}}' bindtap='getShopCode' data-code='{{item.code}}'> 
+             <image src='http://www.shanniao.vip/imgServer/images/lijian.jpg' class='shopImg' wx:if='{{item.sysShopImgInfoList[0].imgUrl == null}}'></image> 
+             <image src='{{item.sysShopImgInfoList[0].imgUrl}}' class='shopImg' wx:else></image> 
+        
+            <view class='shopInfo'>
+                <view class='infoText'>
+                    <view class='up'>
+                        <text class='shopName'>{{item.name}}</text>
+                        <text class='shopStatus'>{{item.sysShopBussinessInfo.isOpen == 1 ? "营业" : "停业"}}</text>
+                    </view> 
+                    <view class='shopText kk'>
+                        <text class='shopText' style='background:rgba(255,244,242,1);padding:5rpx;'>起送价¥{{item.sysShopBussinessInfo.amountMoney == 0 || undefined || null ? "0" : item.sysShopBussinessInfo.amountMoney/100}}</text>
+                        <text class='shopText' style='margin:0 28rpx;background:rgba(255,254,247,1);padding:5rpx;'>{{item.sysShopBussinessInfo.deliveryFee == 0 || undefined || null ? "免配送费" : "配送费" + item.sysShopBussinessInfo.deliveryFee/100}}</text>
+                        <text class='shopText' style='background:rgba(240,253,255,1);padding:5rpx;'>月售{{~~item.buyCountByMonth}}单</text>
+                        <text class='shopText' style='display:flex;flex:1;justify-content:flex-end;'>{{item.distance/1000}}km
+                        </text>
+                    </view>
+                    <text class='shopText st'>{{item.address}}</text>
+                </view>
+            </view>
+        </view>
+
+     </view> 
+
+
+    <view class='near' hidden='{{status}}'>
+      <image src='../../../images/nearShop.png' class='nearShop'></image> 
+      <text class='nearText'>附近没有开通店</text>
+    </view>
+
+ </view> 

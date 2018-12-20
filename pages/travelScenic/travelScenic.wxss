@@ -1,0 +1,74 @@
+@import '../travelTemplate/travelTemplate.wxss';
+/* 搜索框 */
+.searchBox{
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  padding: 5rpx 20rpx 5rpx 20rpx;
+}
+.searchBox .search{
+  height: 58rpx;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular;
+  color: #999999;
+  border-radius: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 20rpx;
+  background: #f4f4f4;
+}
+.shopname{
+  height: 74rpx;
+  /* width: 35%; */
+  font-size: 32rpx;
+  /* color: white; */
+  /* padding-left: 10rpx; */
+  display: flex; 
+  flex: 1;
+  align-items: center; 
+  margin-right: 20rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.name{
+  width: 100rpx;
+  color: #222222;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  overflow:hidden;
+  font-size: 32rpx;
+}
+.searchBox .search .searImg{
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 20rpx
+}
+.scan_parent{
+  width: 10%;
+  height: 74rpx;
+  font-size: 20rpx;
+  color: white;
+  padding-left: 10rpx;
+  display: flex;
+  align-items: center;
+  background: #ff5c61;
+  border-top-left-radius: 6rpx;
+  border-bottom-left-radius: 6rpx;
+  border-right: 1rpx solid white;
+}
+.down{
+  width: 24rpx;
+  height: 32rpx;
+  display: block;
+  margin-right: 10rpx;
+}
+.scanImg{
+  width: 38rpx;
+  height: 38rpx;
+  margin-left: 10rpx
+}
+.searchInput{
+  width: 480rpx;
+}

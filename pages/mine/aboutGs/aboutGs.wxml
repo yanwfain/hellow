@@ -1,0 +1,17 @@
+<!--pages/mine/aboutGs/aboutGs.wxml-->
+<!-- <text>pages/mine/aboutGs/aboutGs.wxml</text> -->
+<view class='main'>
+
+  <image src='https://www.shanxingniao.com/imgServer/images/xiaochengxu/xinlingshou/c/fang.jpg' class='lableImg'></image>
+
+  <view class='lable'>及及，在身边</view>
+
+  <view class='content' wx:for='{{contentList}}'>
+    <view class='contentLable'>
+      <image src='{{item.img}}'></image>
+      <text>{{item.lableText}}</text>
+    </view>
+    <view class='contenText'>{{item.content}}</view>
+  </view>
+
+</view>

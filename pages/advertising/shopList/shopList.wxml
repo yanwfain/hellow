@@ -1,0 +1,28 @@
+<!--pages/index/shopList/shopList.wxml-->
+<view wx:for="{{shopList}}" wx:if="{{id == 1}}">
+  <view class="shopInfo" bindtap='bindshop' data-shopcode="{{item.sysShopImgInfoList[0].shopCode}}">
+    <view class='shopstatus'>
+      <image src='{{item.sysShopImgInfoList[0].imgUrl}}' class='shopstatus'></image>
+    </view>
+    <view class='shopInfodetail'>
+      <view class='shopName'>{{item.sysShopImgInfoList[0].shopName}}</view>
+      <view class='shopaddress'>{{item.address}}</view>
+      <view class='shoptime'>营业时间:{{item.sysShopBussinessInfo.openingHours}}--{{item.sysShopBussinessInfo.closingHours}}</view>
+    </view>
+    <image class='img'src='../../../images/jiantou.png'></image>
+  </view>
+</view>
+
+<view wx:for="{{shopList}}" wx:if="{{id == 2}}">
+  <view class="shopInfo" bindtap='bindshop' data-shopcode="{{item.sysShopImgInfoList[0].shopCode}}">
+    <view class='shopstatus'>
+      <image src='{{item.shopImg}}' class='shopstatus'></image>
+    </view>
+    <view class='shopInfodetail'>
+      <view class='shopName'>{{item.shopName}}</view>
+      <view class='shopaddress'>{{item.shopAddress}}</view>
+      <view class='shoptime'>营业时间:{{item.businessTimeBegin}}--{{item.businessTimeEnd}}</view>
+    </view>
+    <image class='img'src='../../../images/jiantou.png'></image>
+  </view>
+</view>

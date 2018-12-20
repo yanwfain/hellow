@@ -1,0 +1,119 @@
+  {
+  "pages": [
+    "pages/snIndex/snIndex",
+    "pages/mall/mall",
+    "pages/shopMall/shopMall",
+    
+    
+    "pages/estates/estates",
+    "pages/signIn/signIn",
+    "pages/onGlod/onGlod",
+    "pages/getDetail/getDetail",
+    "pages/estate/estate",
+    "pages/index/aboutUs/aboutUs",
+    "pages/attract/attract",
+    "pages/travelIndex/index",
+    "pages/travelPortal/travelPortal",
+    "pages/travelTourism/travelTourism",
+    "pages/travel/travel",
+    "pages/travelAgency/travelAgency",
+    "pages/travelTemplate/travelTemplate",
+    "pages/travelDetail/travelDetail",
+    "pages/travelOfficial/travelOfficial",
+    "pages/switchcity/switchcity",
+    "pages/travelScenic/travelScenic",
+    "pages/platformIntrod/platformIntrod",
+    "pages/platformInprom/platformInprom",
+    "pages/Agroecology/Agroecology",
+    
+    
+    "pages/inviteShop/inviteShop",
+    "pages/detail/detail",
+    "pages/report/report",
+    "pages/find/find",
+    "pages/tabCuxiao/tabCuxiao",
+    "pages/template/template",
+    "pages/index/index",
+    "pages/advertising/advertising",
+    "pages/advertising/shopList/shopList",
+    "pages/advertising/transfer/transfer",
+    "pages/index/shopCar/shopCar",
+    "pages/details/details",
+    "pages/mine/addaddress/addaddress",
+    "pages/order/order",
+    "pages/order/fillIn/fillIn",
+    "pages/mine/mine",
+    "pages/mine/address/address",
+    "pages/mine/storeIntroduce/storeIntroduce",
+    "pages/orderDetails/orderDetails",
+    "pages/index/searchProduct/searchProduct",
+    "pages/guideOpenSetting/guideOpenSetting",
+    "pages/index/shopList/shopList",
+    "pages/mine/locationmap/locationmap",
+    "pages/mine/payInShop/payInShop",
+    "pages/index/searchShopName/searchShopName",
+    "pages/snShopList/snShopList",
+    "pages/serverText/serverText",
+    "pages/openShop/openShop",
+    "pages/activeList/activeList",
+    "pages/activeDetail/activeDetail",
+    "pages/goodStore/goodStore",
+    "pages/lifeWisdom/lifeWisdom",
+    "pages/lifeWisdom/wisdom/wisdom",
+    "pages/mine/mycollection/mycollection",
+    "pages/nearBycuxiao/nearBycuxiao",
+    "pages/mine/aboutGs/aboutGs",
+    "pages/activeShopList/activeShopList"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#ff5c61",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#fafafa"
+  },
+  "tabBar": {
+    "color": "#a9a9a9",
+    "selectedColor": "#222222",
+    "backgroundColor": "#ffffff",
+    "backgroundTextStyle": "light",
+    "list": [
+      {
+        "pagePath": "pages/snIndex/snIndex",
+        "text": "首页",
+        "iconPath": "images/shop.png",
+        "selectedIconPath": "images/shop1.png"
+      },
+      {
+        "pagePath": "pages/tabCuxiao/tabCuxiao",
+        "text": "附近的店",
+        "iconPath": "images/cuxiaoImgd1.jpg",
+        "selectedIconPath": "images/cuxiaoImgd.jpg"
+      },
+     {
+      "pagePath": "pages/travelPortal/travelPortal",
+      "text": "及及·行业",
+      "iconPath": "images/golds.jpg",
+      "selectedIconPath": "images/gold.jpg"
+    },
+    {
+      "pagePath": "pages/estate/estate",
+      "text": "地方产业",
+      "iconPath": "images/domains.jpg",
+      "selectedIconPath": "images/domain.jpg"
+    },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/mine1.png"
+      }
+    ]
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wxf5b37370c57a2db9",
+    "wx6c653b3b961fb92a"
+  ]
+}
+
+

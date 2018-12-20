@@ -1,0 +1,11 @@
+<!--pages/mine/payInShop/payInShop.wxml-->
+<view class='wrap'>
+     <image src='{{shop.sysShopImgInfoList[0].imgUrl}}' class='shopImage'></image>
+    <view class='shopName'>{{shop.name}}</view>
+    <form bindsubmit="payInShop"> 
+      <view class='Money'>金额<input placeholder='请输入金额'type="digit" class='inputMoney' placeholder-class='inputMoneyplaceholder'name="handinput" bindinput='checkMoney'value="{{inputMoney}}" focus='{{focusStatus}}'></input> </view>
+      <view class="downprice">善鸟，在身边！随机立减{{downprice/100}}元</view>
+      <button form-type='submit' class='submit'>付款</button>
+      <view class='gotoindex' bindtap='gotoindex'>进入店铺</view>
+    </form> 
+</view>

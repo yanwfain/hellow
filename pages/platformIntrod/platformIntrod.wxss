@@ -1,0 +1,6 @@
+.Introd{
+  width: 100rpx;
+  height: auto;
+  overflow: hidden;
+  font-size: 16rpx;
+}

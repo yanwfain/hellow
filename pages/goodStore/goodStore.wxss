@@ -1,0 +1,163 @@
+/* pages/goodStore/goodStore.wxss */
+page{
+  background: white;
+}
+
+/*
+  搜索框
+*/
+.sea{
+  display: flex;
+  padding: 20rpx 30rpx;
+  border-bottom: 1px solid #e5e5e5;
+  background: white;
+}
+.int{
+  width: 100%;
+}
+.search{
+  width: 100%;
+  height: 54rpx;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular;
+  border-top-left-radius: 30rpx;
+  border-bottom-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+  border-bottom-right-radius: 30rpx;
+  display: flex;
+  align-items: center;
+  padding-left: 20rpx;
+  color: #999999;
+  background:rgba(201,200,200,0.16);
+}
+.searImg{
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 20rpx
+}
+
+/*
+  店目录
+*/
+.shopList{
+  display: flex;
+  flex-direction: column;
+}
+.shopItem{
+  display: flex;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 20rpx 40rpx;
+}
+.shopItem:last-child{
+  border-bottom: none;
+}
+.shopImg{
+  /* width: 154rpx;
+  height: 154rpx; */
+  width: 146rpx;
+  height: 148rpx;
+  margin-right: 32rpx;
+  border-radius: 6rpx;
+}
+.shopInfo{
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+.infoText{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.up{
+  display: flex;
+  justify-content: space-between;
+}
+.shopName{
+  font-size: 28rpx;
+  color: #333333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 80%;
+}
+.shopText{
+  font-size: 22rpx;
+  display: flex;
+  color: #999999;
+  align-items: center;
+}
+
+.shop1{
+  color: #d58c88;
+  font-size: 20rpx;
+  padding: 10rpx;
+}
+
+.shop2{
+  color: #d58c88;
+  font-size: 20rpx;
+  padding: 10rpx;
+}
+
+.shop3{
+  color: #64c8d7;
+  font-size: 20rpx;
+  padding: 10rpx;
+}
+
+.st{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* white-space: nowrap; */
+}
+.kk{
+  margin: 20rpx 0 30rpx;
+}
+.shopStatus{
+  padding: 10rpx;
+  background: linear-gradient(to  right, #FE8D87, #FF6662);
+  border-radius:6rpx;
+  color: white;
+  font-size: 18rpx;
+  text-align: center;
+}
+.statu{
+  font-size: 20rpx;
+}
+.location{
+  font-size: 24rpx;
+}
+
+
+
+
+/* 滑动导航 */
+.scrollClass{
+  padding:15rpx 30rpx 33rpx;
+}
+
+.scroll-view{
+  overflow:auto;
+  width:auto;
+}
+
+.scrollViewClass{
+  display: flex;
+}
+
+.scrollItemClass{
+  font-size: 32rpx;
+  color: #333333;
+  margin-left: 26rpx;
+}
+
+.selectScrollClass{
+  color: #FF5C61;
+  font-size: 32rpx;
+  margin-left: 26rpx;
+}
+
+.left:nth-child(1){
+  margin-left: 0;
+}

@@ -1,0 +1,76 @@
+<!--pages/Agroecology/Agroecology.wxml-->
+<view>
+  <!-- 轮播 -->
+  <view>
+    <swiper class='banner' indicator-dots='true' autoplay='true' interval='5000' circular='true'>
+    <block wx:for="{{banner}}">
+      <swiper-item>
+        <image class='bannImg' src='{{item.imgUrls}}'></image>
+      </swiper-item>
+    </block>
+    </swiper>
+  </view>
+   <!-- 公告 -->
+  <view class='endlongSwiper'>
+    <image src='../../images/loudspeaker.png'></image>
+    <swiper  autoplay='true' interval='3000' duration='500' circular='true' vertical='true'>
+      <block wx:for="{{arr}}">
+        <swiper-item>
+          <text>{{item}}</text>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+    <!-- 导航 -->
+  <view class='funNav commWidth'>
+    <view class='navView'>
+      <image bindtap='goNav' data-id='0' src='http://www.shanxingniao.com/imgServer/images/use_test/nongyeshengtai/npticon1.jpg'></image>
+      <view>全国农场</view>
+    </view>
+    <view class='navView'>
+      <image bindtap='goNav' data-id='1' data-typename='健康农产' data-off='true' src='http://www.shanxingniao.com/imgServer/images/use_test/nongyeshengtai/npticon2.jpg'></image>
+      <view>健康农产</view>
+    </view>
+    <view  class='navView'>
+      <image data-id='2' bindtap='goNav' data-off='true' src='http://www.shanxingniao.com/imgServer/images/use_test/nongyeshengtai/npticon3.jpg'></image>
+      <view>平台招商</view>
+    </view>
+    <view class='navView'>
+      <image data-id='3' bindtap='goNav' data-off="true" src='http://www.shanxingniao.com/imgServer/images/use_test/nongyeshengtai/npticon4.jpg'></image>
+      <view>平台介绍</view>
+    </view>
+  </view>
+   <view class='classTitle'>— 精选景区 —</view>
+   <!-- <import src='../travelTemplate/travelTemplate.wxml' />
+  <template is="travelList" data="{{offcialList}}"></template> -->
+   <template name="travelList">
+  <block wx:for='{{offcialList}}' >
+    <!-- 灰条 -->
+    <view style='background:#f4f4f4;height:8rpx;width:750rpx;'></view>
+    <view class='commWidth' bindtap='goTravelOfficial' data-entrance='{{entrance}}' data-scenicCode='{{item.scenicCode}}' data-type='{{item.type}}' data-lat='{{item.lat}}' data-lng='{{item.lng}}' data-code='{{item.code}}' data-name='{{item.name}}' data-touristCode='{{item.touristCode}}' >
+      <view class='travel'>
+        <!-- 标题 -->
+        <view class='travelTitle'>
+          <text class='title'>{{item.title}}</text>
+          <image class='travelTitleImg' src='../../images/jiantou1.png'></image>
+        </view>
+        <!-- 大图 -->
+        <image class='mainImg' src='{{item.imgUrl}}'></image>
+        <!-- 底部 -->
+        <view class='travelFoot'>
+          <view class='travelTime'>
+            <image hidden='{{off}}' style='width:22rpx;height:30rpx;' src='../../images/dizhi.png'></image>
+            <text hidden='{{off}}' >{{item.distance/1000}}km</text>
+            <image style='width:30rpx;height:19rpx;' src='../../images/guancha.png'></image>
+            <text>{{item.exposureTimes < 5000?item.exposureTimes:'5000+'}}</text>
+          </view>
+          <view class='travelName'>
+            <image src='../../images/iconPhoto.jpg'></image>
+            {{item.name}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</template>
+</view>

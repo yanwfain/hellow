@@ -1,0 +1,47 @@
+<!--pages/order/order.wxml-->
+<!-- <view class='container'> -->
+<view class='lable' bindtap='selectTabb'>
+  <view class='{{selectStatuss1 ? "selectClass" : "labItem"}}' data-index='0'>全部</view>
+  <view class='{{selectStatuss2 ? "selectClass" : "labItem"}}' data-index='1'>已完成</view>
+  <view class='{{selectStatuss3 ? "selectClass" : "labItem"}}' data-index='2'>未支付</view>
+</view>
+
+  <view class='order' wx:for="{{orderList}}" wx:key="order" bindtap='orderDetail' data-code='{{item.code}}'data-payway='{{item.updatedBy}}'>
+    <view class='lableModule'>
+      <image src='{{item.shopImgUrl}}' class='lableImgg1' wx:if='{{item.shopImgUrl}}'></image>
+      <image src='http://www.shanniao.vip/imgServer/images/lijian.jpg?t=121354413' class='lableImgg1' wx:else></image>
+      <text class='lableTxt'>{{item.shopName}}</text>
+      <image src='../../images/jiantou1.png' class='lableImgg2'></image>
+    </view>
+    <view class='orderTime'>
+      <text decode="{{true}}">{{item.updatedAt}}</text> 
+        <text class='confirm'>{{item.statusType}}</text>  
+    </view>
+    <view class='forImg'>
+      <view class='orderImg' wx:for="{{item.retailOrderItemsList}}" wx:for-item="orderImgGroup" wx:key="orderImg">
+        <image mode="aspectFill"src="{{orderImgGroup.cover}}"></image>
+      </view>
+    </view>
+ 
+    <view class='orderNum'>
+      <view class='numMoney'>
+        <view wx:if="{{item.updatedBy =='NEW_RETAIL_OFFLINE'}}">线下支付，实付 <text class='orderMoney'>¥ {{item.salePrice/100}}</text> </view>
+        <view wx:else>共{{item.retailOrderItemsList.length}}件商品，实付 <text class='orderMoney'>¥ {{item.salePrice/100}}</text> </view>
+      </view>
+    </view>
+
+    <view class='oneMore' hidden="{{!selectStatuss1}}">
+     <view wx:if="{{item.status == '2'}}" catchtap='againBuy' data-index='{{index}}'>再来一单</view>
+     <view wx:if="{{item.status == '0'}}" catchtap='gobuy' data-index='{{index}}'>付款</view>
+    </view>
+
+    <view class='oneMore' catchtap='againBuy' hidden="{{!selectStatuss2}}" data-index='{{index}}'>
+     <view>再来一单</view>
+    </view>
+
+    <view class='oneMore' catchtap='gobuy' hidden="{{!selectStatuss3}}" data-index='{{index}}'>
+     <view>付款</view>
+    </view>
+
+  </view>
+<!-- </view> -->

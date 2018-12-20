@@ -1,0 +1,179 @@
+
+.bgImg{
+  width: 100%;
+  height: 100%;
+}
+.mineBox{
+  position: relative;
+  height: 347rpx;
+}
+.mineBox .userInfor{
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50%; 
+  transform: translate(-50%,-50%);
+}
+.userImg{
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 50%;
+  margin-bottom: 34rpx;
+  margin-right: 20rpx;
+}
+.userName{
+  color: #fff;
+  font-size: 36rpx;
+  margin-top: -25rpx;
+}
+/* 我的列表 */
+.userList{
+  background: #fff;
+  padding: 0 30rpx;
+  font-size: 30rpx;
+}
+.rights{
+  display: flex; 
+}
+.rights view{
+  line-height: 40rpx;
+  height: 40rpx;
+  color: #999;
+  border-radius:5px;
+  padding: 0 10rpx;
+  font-size: 28rpx;
+  margin-top: 31rpx;
+  border: 1rpx solid #999;
+  margin-right: 10rpx;
+}
+.userOrder{
+  display: flex;
+  justify-content: space-between;
+  height: 105rpx;
+  line-height: 105rpx;
+  border-bottom: 1rpx solid #eee;
+}
+.userOrders{
+  display: flex;
+  background: #f4f4f4;
+  justify-content: space-between;
+  line-height: 70rpx;
+  border-bottom: 1rpx solid #eee;
+  flex-wrap: wrap;
+}
+.userOrders text{
+  margin: 0 20rpx;
+  font-size: 28rpx;
+  color:#999;
+}
+.userOrder:last-child{
+  border-bottom:none;
+}
+.userOrder .shop{
+  color: #333;
+  margin-top: 22rpx;
+  position: relative;
+  top: 4rpx;
+}
+.userOrder .shopHone{
+  position: relative;
+  top: 4rpx;
+  color: #666;
+}
+.orderLeft{
+   width: 28rpx;
+  height: 36rpx; 
+  margin-right: 42rpx;
+  vertical-align: middle;
+  margin-left: 6rpx;
+}
+ .orderLeft1{
+  width: 35rpx;
+  height: 40rpx; 
+   margin-right: 40rpx; 
+  vertical-align: middle;
+}
+.orderLeft11{
+  width: 37rpx;
+  height: 39rpx;
+   margin-right: 38rpx; 
+  vertical-align: middle;
+}  
+.orderRight{
+  width: 14rpx;
+  height: 26rpx;
+  margin-top: 43rpx;
+} 
+.switch{
+  background: #fff;
+  text-align: center;
+  color: #ef2214;
+  line-height: 88rpx;
+  margin-top: 40rpx;
+  font-size: 30rpx;
+}
+.getUser{
+  font-size: 24rpx;
+  color: white;
+  background: #ff8b7c;
+}
+/* 弹出层 */
+.tance{
+  width: 100vw;
+  height: 100vh;
+  background:rgba(0,0,0,.6);
+  position:fixed;
+  top: 0;
+  align-items: center;
+  display: flex;
+}
+.tanceView{
+  width: 550rpx;
+  height: 400rpx;
+  background: #fff;
+  border-radius:10px;
+  margin:  auto;
+  display: flex;
+  align-items: center;
+}
+.tanceView text{
+  display: block;
+  font-size: 28rpx;
+  width: 500rpx;
+  line-height: 50rpx;
+  color: #999;
+  margin: 0 auto;
+}
+/* 分类导航 */
+.nav{
+  display: flex;
+  background: white;
+  flex-wrap: wrap;
+  margin-top: 50rpx;
+}
+.itemClass{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin-right: 40rpx; */
+  margin-top: 30rpx;
+  margin-left: 10rpx;
+  justify-content: center;
+}
+/* .itemClass:nth-child(1),.itemClass:nth-child(6),.itemClass:nth-child(11){
+  margin-left: 0;
+} */
+.itemImg{
+  width: 40rpx;
+  height: 40rpx;
+  margin-bottom: 0rpx;
+}
+.itemText{
+  font-size: 24rpx;
+  color: #333333;
+  width:127rpx;
+    /* border:1rpx solid black;   */
+  text-align:center;
+}

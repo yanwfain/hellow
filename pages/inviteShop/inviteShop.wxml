@@ -1,0 +1,10 @@
+<view class='cont'>
+  <view class='contName' style='width:260rpx'>店铺名：</view>
+  <view style='width:230rpx'>店铺账号：</view>
+  <view style='width:160rpx' class="">时间：</view>
+</view>
+<view class='cont' wx:for="{{inviteShop}}" wx:key=''>
+  <view class='contName' style='width:260rpx'>{{item.shopName}}</view>
+  <view style='width:230rpx'>{{item.beingPhone}}</view>
+  <view style='width:160rpx' class="">{{item.creatAt}}</view>
+</view>

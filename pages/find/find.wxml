@@ -1,0 +1,38 @@
+<!-- 分类滑块 -->
+<view class='cont' wx:if="{{loing != 'false'}}">
+  <scroll-view scroll-x class='scroX'>
+    <block wx:for='{{classFaly}}' wx:key=''>
+      <view class="classFaly {{off == index?'color':''}}" data-ide='{{index}}' bindtap='classFaly' >
+        {{item.name}}
+      </view>
+    </block>
+  </scroll-view>
+</view>
+<!-- 智慧文章 -->
+<view class='main' wx:if="{{loing != 'false'}}">
+  <view wx:for='{{getLifeWisdomList}}' class='wisdomView'>
+    <view class='lifeList' data-articlecode='{{item.code}}' bindtap='goLifeInfo'>
+        <image src='{{item.imageUrl}}' class='lifeImg'></image>
+        <view class='lifeText'>
+          <view class='conter'>{{item.mainContent}}</view>
+          <view class='author'>
+            <text>{{item.source}}</text>
+          </view>
+        </view>
+    </view>
+  </view>
+</view>
+<!-- 审核块 -->
+<view class='main' wx:if="{{loing === 'false'}}">
+  <view  class='wisdomView'>
+    <view class='lifeList' >
+        <image src='../../images/about.png' class='lifeImg'></image>
+        <view class='lifeText'>
+          <view class='conter'>{{lisa.name}}</view>
+          <view class='author'>
+            <text>{{lisa.lis}}</text>
+          </view>
+        </view>
+    </view>
+  </view>
+</view>

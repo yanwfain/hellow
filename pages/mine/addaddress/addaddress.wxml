@@ -1,0 +1,30 @@
+<!--pages/mine/addaddress/addaddress.wxml-->
+
+<form bindsubmit='commit'>
+  <view class='form_padding'>
+    <view class='add_container'>
+      <view class='left_text'>收件人</view>
+      <input class='input_style' placeholder='收货人姓名' placeholder-class='holder' name='receiver'value='{{address.customerName}}'></input>
+    </view>
+  </view>
+  <view class='form_padding'>
+    <view class='add_container'>
+      <view class='left_text'>联系电话</view>
+      <input class='input_style' placeholder='请填写收货手机号' placeholder-class='holder' name='phonenumber'value="{{address.customerMobile}}"></input>
+    </view>
+  </view>
+  <view class='form_padding'>
+    <view class='add_container'>
+      <view class='left_text'>详细地址</view>
+      <picker mode='region' value="{{selection}}" name='city' class='pick_style' bindchange='selectCity'>
+        <view class="{{isCity?'address_city':'holder'}}">{{city}}</view>
+      </picker>
+    </view>
+  </view>
+  <view class='form_padding'>
+  <textarea class='address_detail' placeholder='请输入详细地址信息' placeholder-class='holder' name='detail_address'value='{{address.customerAddress}}'></textarea>
+  </view>
+  
+<!-- <button class='submit' bindtap='location'>定位</button> -->
+  <button form-type='submit' class='submit'>确定</button>
+</form>

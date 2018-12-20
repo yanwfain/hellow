@@ -1,0 +1,58 @@
+.mineBox{
+  width: 100vw;
+  height: 346rpx;
+  text-align: center;
+  background: linear-gradient(to top, rgba(254, 141, 135, 1),rgba(254, 102, 98, 1));
+}
+.fonts{
+  font-size: 38rpx;
+  color: #fff;
+  font-weight: 600;
+}
+.photoImg{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 250rpx;
+  margin: 20rpx auto;
+}
+.signInCon{
+  width: 700rpx;
+  height: 40rpx;
+  border-radius: 40rpx;
+  border: 1rpx solid #ff5c61;
+  margin: 50rpx auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.signIn{
+  height: 37rpx;
+  width: 97rpx;
+  position: relative;
+}
+.signInLeft{
+  border-radius:  37rpx 0 0 37rpx;
+}
+.signInright{
+  border-radius: 0 37rpx 37rpx 0;
+}
+.signInBack{
+  background: #ff5c61;
+}
+.sign{
+  width: 80rpx;
+  padding: 5rpx;
+  line-height: 36rpx;
+  font-size: 28rpx;
+  border-radius: 36rpx;
+  background: #ff5c61;
+  color: #fff;
+  position: absolute;
+  left: 10rpx;
+  bottom: -55rpx;
+  text-align: center;
+}
+.signBack{
+  background: #999;
+  width: 100rpx;
+}

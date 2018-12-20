@@ -1,0 +1,33 @@
+<!-- 商场头部 -->
+<view class='titleData'>
+  <image hidden="{{MakerDetail.sysShopImgInfo.imgUrl}}" src='../../images/wode.png' class='pohoto'></image>
+  <image src='{{MakerDetail.sysShopImgInfo.imgUrl}}' class='pohoto'></image>
+  <view class='message'>
+    <text>商户数量：{{MakerDetail.subStoreCount?MakerDetail.subStoreCount:'0'}}家商户</text>
+    <text bindtap='goShopLoc'>地址：{{MakerDetail.sysShopInfo.address}}</text>
+    <image src='../../images/place.png'></image>
+    <text class='pohotos' bindtap='pohotos'>商场相册</text>
+  </view>
+</view>
+<!-- banner -->
+<import src="../template/template.wxml" />
+<template is="shopBanner" data='{{lbList}}'></template>
+<!-- nav -->
+<import src="../template/template.wxml" />
+<template is='navList' data='{{navList}}'></template>
+<!-- 大类 -->
+<scroll-view scroll-x class='scroll'>
+  <view class='bigClass'>
+    <view class='bigClassTxt {{index == bigClassTxtNumber?"bigClassTxtColor":""}}' wx:for="{{MakerClass}}" wx:key bindtap='bigClassTxt' data-index='{{index}}'>
+      <view>{{item.typeName}}</view>
+      <view>{{item.count}}</view>
+    </view>
+  </view>
+</scroll-view>
+<!-- 分类 -->
+<view class='option'>
+  <view wx:for="{{navClass}}" bindtap='cut' data-index='{{index}}' class="optionTxt {{index == navClassTitle ? 'color':''}}">{{item.name}}</view>
+</view>
+<!-- 促销类列表 -->
+<import src="../template/template.wxml" />
+<template is='activityLists' data='{{AdvList}}'></template>

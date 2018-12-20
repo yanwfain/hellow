@@ -1,0 +1,151 @@
+<view>
+  <!--店铺基本信息展示  -->
+  <view class='searchBox' id='top'>
+    <view class='shopHeaderInfo'>
+      <!--头图展示并可以获取店铺记录  -->
+      <image src='http://www.shanniao.vip/imgServer/images/lijian.jpg?t=121354413' class='headerImg' wx:if='{{shop.sysShopImgInfoList[0].imgUrl == null}}'></image>
+      <image src='{{shop.sysShopImgInfoList[0].imgUrl}}' class='headerImg' wx:else></image>
+      <!--店铺基本信息并能拨打电话  -->
+      <view class='shopname'>
+        <view class='shopTitle'>
+          <text class='name'>{{shop.name}}</text>
+          <view class='yystatus'>{{shop.sysShopBussinessInfo.isOpen == 1 ? "营业" : "停业"}}</view>
+        </view>
+        <view class='text2 textRed'>新社群+新零售</view>
+        <view class='phoneClass'>
+          <text class='text2'>电话：{{shop.servicePhone}}</text>
+          <image src='../../images/dianhuaImg.png' class='phoneImg' bindtap='callPhone'></image>
+          <view class='txt' bindtap='goMap'>举报</view>
+        </view>
+        <text class='text2'>{{shop.address}}</text>
+        <view class='mapTxt'>
+        </view>
+      </view>
+      <view class='shouCang' bindtap='saveShop'>{{off == 1 ? "取消收藏" : "+ 收藏"}}</view>
+    </view>
+    <!-- 距离 -->
+    <view class='seas'>
+      <view class='km'>
+        <text style='color:red'>↓</text> 距离您：{{km / 1000}}km
+      </view>
+      <image src='../../images/map.jpg' bindtap='goMaps'></image>
+    </view>
+    <!-- <view class='sea'>
+      <view class='search' bindtap='search'>
+        <image class='searImg' src='../../images/ss.png'></image>
+        <input placeholder='请输入商品名称' bindinput='values' disabled="true " bindconfirm='seek'></input>
+      </view>
+    </view> -->
+    <view class='navList'>
+      <view class='navLists' wx:for='{{nav}}' bindtap='selectNav' data-name='{{item.name}}'>
+        <image src='{{item.img}}'></image>
+        <view style="{{itName == item.name?'color:#ff5c61':''}}">{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 首页&&促销 -->
+  <view class='indexs' wx:if="{{itName == '首页' || itName == '促销活动'}}">
+    <view>
+      <view class='topType'>促销活动</view>
+      <view class='promotion'>
+        <block wx:for="{{promotion}}" wx:key='{{index}}' wx:if="{{index < 6}}">
+          <view class='promotionImg' data-shopCode='{{item.code}}' bindtap='proTap'>
+            <image src='{{item.cover}}' mode="aspectFill"></image>
+            <view class='proTxt'>
+              <text>店铺活动</text>
+            </view>
+          </view>
+          <view class='abstract'>{{item.name}}</view>
+        </block>
+      </view>
+    </view>
+  </view>
+  <!-- 产品 -->
+  <view class='indexs product' wx:if="{{itName == '产品'}}">
+    <scroll-view scroll-y="true" class='scrollY' style='{{iphoneX == 724?"height:850rpx;":""}}'>
+      <view class="tab_item {{currentTab==index?'active':''}}" wx:for="{{productTypeList}}" wx:key="typeItem" data-current="{{index}}" data-name='{{item.name}}' bindtap="switchTab">{{item.name}}</view>
+    </scroll-view>
+    <scroll-view scroll-y="true" bindscrolltolower="loadMore" class='productScroll' style='{{iphoneX == 724?"height:850rpx;":""}}'>
+      <view class='topType'>{{typeName}}</view>
+      <view class='productwrap'>
+        <view wx:for="{{expertList}}" wx:key="code" class='productitem'>
+          <view class='item_swiper'>
+            <view class="item_ans" bindtap='details' data-id='{{index}}' data-code='{{item.code}}'>
+              <view class="avatar">
+                <image class="img" mode='aspectFill' src="{{item.cover}}"></image>
+              </view>
+              <view class="expertInfo">
+                <view class="name">{{item.name}}</view>
+                <view class="flavor">
+                  <text class='taste'>已售{{item.salesVolume}}</text>
+                </view>
+                <view class="askBtn">
+                  <view class="price">
+                    <text class="saletext">¥{{item.salePrice/100}}</text>
+                    <text class='throughline' hidden='{{item.salePrice/100 >= item.originPrice/100 ? true : false}}'>{{item.originPrice?item.originPrice/100:""}}</text>
+                  </view>
+                  <view class='minAdd'>
+                    <image catchtap='minus' hidden='{{item.count==0}}' data-index='{{index}}' src='../../images/reduce.png'></image>
+                    <view class='change' hidden='{{item.count==0}}'>{{item.count}}</view>
+                    <image src='../../images/jia.png' catchtap='plusPro' data-index='{{index}}'></image>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view style='height:20rpx;width:50rpx;'></view>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 公司简介 -->
+  <view class='indexs' wx:if="{{itName == '我们'}}">
+    <image class='shopPhoto' src='{{shop.sysShopImgInfoList[0].imgUrl}}'></image>
+    <view class='abutUs'>关于我们</view>
+    <!-- <view class='txtabout'>标题：{{investment.name}}</view> -->
+    <view class='txtabout'>店铺：{{investment.name}}</view>
+    <view class='txtabout'>店长：{{investment.contactUser}}</view>
+    <view class='txtabout'>联系我们：{{investment.contactNumber}}</view> 
+    <block wx:for="{{investment.shopInvestmentCooperationImgs}}" wx:key >
+      <image class='abutUsImg' mode='aspectFill' src='{{item.imgUrl}}'></image>
+      <text class='abutUsTxt'>{{item.imgUtlDes}}</text>
+    </block>
+    
+  </view>
+  <!-- 招商 -->
+  <view class='indexs' wx:if="{{itName == '招商合作'}}">
+    <view class='investment' wx:for="{{investment}}" wx:key bindtap='goInvestment' data-code='{{item.investmentCooperationCode}}'>
+      <view class='investmentTitle'>{{item.title}}</view>
+      <image src='{{item.imgUrl}}' mode="aspectFill"></image>
+      <view class='inButton'>
+        <text>{{item.name}}</text>
+        <text>{{item.describe/1000}}</text>
+      </view>
+    </view>
+  </view>
+<!-- 附近的店 -->
+<view class='titles'  wx:if="{{itName == '首页' || itName == '促销活动'}}">- 附近的店 -</view>
+<import src='../template/template.wxml'/>
+<template is="{{itName == '首页' || itName == '促销活动'?'store':''}}" data="{{shopItemInfo}}" />
+</view>
+<!--底部按钮  -->
+<view class='shop_bottom' id='bottom'>
+  <view class='flex_item bottomBtnStyle' bindtap='goSnIndex'>
+    <image src='../../images/pintai.png'></image>
+    <text>平台</text>
+  </view>
+  <view class='flex_item fenXiangBtn'>
+    <button plain="让生意,及所能及" class='sharImg sharBtnClass' open-type='share' hover-class="other-button-hover">分享</button>
+    <view class='bottomBtnStyle'>
+      <image src='../../images/fenxiang.png'></image>
+      <text>分享</text>
+    </view>
+  </view>
+  <!--数量展示  -->
+  <view class='fixed flex_item' wx:if="{{itName == '产品'}}" bindtap='goToShopCar' style='flex:2 0 25%;'>
+    <image class='fixImg' src='../../images/shopcar.png'></image>
+    <view class='fixNum'>{{fixNum}}</view>
+    <view class='fixText'>购物车</view>
+  </view>
+</view>
+<view style='width:108rpx;height:108rpx;'></view>

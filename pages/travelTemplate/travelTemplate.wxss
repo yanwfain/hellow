@@ -1,0 +1,313 @@
+/* banner轮播 */
+.banner{
+  width: 100%;
+  height: 406rpx;
+}
+.bannImg{
+  width: 100%;
+  height: 100%;
+}
+/* 旅游列表 */
+.travel{
+  width: 100%;
+  margin-bottom: 10rpx;
+}
+.travelTitle{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* font-size: 34rpx; */
+}
+.title{
+  width: 630rpx;
+  color:#666;
+  font-size:28rpx;
+  font-weight:400;
+  line-height:50rpx;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:1;
+  overflow:hidden;
+  margin-top: 10rpx;
+}
+.travelTitleImg{
+  width: 14rpx;
+  height: 26rpx;
+}
+.mainImg{
+  width: 100%;
+  height: 300rpx;
+  margin: 10rpx 0 0 0;
+  border-radius: 3px;
+  /* vertical-align:middle; */
+}
+.travelFoot{
+  width: 100%;
+  height: 54rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.travelName{
+  width: 400rpx;
+  color: #0c335c;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:1;
+  overflow: hidden;
+  font-size: 28rpx;
+  margin-top: 8rpx;
+  line-height: 46rpx;
+  text-align: right;
+  align-items: center;
+}
+.travelName image{
+  width: 35rpx;
+  height: 35rpx;
+  margin-top: -3rpx;
+}
+.travelTime{
+  align-items: center;
+}
+.travelTime image{
+  /* -webkit-filter: grayscale(100%); */
+  opacity: .7;
+  margin: 0 5rpx;      
+}
+.travelTime text{
+  font-size: 24rpx;
+  color: #999;
+}
+/* 附近的店CLASS */
+.shopList {
+  display: flex;
+  flex-direction: column;
+}
+.shopItem {
+  background: #fff;
+  display: flex;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 15rpx 40rpx;
+}
+.shopItem:last-child {
+  border-bottom: none;
+}
+.shopImg {
+  /* width: 154rpx;
+  height: 154rpx; */
+  width: 146rpx;
+  height: 148rpx;
+  margin-right: 32rpx;
+  border-radius: 6rpx;
+}
+.shopInfo {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+.infoText {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.up {
+  display: flex;
+  width: 493rpx;
+  justify-content: space-between;
+}
+.shopName {
+  font-size: 28rpx;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 70%;
+}
+.shopText {
+  font-size: 22rpx;
+  display: flex;
+  color: #999;
+  align-items: center;
+}
+.shopTexts {
+  margin-top: 45rpx;
+}
+.shop1 {
+  color: #d58c88;
+  font-size: 20rpx;
+  padding: 10rpx;
+}
+.shop2 {
+  color: #104883;
+  font-size: 20rpx;
+  padding: 10rpx;
+}
+.shop3 {
+  color: #1d60a7;
+  font-size: 20rpx;
+  padding: 10rpx;
+}
+.st {
+  width: 450rpx;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.kk {
+  margin: 5rpx 0;
+  width: 240rpx;
+  border-radius: 3px;
+  border: 1rpx solid rgb(253, 153, 147);
+  font-size: 20rpx;
+  color: #fe8d87;
+  text-align: center;
+}
+.shopStatus {
+  padding: 10rpx;
+  background: linear-gradient(to right, #fe8d87, #ff6662);
+  border-radius: 6rpx;
+  color: white;
+  font-size: 18rpx;
+  text-align: center;
+}
+.statu {
+  font-size: 20rpx;
+}
+.location {
+  font-size: 24rpx;
+}
+/*分类导航*/
+.nav{
+  display: flex;
+  padding: 0 0rpx 5rpx;
+  width: 720rpx;
+  margin: 0 auto;
+   /* justify-content:space-between;  */
+  background: white;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+}
+.ambitus{
+  position: absolute;
+  top: -8rpx;
+  left: -80rpx;
+  width: 200rpx;
+  font-size: 18rpx;
+  background: #fe8d87;
+  color: #fff;
+  padding-top: 30rpx;
+  text-align: center;
+  transform: rotate(-45deg);
+}
+.itemClass{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin-right: 40rpx; */
+  margin-top: 13rpx;
+  margin-left: 20rpx;
+  justify-content: space-between;
+}
+.itemClass:nth-child(11){
+  margin-left: 0;
+}
+.itemImg{
+  width: 75rpx;
+  height: 75rpx;
+  margin-bottom: 0rpx;
+}
+.itemText{
+  font-size: 24rpx;
+  color: #333333;
+  width:120rpx;
+    /* border:1rpx solid black;   */
+  text-align:center;
+}
+/* 分类 */
+
+.ify {
+  width: 690rpx;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  height: 80rpx;
+  align-items: center;
+  font-size: 30rpx;
+  position: relative;
+
+  border-bottom: 1rpx solid #e5e5e5;
+}
+
+.ify view {
+  text-align: center;
+  width: 33%;
+}
+
+.ify view image {
+  width: 20rpx;
+  height: 20rpx;
+  margin-left: 10rpx;
+}
+
+.ify .mlode {
+  transition: all 0.3s;
+  position: absolute;
+  top: 83rpx;
+  height: 0rpx;
+  overflow: hidden;
+  width: 690rpx;
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 10;
+}
+
+.ify .mlodes {
+  overflow: auto;
+  transition: all 0.5s;
+  height: 520rpx;
+}
+
+.mlodeOne {
+  width: 200rpx;
+  height: 500rpx;
+  background: #f4f4f4;
+  text-align: center;
+}
+
+.mlodeTwo {
+  width: 400rpx;
+  height: 500rpx;
+}
+
+.rights {
+  position: absolute;
+  right: 0;
+}
+
+.centers {
+  margin: 0 auto;
+}
+
+.mlodeOne .option {
+  width: 200rpx;
+  line-height: 68rpx;
+  font-size: 28rpx;
+  color: #666;
+  text-align: center;
+  font-weight: 400;
+}
+
+.mlodeOne .colorr, .mlodeTwo .colorr {
+  color: #ff5c61;
+  background: #fff;
+}
+
+.mlodeTwo view {
+  width: 400rpx;
+  line-height: 68rpx;
+  font-size: 28rpx;
+  color: #666;
+}

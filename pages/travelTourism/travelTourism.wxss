@@ -1,0 +1,74 @@
+@import '../travelTemplate/travelTemplate.wxss';
+/* 导航class */
+/* .pullDown{
+  height: 90rpx;
+  width: 100%;
+  margin: 0 auto;
+  background: green;
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+}
+.pullDown view{
+  text-align: center;
+  align-items: center;
+}
+.pullDownOne{
+  width: 50%;
+}
+.pullDownTwo{
+  width: 25%;
+}
+.pullDown image{
+  width: 25rpx;
+  height: 25rpx;
+  transition: all .5;
+  margin-left: 10rpx;
+  margin-top: -7rpx;
+}
+.pullDownClick{
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+.pullPosition{
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, .6);
+  position: absolute;
+  z-index: 1;
+  top: 0;
+}
+.pillClass{
+  width: 690rpx;
+  display: flex;
+  height: 75vh;
+  padding: 20rpx 30rpx;
+  background: #fff;
+  position: absolute;
+  top: 90rpx;
+  z-index: 2;
+}
+.scrollHei{
+  height: 100%;
+}
+.pullClassScroll{
+  width: 300rpx;
+  border: 
+} */
+.nearbyShop{
+  width: 100%;
+  line-height: 55rpx;
+  color: #666;
+  text-align: center;
+  font-size: 28rpx;
+}
+/* 轮播 */
+.lbImg{
+  width: 100%;
+  height: 406rpx;
+}
+.swip{
+  padding: 4rpx;
+  background: #f4f4f4;
+}

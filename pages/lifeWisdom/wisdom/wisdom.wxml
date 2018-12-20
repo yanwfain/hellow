@@ -1,0 +1,13 @@
+<!--pages/lifeWisdom/wisdom/wisdom.wxml-->
+<!-- <text>pages/lifeWisdom/wisdom/wisdom.wxml</text> -->
+
+<view class='main'>
+  <view class='infoLable'>{{infoList[0].title}}</view>
+  <image src='{{infoList[0].headImg}}' class='wisImg' bindtap='goPintai'></image>
+  <view>
+    <view class='wisdomView' wx:for='{{infoList[0].articleImgInfo}}'>
+        <text class='infoText' wx:if='{{item.content}}' selectable='true'>{{item.content}}</text>
+        <image src='{{item.picture}}' class='infoImg' wx:if='{{item.picture}}'></image>
+    </view>
+  </view>
+</view>

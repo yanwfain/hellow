@@ -1,0 +1,79 @@
+<view class='main'>
+  <view class='active'>
+    <view class='activeInfo'>
+      <video wx:if="{{videoUrl}}" src='{{video}}' style='width:100%'></video>
+      <image wx:if="{{!videoUrl}}" src='{{fok != 1?activeInfo[0].cover:selects[0].imgUrl}}' data-id='{{fok != 1?0:1}}' data-url='{{fok != 1?activeInfo[0].cover:selects[0].imgUrl}}' mode="widthFix" class='activeImg' bindtap='previewImg'></image>
+
+      <view class='activeName fontW' style='width:620rpx'>{{activeInfo[0].activeName}}
+        <text class='txt' bindtap='goMaps'>举报</text>
+      </view>
+      <text class='activeName'>店铺名称：{{activeInfo[0].shopName}}</text>
+      <text class='activeTime'>活动时间：{{activeInfo[0].beginTime}}-{{activeInfo[0].endTime}}</text>
+      <text class='activeContent'>{{activeInfo[0].activeContent}}</text>
+      <text class='activeAddress'>{{activeInfo[0].activeAddress}}</text>
+      <text class='hint activeAddress'>图片仅供参考，以到店为准。</text>
+      <!-- 地图导航 -->
+      <view class='seas'>
+        <image src='../../images/map.jpg' bindtap='goMap'></image>
+      </view>
+      <!-- 文字轮播 -->
+      <view class='txtBanner' wx:if="{{hides != 1}}">
+        <view class='txtBannerView'>
+          <swiper style='height:150rpx;' autoplay='true' interval='3000' duration='500' circular='true' vertical='true'>
+            <block wx:for="{{txtBanner.cuAdv1}}" wx:key>
+              <swiper-item>
+                <view class='swipers'>
+                  <text class='fontSizeTxt'>{{item.activeContent}}</text>
+                </view>
+
+              </swiper-item>
+            </block>
+          </swiper>
+        </view>
+        <view class='txtBannerView'>
+          <swiper style='height:150rpx;' autoplay='true' interval='3000' duration='500' circular='true' vertical='true'>
+            <block wx:for="{{txtBanner.cuAdv2}}" wx:key>
+              <swiper-item>
+                <view class='swipers'>
+                  <text class='fontSizeTxt'>{{item.name}}</text>
+                </view>
+              </swiper-item>
+            </block>
+          </swiper>
+        </view>
+      </view>
+      <image wx:if="{{fok != 1}}" src='{{activeInfo[0].coverThird}}' data-id='0' data-url='{{activeInfo[0].coverThird}}' class='activeImg imgCenter' bindtap='previewImg'></image>
+      <block wx:for='{{selects}}' wx:key='' wx:if="{{fok == 1}}">
+        <image class='activeImg' wx:if="{{index != 0}}" src="{{item.imgUrl}}" data-id='1' data-url='{{item.imgUrl}}' mode="widthFix" bindtap='previewImg'></image>
+        <view wx:if="{{index != 0}}">{{item.describe}}</view>
+      </block>
+    </view>
+  </view>
+  <view style='width:100vw;height:10rpx;'>
+
+  </view>
+  <view class='bottomBtn'>
+    <view class='flexItem' bindtap='goShop'>
+      <image src='../../images/shopImg.png' class='flexItemImg'></image>
+      <text class='flexItemText'>店铺</text>
+    </view>
+    <view class='flexItem btnPosition'>
+      <image src='../../images/kaidian.png' class='flexItemImg'></image>
+      <text class='flexItemText'>{{off == 0 ? '收藏':'取消收藏'}}</text>
+      <button class='positionBtn' plain='true' style='border:none;' bindtap='saveShop'></button>
+    </view>
+    <view class='flexItem btnPosition'>
+      <image src='../../images/fenxiang.png' class='flexItemImg'></image>
+      <text class='flexItemText'>分享</text>
+      <button class='positionBtn' plain='true' style='border:none;' open-type='share'></button>
+    </view>
+    <view class='flexItemRight' bindtap='goOpenShop'>开店，我也要发！</view>
+  </view>
+  <view class='recommend'>— 推荐店铺 —</view>
+  <!--店目录  -->
+  <import src="../template/template.wxml" />
+  <template is="store" data='{{shopItemInfo}}'></template>
+</view>
+
+
+<view style='width:112rpx;height:112rpx;'></view>

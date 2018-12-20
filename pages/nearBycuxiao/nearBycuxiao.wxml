@@ -1,0 +1,55 @@
+<view class='main'>
+  <swiper class='shop_swiper lbImg' indicator-dots autoplay="true" interval="5000" duration="1000" circular='true' hidden='{{luboActive}}' bindtap='goActiveInfo'>
+    <block wx:for="{{lbList}}" wx:key="">
+      <swiper-item >
+        <!-- <view class='lbImga'  > -->
+        <image src="{{item.sysAdvertData.imgUrl}}" class='lbImg' data-activecode="{{item.sysAdvertActivityInfo.activityCode}}" data-activename="{{item.activeName}}" />
+        <!-- </view> -->
+      </swiper-item>
+    </block>
+  </swiper>
+  <!--颜色分割条  -->
+  <view class='slectColor'></view>
+  <!-- 排序分类 -->
+  <import src="../template/template.wxml"/>
+  <template is='classFily' data='{{classList,Citys,Sort,pull,claId,tabList,tabListSingle,wid,lefts,imges}}'></template>
+  <!--颜色分割条  -->
+  <view class='slectColor'></view>
+  <!--附近促销、附近的店展示  -->
+  <view hidden='{{listStatus}}'>
+    <!--附近促销、附近的店  -->
+    <view class='nearStatus' bindtap='selectBigClass'>
+      <view class='nearShop'>
+        <text class='{{selectStatus ? "shText" : "shText selectClass"}}' data-text='附近的店'>附近的店</text>
+      </view>
+      <view class='nearCuxiao'>
+        <text class='{{selectStatus ? "cuxiaoText selectClass" : "cuxiaoText"}}' data-text='附近促销'>附近促销</text>
+      </view>
+    </view>
+    <!--展示列表  -->
+    <import src="../template/template.wxml" />
+    <template is='{{selectStatus?"activityList":""}}' data='{{shopItemInfo}}'></template>
+    <!-- 附近的店 -->
+    <import src="../template/template.wxml" />
+    <template is='{{!selectStatus?"store":""}}' data='{{shopItemInfo}}'></template>
+  </view>
+  <!-- 生活智慧 -->
+  <view class='main' hidden='{{!listStatus}}'>
+    <view class='mamText'>生活智慧</view>
+    <view wx:for='{{getLifeWisdomList}}' class='wisdomView'>
+      <view class='lifeList' data-articlecode='{{item.code}}' bindtap='goLifeInfo'>
+        <image src='{{item.imageUrl}}' class='lifeImg'></image>
+        <view class='lifeText'>
+          <view class='conter'>{{item.mainContent}}</view>
+          <view class='author'>
+            <text>{{item.source}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+<!-- 置顶 -->
+<image class='isTop' src='../../images/isTop.png' bindtap='isTop'></image>

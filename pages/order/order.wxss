@@ -1,0 +1,113 @@
+/* pages/order/order.wxss */
+
+.lable{
+  display: flex;
+}
+
+.lableModule{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.lableImgg1{
+  width: 60rpx;
+  height: 60rpx;
+  display: block;
+  border-radius: 50%;
+  /* border: 1rpx solid; */
+}
+
+.lableTxt{
+  color: #333333;
+  font-size: 32rpx;
+  /* border: 1rpx solid; */
+  margin: 0 20rpx 0 30rpx;
+}
+
+.lableImgg2{
+  width: 14rpx;
+  height: 26rpx;
+  display: block;
+  /* border: 1rpx solid; */
+}
+
+.labItem{
+  flex: 1;
+  /* align-items: center;
+  justify-content: center; */
+  text-align: center;
+  font-size: 32rpx;
+  padding: 20rpx 0;
+  margin-bottom: 20rpx;
+  background: white;
+  border-top: 1rpx solid #e5e5e5;
+}
+
+.selectClass{
+  background: #FF5C61;
+  color: white;
+  flex: 1;
+  font-size: 32rpx;
+  padding: 20rpx 0;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+
+
+.order{
+  background: #fff;
+  padding: 32rpx 24rpx 40rpx 24rpx;
+  margin-bottom: 16rpx;
+}
+.order .orderTime{
+  color: #999;
+  font-size: 28rpx;
+  display: flex;
+  justify-content: space-between;
+  margin:0 16rpx 24rpx 0;
+
+}
+.order .confirm{
+  color: #333;
+}
+.forImg{
+  display: flex; 
+  flex-wrap: wrap;
+}
+.orderImg{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32rpx;
+  width: calc(100%/4);
+  align-items: center;
+}
+.orderImg image{
+  width: 140rpx;
+  height: 140rpx;
+}
+.orderNum{
+  display: flex;
+  justify-content: flex-end;
+  color: #666;
+  font-size: 28rpx;
+  margin-bottom: 24rpx;
+  margin-left: 16rpx;
+  margin-right: 16rpx;
+}
+.orderNum .orderMoney{
+  color: #000;
+}
+.oneMore{
+  display: flex;
+  justify-content: flex-end;
+  color: #FF5C61;
+  font-size: 28rpx;
+}
+.oneMore view{
+  border: 1rpx solid #FF5C61; 
+  padding: 12rpx 28rpx; 
+  border-radius: 6rpx;
+  margin-left: 16rpx;
+  margin-right: 16rpx;
+}

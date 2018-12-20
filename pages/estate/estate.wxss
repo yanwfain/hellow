@@ -1,0 +1,126 @@
+
+/* 轮播图 */
+.lbImg{
+  width:100%;
+  height: 406rpx;
+}
+/* 地址选择 */
+
+/* .seckreg{
+  overflow: auto;
+  transition: all 0.5s;
+  height: 520rpx;
+} */
+.seckregion{
+  width: 100%;
+  line-height: 70rpx;
+  display: flex;
+  font-size: 34rpx;
+  background: #fff;
+}
+.xiala {
+  width: 20rpx;
+  height: 20rpx;
+  margin-left: 10rpx;
+}
+
+.sekcen {
+  width: 33%;
+  text-align: center;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.masking{
+  width: 100%;
+  height: 100vh;
+  top: 475rpx;
+  background: rgba(0, 0, 0, .4);
+}
+.masView1{
+  width: 250rpx;
+  height: 450rpx;
+  font-size: 30rpx;
+  color: #666;
+}
+.masView1 view{
+  width: 100%;
+  line-height: 70rpx;
+  text-align: center;
+}
+.masView{
+  width: 750rpx;
+  height: 500rpx;
+  display: flex;
+  background: #fff;
+}
+.fontS{
+  color: #ff5c61;
+  font-weight: 900
+}
+/* 精选 */
+
+.center {
+  width: 690rpx;
+  padding: 50rpx;
+  top:405rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.centers {
+  width: 690rpx;
+  background: #f4f4f4;
+  top:474rpx;
+  padding: 40rpx;
+}
+.text {
+  width: 150rpx;
+  line-height: 90rpx;
+  padding: 0 10rpx;
+  text-align: center;
+  margin: 20rpx 0;
+  border: 1rpx solid #f4f4f4;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.cityArr{
+  width: 100%;
+  padding: 20rpx 0;
+  font-size: 34rpx;
+  font-weight: 900;
+}
+.cityArrs{
+  text-align: center;
+  width: 100%;
+  font-size: 30rpx;
+  color: #666;
+}
+.centerList{
+  width: 690rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+.titles{
+  padding: 20rpx 0 10rpx 0;
+  font-size: 32rpx;
+  font-weight: 600;
+}
+.listDan{
+  width: 115rpx;
+  margin: 0 0 -1rpx -1rpx;
+  text-align: center;
+  font-size: 26rpx;
+  padding: 0 10rpx;
+  color: #666;
+  height: 80rpx;
+  line-height: 80rpx;
+  border:1rpx solid #f4f4f4;
+  /* display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical; */
+  overflow: hidden;
+  background: #fff;
+}

@@ -1,0 +1,45 @@
+<!-- 头部 -->
+<view class='adveTitle' id='goTop'>
+  <view class='adveTwo'>已转让：{{int}}</view>
+  <view class='adveTwo'>累计收益：{{gold}}</view>
+</view>
+<!-- 收益部分 -->
+<view class='earnings'>
+  <!-- <view bindtap='goMany' class="{{off == 2?'back':''}}" data-id='2'>转让明细</view> -->
+  <view >广告投放金转让</view>
+
+</view>
+<!-- 明细部分 -->
+<!-- <view class='detail' wx:if="{{off == 2}}" wx:for="{{details}}" wx:key=''>
+  <view>手机号:{{item.beingPhone}}</view>
+  <view class='big'>店名称:{{item.shopName}}</view>
+  <view class='big'>转出:{{item.money}}</view>
+  <view class='big'>时间:{{item.creatAt}}</view>
+</view> -->
+<!-- 转出层 -->
+<view class='centers'>
+  <form bindsubmit='accounts'>
+    <view class='cont'>
+      <text>转入手机号：</text>
+      <input type='text' name='phone' data-id='0' bindinput='inp'></input>
+    </view>
+    <view class='cont'>
+      <text>转出金额：</text>
+      <input type='text' name='gold' data-id='1' bindinput='inp'></input>
+    </view>
+    <view class='cont'>
+      <text>您的名字：</text>
+      <input type='text' name='name'  value='{{contactPhone.contactName}}' data-id='2'  bindinput='inp'></input>
+    </view>
+    <view class='cont'>
+      <text>您的手机号：</text>
+      <input type='text' name='phones' value='{{contactPhone.contactPhone}}' data-id='3'  bindinput='inp'></input>
+    </view>
+    <view class='conts'>
+      <button bindtap='accounts' class='buts' type='primary'>转出</button>
+    </view>
+  
+  
+  </form>
+</view>
+<view style='height:600px;width:100px;'></view>

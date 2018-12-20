@@ -1,0 +1,68 @@
+<view class='orderDetails'>
+  <view class='details_box'>
+    <view class='details_img' wx:for="{{orderDetail.retailOrderItemsList}}" wx:key="iconList">
+      <view class='details_left'>
+        <image class='icon' src='{{item.cover}}'></image>
+        <view class='product_title'>
+          <text class='ware'>{{item.productName}}</text>
+          <view class='prix'>x<text>{{item.buyCount}}</text></view>
+        </view>
+      </view>
+    <view class='rate'>¥<text>{{item.salePrice*item.buyCount/100}}</text></view>
+    </view>
+  </view>
+</view>
+<view class='cost'>
+  <view class='packCost'>
+    <text>包装费</text>
+    <text>¥0.0</text>
+  </view>
+  <view class='packCost'>
+    <text>配送费</text>
+    <text>¥{{orderDetail.deliveryFee/100}}</text>
+  </view>
+  <view class='packCost packCostOne'>
+    <text>随机立减</text>
+    <text>¥{{orderDetail.preferentialFee/100}}</text>
+  </view>
+  <view class='actPackCost'>
+    <text>实际支付</text>
+    <text class='actCostNum'>¥{{orderDetail.salePrice/100}}</text>
+  </view>
+</view>
+<view class='disInfor'>
+  <view class='disInforTxt'>配送信息</view>
+  <view class='specific'>
+    <text>收货信息</text>
+    <view class='sh_infor'>
+      <view class='sh_Person'>{{orderDetail.customerDeliveInfo.customerName}}<text class='sh_Tel'>{{orderDetail.customerDeliveInfo.customerMobile}}</text></view>
+      <view class='sh_Address'>{{orderDetail.customerDeliveInfo.customerAddress}}</view>
+    </view>
+  </view>
+  <view class='distriWay'>
+    <text>配送方式</text>
+    <text class='zxDistriWay'>{{zxDistriWay}}</text>
+  </view>
+</view>
+
+<view class='disInfor dingDan'>
+  <view class='disInforTxt'>订单信息</view>
+  <view class='orderWay'>
+    <text class='number'>订单号码</text>
+    <view>    
+      <text class='order_number'>{{orderDetail.orderSn}}</text>
+      <text class='col_line'>|</text>
+      <text class='copy'>复制</text>
+    </view>   
+  </view>
+  <view class='time_box'>
+    <text class='order_time'>下单时间</text>
+    <view class='sure_time'>
+      <view class='year_time'>{{orderDetail.updatedAt}}</view>
+    </view>
+  </view>
+  <view class='time_box pay'>
+    <text class='order_time'>支付方式</text>
+    <view class='payfor_way'>{{payfor_way}}</view>
+  </view>
+</view>

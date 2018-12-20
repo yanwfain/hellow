@@ -1,0 +1,38 @@
+<!-- 轮播 -->
+<import src='../travelTemplate/travelTemplate.wxml' />
+<template is="banner" data='{{banner}}'></template>
+<!-- 行业入口 -->
+<view class='title'>—及及·行业—</view>
+<view class='portal'>
+  <block wx:for="{{channel}}">
+    <view style='background:#f4f4f4;width:100vw;height:8rpx;margin-left:-15rpx;margin-bottom:15rpx;'></view>
+    <view class='portalFor {{item.dispark?"":"color"}}' data-platformCode='{{item.platformCode}}' bindtap='goChannel' data-status='{{item.status}}' data-id='{{item.id}}'>
+      <view class='portalTitle {{item.dispark?"":"colors"}}'>{{item.title}}</view>
+      <image class='portalImg' src='{{item.imgUrl}}'></image>
+    </view>
+  </block>
+  <!-- 乐水园 -->
+  <!-- <block >
+    <view style='background:#f4f4f4;width:100vw;height:8rpx;margin-left:-15rpx;margin-bottom:15rpx;'></view>
+    <view class='portalFor' bindtap='waterpack' >
+      <view class='portalTitle'>及及·乐水园 带您畅游水世界</view>
+      <image class='portalImg' src='http://www.shanxingniao.com/imgServer/images/20181101/SYSUSERINFO201809271840550276931/small/697288ce4f494a5d86dc353583ee5cc0.jpg'></image>
+    </view>
+  </block> -->
+  <!-- 农场 -->
+  <!-- <block>
+    <view style='background:#f4f4f4;width:100vw;height:8rpx;margin-left:-15rpx;margin-bottom:15rpx;'></view>
+    <view class='portalFor' bindtap="agroecology">
+      <view class='portalTitle'>及及在身边+农业生态圈</view>
+      <image class='portalImg' src='http://www.shanxingniao.com/imgServer/images/20181220/SYSUSERINFO201812171658430429789/small/e50b294b2e0c48ae9dc755da5066d2fb.jpg'></image>
+    </view>
+  </block> -->
+  <!-- 期待更多 -->
+  <!-- <block>
+    <view style='background:#f4f4f4;width:100vw;height:8rpx;margin-left:-15rpx;margin-bottom:15rpx;'></view>
+    <view class='portalFor' bindtab="more">
+      <view class='portalTitle'>及及其他行业频道，陆续开放中</view>
+      <image class='portalImg' src='http://www.shanxingniao.com/imgServer/images/20181102/SYSUSERINFO20180928132705055512/small/30b2d6c4d1c4437598a7ef0f06b6448f.jpg'></image>
+    </view>
+  </block> -->
+</view>

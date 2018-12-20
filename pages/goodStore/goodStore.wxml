@@ -1,0 +1,51 @@
+<!--pages/goodStore/goodStore.wxml-->
+<!-- <text>pages/goodStore/goodStore.wxml</text> -->
+
+<view class='mian'>
+    <!--搜索  -->
+       <!-- <view class='sea'>
+        <view class='search'>
+            <image class='searImg' src='../../images/ss.png'></image>
+            <input placeholder='请输入店铺名称' bindconfirm='statusText' class='int'  confirm-type="搜索" type='text' bindinput='ss'></input> 
+        </view>
+      </view> -->
+      <!-- 滑动导航 -->
+<!-- <view class='scrollClass' wx:if='{{tabList}}'>
+    <scroll-view scroll-x style='height:45rpx;line-height:45rpx;white-space:nowrap;display:flex;' class='scroll-view'>
+        <view class='scrollViewClass' bindtap='selectTabItem'>
+          <block wx:for='{{tabList}}'>
+             <view class='{{item.scrollTab ? "left scrollItemClass" : "left selectScrollClass"}}' data-index='{{index}}'>{{item.typeName}}</view>
+          </block>
+        </view> 
+    </scroll-view>
+</view> -->
+    <!--店目录  -->
+        <view class='shopList' hidden='{{!status}}'>
+            <view class='shopItem' bindtap='getShopCode' wx:for='{{getGoodStoreList}}' data-code='{{item.code}}'>
+                <image src='http://www.shanniao.vip/imgServer/images/lijian.jpg?t=121354413' class='shopImg' wx:if='{{item.sysShopImgInfoList[0].imgUrl == null}}'></image>
+                <image src='{{item.sysShopImgInfoList[0].imgUrl}}' class='shopImg' wx:else></image>
+                <view class='shopInfo'>
+                    <view class='infoText'>
+                        <view class='up'>
+                            <text class='shopName'>{{item.name}}</text>
+                            <text class='shopStatus'>{{item.sysShopBussinessInfo.isOpen == 1 ? "营业" : "停业"}}</text>
+                        </view> 
+                        <view class='shopText kk'>
+                            <text class='shopText shop1' style='background: #fff4f2;padding:5rpx;'>起送价¥{{item.sysShopBussinessInfo.amountMoney == null || undefined || 0 ? "0" : item.sysShopBussinessInfo.amountMoney/100}}</text>
+                            <text class='shopText shop2' style='margin:0 28rpx;background: #fff3f7;padding:5rpx;'>{{item.sysShopBussinessInfo.deliveryFee == 0 || undefined || null ? "免配送费" : "配送费" + item.sysShopBussinessInfo.deliveryFee/100}}</text>
+                            <text class='shopText shop3' style='background: #f0fdff;padding:5rpx;'>月售{{~~item.buyCountByMonth}}单</text>
+                            <!-- <text class='shopText' style='display:flex;flex:1;justify-content:flex-end;'>{{item.distance/1000 < 0 ? "0" : item.distance/1000}}km
+                            </text> -->
+                        </view>
+                        <text class='shopText st'>{{item.address}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+
+
+        <view class='near' hidden='{{status}}'>
+          <image src='../../images/nearShop.png' class='nearShop'></image> 
+          <text class='nearText'>附近没有开通店</text>
+        </view>
+</view>

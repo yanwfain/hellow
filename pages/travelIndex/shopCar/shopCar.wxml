@@ -1,0 +1,45 @@
+<!--pages/index/shopCar.wxml-->
+<view wx:for="{{expertList}}" wx:key="list">
+  <view class="item_ans">
+    <checkbox-group bindchange="checkboxChange" data-index='{{index}}'>
+      <label class="checkbox">
+        <checkbox checked="{{item.checked}}" />
+      </label>
+    </checkbox-group>
+    <view class="avatar">
+      <image class="img" src="{{item.cover}}"></image>
+    </view>
+    <view class="expertInfo">
+      <view class="name">{{item.name}}</view>
+      <view class="tag">下雨天，咖啡和音乐更配</view>
+      <view class="askBtn">
+        <view class="price">¥
+          <text>{{item.salePrice/100}}</text>
+        </view>
+        <view class='minAdd'>
+          <image bindtap='minus' src='../../../images/reduce.png' data-index="{{index}}"></image>
+          <text class='change'>{{item.count}}</text>
+          <image bindtap='add' src='../../../images/jia.png' data-index="{{index}}"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 底部固定 -->
+<view class='bill_bottom'>
+  <view class='options'>
+    <view>起送:¥{{shopInfo.sysShopBussinessInfo.amountMoney/100}}</view>
+    <view>配送时间:{{shopInfo.sysShopBussinessInfo.openingHours+"--"+shopInfo.sysShopBussinessInfo.closingHours}}</view>
+  </view>
+  <view class='settlement'>
+    <view class='allSelect'>
+      <view class='selectTxt' bindtap='selectAll'>
+        <checkbox checked='{{selectAll}}'></checkbox>全选
+      </view>
+      <text>¥{{totalPrice/100}}</text>
+      </view>
+    <view class="{{canIBuy?'balance':'balance_no'}}" bindtap='navigateTo' >
+    结算
+    </view> 
+  </view>
+</view>

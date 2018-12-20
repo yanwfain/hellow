@@ -1,0 +1,129 @@
+.orderDetails{
+  background: #fff;  
+}
+.orderDetails .details_img{
+  background: #F8F8F8;
+  padding: 24rpx 30rpx;
+  margin-bottom: 8rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.orderDetails .details_img:last-of-type{
+  margin-bottom: 0;
+}
+.orderDetails .details_img image{
+  width: 90rpx;
+  height: 90rpx;
+}
+.orderDetails .details_left{
+  display: flex;
+}
+.orderDetails .icon{
+  margin-right: 16rpx;
+}
+.orderDetails .product_title{
+  display: flex;
+  flex-direction: column;
+}
+.orderDetails .ware{
+  font-size: 28rpx;
+}
+.orderDetails .prix{
+  font-size: 20rpx;
+  color: #999;
+  margin-top: 6rpx;
+}
+.orderDetails .ware,.orderDetails .rate,.cost,
+.disInfor,.distriWay,.orderWay{
+  color: #333;
+}
+.sure_time,.order_number,.year_time,.payfor_way,
+.distriWay .zxDistriWay,.specific .sh_infor{
+  color: #666;
+}
+.orderDetails .rate{
+  font-size: 24rpx;
+}
+.orderDetails .rate text{
+  font-size: 32rpx;
+  color: #151515;
+}
+
+.cost{
+  background: #fff;
+  padding: 32rpx 30rpx;
+  font-size: 28rpx;
+}
+.cost .packCost{
+  padding-bottom: 32rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.cost .packCostOne{
+  border-bottom: 1rpx solid #e6e6e6; 
+}
+.cost .actPackCost{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 32rpx;
+}
+.cost .actCostNum{
+  font-size: 36rpx;
+  font-weight: 800;
+}
+.disInfor{
+  margin-top: 16rpx;
+  font-size: 28rpx;
+  background: #fff;
+  padding: 32rpx 30rpx;
+}
+.disInforTxt{  
+  font-weight: 800; 
+  margin-bottom: 40rpx;
+}
+.specific{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #e6e6e6;
+  padding-bottom: 22rpx;
+}
+.specific .sh_Person{
+  display: flex;
+  justify-content: flex-end;  
+}
+.specific .sh_Person text{
+  margin-left: 12rpx;
+}
+.distriWay{
+  padding-top: 32rpx;
+  display: flex;
+  justify-content: space-between; 
+}
+.copy{
+  color: #FF5C61;
+  font-size: 26rpx;
+}
+.dingDan{
+  padding: 32rpx 30rpx 0 32rpx;
+  margin-bottom: 80rpx;
+}
+.orderWay{
+  padding-bottom: 22rpx;
+  display: flex;
+  justify-content: space-between; 
+  border-bottom: 1rpx solid #e6e6e6;
+}
+.col_line{
+  margin: 0 30rpx;
+  color: #ccc;
+  font-size: 22rpx;
+}
+.time_box{
+  line-height: 86rpx;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #e6e6e6;
+}
+.pay{
+  border-bottom: none;
+}

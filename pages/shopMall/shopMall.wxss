@@ -1,0 +1,73 @@
+@import '../template/template.wxss';
+/* 头部 */
+.titleData{
+  width: 690rpx;
+  margin:0 auto;
+  padding: 40rpx 0;
+  display: flex;
+}
+.pohoto{
+  width: 200rpx;
+  height: 200rpx;
+}
+.message{
+  width: 480rpx;
+  font-size: 26rpx;
+  color: #666;
+  position: relative;
+}
+.message text,.message image{
+  display: block;
+  margin-bottom: 15rpx;
+}
+.pohotos{
+  border: 1rpx solid #ff5c61;
+  color: #ff5c61; 
+  border-radius:3px;
+  text-align: center;
+  padding: 0 15rpx;
+  width: 110rpx;
+}
+.message image{
+  width: 30rpx;
+  height: 40rpx;
+}
+/* 大类选项 */
+.scroll{
+  margin: 0 auto;
+  width: 690rpx;
+  white-space:nowrap;
+  display:flex;
+}
+.bigClass{
+  display: flex;
+  margin:0 auto;
+
+  padding: 10rpx;
+}
+.bigClassTxt{
+  text-align: center;
+  font-size: 26rpx;
+  margin-left: 20rpx;
+}
+.bigClassTxtColor{
+  color: #ff5c61;
+}
+/* 排序分类 */
+.option{
+  width: 690rpx;
+  margin: 0 auto;
+  padding: 20rpx 0;
+  font-size: 26rpx;
+  display: flex;
+  justify-content:space-between;
+  border-top: 1rpx solid #999;
+}
+.optionTxt{
+  padding: 8rpx 25rpx;
+  border-radius:20px;
+}
+.color{
+  background:#ff5c61;
+  color: #fff;
+}

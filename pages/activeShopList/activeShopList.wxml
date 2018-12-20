@@ -1,0 +1,25 @@
+<!--pages/goJionList/goJionList.wxml-->
+<!-- <text>pages/goJionList/goJionList.wxml</text> -->
+
+<view class='main'>
+  <!-- 搜索框 -->
+  <view class='sea'>
+    <view class='search'>
+        <image class='searImg' src='../../../images/ss.png'></image>
+        <input placeholder='请输入活动名称' bindconfirm='statusText' class='int'  confirm-type="搜索" type='text' bindinput='text'></input> 
+    </view>
+  </view>
+    
+  <view class='listItem' bindtap='goJionDetail' wx:for='{{activityList}}' data-code='{{item.code}}' data-shopCode='{{item.shopCode}}' data-activename='{{item.shopName}}' data-cover='{{item.cover}}' data-item='{{item}}'>
+      <view class='lable'>
+          <text>{{item.shopName}}</text>
+          <image src='../../images/jiantou1.png'></image> 
+      </view>
+      <view class='content'>
+          <text>{{item.beginTime}}-{{item.endTime}}</text>  
+          <image src='{{item.cover}}'></image>
+          <text>{{item.activeName}}</text>
+      </view>
+  </view>
+
+</view>
