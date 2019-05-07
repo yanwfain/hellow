@@ -1,0 +1,60 @@
+<view>  
+<view class="top-nav">
+  <view class="comprehensive" data-id="0" bindtap='onchangClicko' >
+    综合排序
+    <image src="../../images/xiala.png"></image>
+  </view>
+  <view class="sales" data-id="1" bindtap='onchangClickt'>
+    销量
+   <image src="../../images/xiala.png"></image>
+  </view>
+  <view class="screen" data-id="2" bindtap='onchangClickh'>
+    筛选
+    <image src="../../images/xiala.png"></image>
+  </view>
+  <!-- <view class="mlode mlodes "  style="345rpx"> -->
+    <scroll-view class="mlodeOne view_hideo{{showViewo?'view_showo':''}}">
+        <view class="option" data-id='0'>全部</view>
+        <view class="option" data-id='1'></view>
+    </scroll-view>
+    <scroll-view class="mlodeTow view_hidet{{showViewt?'view_showt':''}}">
+        <view class="option" class="option" data-id='0'>从高到低</view>
+        <view class="option" class="option" data-id='1'>从低到高</view>
+    </scroll-view>
+    <scroll-view class="mlodethree view_hideh{{showViewh?'view_showh':''}}">
+      <view class="option" data-id='0'>
+        全部
+      </view>
+    </scroll-view>
+  <!-- </view> -->
+</view>
+<view class="view-cont">
+      <block wx:for="{{detail}}" wx:key='index'>
+      <view class="view-dv" bindtap='deilsFn' data-id="{{item.id}}" data-code="{{item.code}}">
+        <view class="left-view">
+          <image src="{{item.cover}}" class="left-img"></image>
+        </view>
+        <view class="right-view">
+          <view class="tit-ico">
+            <view class="ico-view"><image src="../../images/loags.jpg"></image>
+            </view>
+            <view class="title-txt">　 {{item.name}}</view>
+          </view>
+          <view class="content">
+            {{item.productSpecStr}}
+          </view>
+          <view class="Price">
+            <text class="pic">￥{{item.productPrice/100}}</text>
+            <text class="price-dele">￥{{item.originPrice/100}}</text>
+          </view>
+          <view class="ShopName">
+            <text class="Name">{{item.subordinate}}</text>
+            <text class="Dian" bindtap='goshoping' data-shopCode="{{item.shopCode}}" data-code="{{item.code}}" data-subordinate="{{item.subordinate}}">进店 ></text>
+            <!-- <image src="../../images/shopcar.png" class="JiaGou"></image> -->
+          </view>
+        </view>
+        </view>
+      </block>
+  </view>
+  
+</view> 

@@ -7,12 +7,29 @@ App({
     userInfo: null,
     selectProducts: [],
     shopInfo: {},
-    openId: null,
+    shopInfoFn:{},
+    openId:null,
     latitude: null,
     longitude: null,
     addressRes: null,
     city: null,
-    token: null
+    token: null,
+    jifen:null,
+    optionss:null,
+    num:null,
+    indexbanner:null,
+    shopDingdan:[],
+    indexName:[],
+    indexQintai:[],
+    channelId:[],
+    huandian:[],
+    activityCodebao:null,
+    moneybao:null,
+    shopCodebao:null,
+    zhifuid:null,
+    accessn:null,
+    jinsllo:null,
+    usercode:null
   },
   onLaunch: function (options) {
     console.log(options, "传参")
@@ -33,14 +50,13 @@ App({
         }
       }
     })
-    
   },
    onShareAppMessage: function(res) {
     var that = this;
     if (res.from === 'button') {
     }
     return {
-      title: '精准匹配营销,生意及所能及',
+      title: '快来善小美,悠享健康生活',
     }
   },
   onShow: function (options){
@@ -50,6 +66,7 @@ App({
         this.globalData.extraData = options.referrerInfo.extraData.transmitData
       }
     }
+    
   },
   
 

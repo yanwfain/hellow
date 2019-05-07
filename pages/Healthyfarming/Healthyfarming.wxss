@@ -1,0 +1,201 @@
+.top-nav{
+width:100%;
+margin:0 auto;
+display:flex;
+justify-content:space-between;
+height:80rpx;
+align-items:center;
+font-size:30rpx;
+position:relative;
+border-bottom:1rpx solid #e5e5e5;
+}
+.top-nav view {
+  text-align: center;
+  width: 33%;
+}
+.top-nav view image {
+  width: 20rpx;
+  height: 20rpx;
+  margin-left: 10rpx;
+}
+.top-nav .mlode {
+  transition: all 0.3s;
+  position: absolute;
+  top: 83rpx;
+  height: 0rpx;
+  overflow: hidden;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 10;
+}
+.top-nav .mlodes {
+  overflow: auto;
+  transition: all 0.5s;
+  height: 520rpx;
+}
+.price-dele{
+  font-size: 24rpx;
+  text-decoration:line-through;
+}
+.mlodeOne {
+  width: 29%;
+  height: 500rpx;
+  background: #f4f4f4;
+  text-align: center;
+   display: flex;
+   margin-left:1%;
+    top:80rpx;
+    position: absolute;
+      z-index: 999;
+}
+.mlodeTow {
+  width: 40%;
+  height: 500rpx;
+  background: #f4f4f4;
+  text-align: center;
+  display: flex;
+  position:absolute;
+  top:80rpx;
+  left:30%;
+  z-index: 999;
+}
+.mlodethree{
+  width: 28%;
+  height: 500rpx;
+  background: #f4f4f4;
+  text-align: center;
+  display: flex;
+  position:absolute;
+  top:80rpx;
+  left:70%;
+  z-index: 999;
+}
+.mlodeOne .option {
+  width: 200rpx;
+  line-height: 68rpx;
+  font-size: 28rpx;
+  color: #666;
+  text-align: center;
+  font-weight: 400;
+}
+.mlodeOne .colorr, .mlodeTow .colorr {
+  color: #ff5c61;
+  background: #fff;
+}
+.mlodeTow view {
+  width: 300rpx;
+  line-height: 68rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+.mlodethree view{
+  width: 160rpx;
+  line-height: 68rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+.view_hideo,.view_hidet,.view_hideh{
+    display: none;
+}
+.view_showo,.view_showh,.view_showt{
+    display: block;
+}
+.view-cont{
+  width:  100%;
+  overflow: hidden;
+  height:auto;
+  margin:0 auto;
+  padding: 10rpx;
+}
+.view-dv{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin: 10rpx;
+}
+.left-view{
+  width: 280rpx;
+  height: 260rpx;
+  float:left;
+  text-align: center;
+}
+.left-view .left-img{
+  width: 90%;
+  height:90%;
+  border-radius: 10rpx;
+}
+.right-view{
+  width: 420rpx;
+  height: 260rpx;
+  float:left;
+}
+.tit-ico{
+  width: 100%;
+  margin:0 auto;
+  /* margin-right:10rpx; */
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  position:relative;
+  padding: 5rpx;
+}
+.ico-view{
+  width:40rpx;
+  height: 40rpx;
+  position:absolute;
+}
+.ico-view image{
+  width:40rpx;
+  height:40rpx;
+}
+.title-txt{
+  /* width: 380rpx; */
+  height: 80rpx;
+  font-size: 28rpx;
+  margin-left:10rpx;
+  margin-top:10rpx;
+  text-overflow: -o-ellipsis-lastline;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;
+}
+.content{
+  font-size: 24rpx;
+  color: #b6b4b4;
+  margin: 10rpx;
+  margin-left:10rpx;
+}
+.Price{
+  font-size: 28rpx;
+  margin: 10rpx;
+  margin-left:0rpx;
+}
+.Price text{
+   margin: 10rpx;
+  margin-left:10rpx;
+  margin-right:10rpx;
+}
+.pic{
+  font-size: 30rpx;
+  color:red;
+  
+}
+.ShopName{
+  margin:10rpx;
+  margin-left:10rpx;
+  font-size:26rpx;
+  margin-top:10rpx;
+}
+.Name{
+  font-size: 24rpx;
+color:#b6b4b4;
+}
+.Dian{
+  padding: 20rpx;
+  font-size: 26rpx;
+  margin-left:12rpx;
+}
+.JiaGou{
+  width: 50rpx;
+  height: 50rpx;
+  float:right;
+}

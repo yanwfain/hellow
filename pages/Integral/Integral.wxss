@@ -1,0 +1,95 @@
+.topIntegral{
+  width: 96%;
+  background: white;
+  text-align: center;
+  padding-top: 15rpx;
+  margin:0 auto;
+  height: 400rpx;
+  overflow: hidden;
+}
+.topIntegral image{
+  width:100%;
+  height: 100%; 
+}
+.yellow{
+  background: rgb(255, 217, 0);
+   position: fixed;
+  bottom: 0;
+  left:0;
+  color:white;
+  text-align: center;
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 36rpx;
+}
+.center{
+  position:absolute;
+  top:40%;
+  left:30%;
+  width: 350rpx;
+  background: gray;
+  opacity: .9;
+  height: 200rpx;
+  display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+  color:white;
+}
+.center-txt{
+  font-size: 34rpx;
+  margin-top:-10rpx;
+}
+.cllk{
+   font-size: 34rpx;
+   color:blue;
+   margin-top:20rpx;
+}
+.title{
+  width: 98%;
+  height: 100rpx;
+  padding: 16rpx;
+  margin:0 auto;
+  position:relative;
+}
+.right{
+  position:absolute;
+  right:8%;
+  top:20rpx;
+}
+.title text{
+  font-size: 28rpx;
+}
+.title view{
+  font-size: 26rpx;
+}
+.gray{
+  width:100%;
+  height: 16rpx;
+  background: rgb(245, 243, 243);
+}
+.DuiTiao{
+  width:100%;
+  padding: 16rpx;
+}
+.DuiTiao .titxt{
+  font-size: 28rpx;
+}
+.DuiTiao view{
+  font-size: 28rpx;
+  color:rgb(87, 85, 85);
+  margin-top:10rpx;
+}
+.foot{
+  position: fixed;
+  bottom: 0;
+  left:0;
+  background: #ccc;
+  color:white;
+  text-align: center;
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 36rpx;
+}

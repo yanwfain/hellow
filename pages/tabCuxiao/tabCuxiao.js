@@ -105,7 +105,7 @@ Page({
       console.log("shopCode", shopCode);
     }
     return {
-      title: '精准匹配营销,生意及所能及',
+      title: '快来善小美，悠享健康生活',
       path: '/pages/snIndex/snIndex',
       imageUrl: '',
       success: function(res) {
@@ -154,8 +154,11 @@ Page({
   // 点击导航菜单大类获取数据
   getItemCode: function(e) {
     let code = e.target.dataset.code;
+    console.log(code)
     let typename = e.target.dataset.typename;
+    console.log(typename)
     let typecode = e.target.dataset.typecode;
+    console.log(typecode)
     let city = this.data.city;
     if (typename === "全部") {
       wx.navigateTo({
@@ -344,6 +347,7 @@ function getMoreBy(that) {
   };
   // 发送请求
   httpUtils.postRequest(url, data).then(function(res) {
+    console.log(res)
     if (res.data.body) {
       console.log(res.data.body);
       if (res.data.body == "" || res.data.body == undefined || res.data.body == null) {
@@ -386,6 +390,7 @@ function getMoreNearBy(that) {
   };
   console.log(data)
   httpUtils.postRequest(url, data).then(function(res) {
+    console.log(res)
     if (res.data.body) {
       console.log(res.data.body);
       if (res.data.body == "" || res.data.body == undefined || res.data.body == null) {

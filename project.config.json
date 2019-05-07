@@ -6,13 +6,16 @@
 		"es6": true,
 		"postcss": true,
 		"minified": true,
-		"newFeature": true
+		"newFeature": true,
+		"autoAudits": false
 	},
 	"compileType": "miniprogram",
 	"libVersion": "1.9.93",
-	"appid": "wxf90793b6b6ec6236",
-	"projectname": "jiji",
+	"appid": "wx1d10004701ac74a1",
+	"projectname": "jjjj",
 	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,

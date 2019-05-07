@@ -27,6 +27,7 @@ Page({
    */
   onLoad: function (options) {
     console.log(app.globalData);
+    console.log(app.globalData.shopInfo.customerCode)
     console.log(options,"options88888888888888888");
     var that = this;
     delta = options.delta == undefined ? 2 : options.delta;
@@ -53,6 +54,7 @@ Page({
     //从首页购物车按钮进入
     if(options.productStr==undefined){
       var selectProducts = app.globalData.selectProducts;
+      console.log(selectProducts)
       var total = 0
       for (var i = 0; i < selectProducts.length; i++) {
         total = total + selectProducts[i].salePrice * selectProducts[i].count;
@@ -88,6 +90,7 @@ Page({
       }
 
       var product = JSON.parse(options.productStr)
+      console.log(product)
       var selectProducts=[];
       selectProducts = selectProducts.concat(product);
       var total = 0;
@@ -178,6 +181,7 @@ Page({
             appId: constantFields.APP_ID,
             code: res.code
           });
+          
         }).then(function (res) {
           params.openId = res.data.body.openId;
           params.customerCode = app.globalData.shopInfo.customerCode;
@@ -197,6 +201,8 @@ Page({
           return httpUtils.postRequest(url, params);
         }, function (err) {
           console.log(err)
+          console.log(params+"--------------")
+          console.log(app.globalData.shopInfo.customerCode)
         }).then(function (res) {
           wx.hideLoading();
           console.log(res);
@@ -213,6 +219,8 @@ Page({
 
             }
           }
+          console.log(res)
+          console.log(paymentParams)
           return httpUtils.httpPromise(wx.requestPayment)(paymentParams);
         }).then(function (res) {
           app.globalData.selectProducts = [];

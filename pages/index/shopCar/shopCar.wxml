@@ -12,6 +12,7 @@
     <view class="expertInfo">
       <view class="name">{{item.name}}</view>
       <view class="tag">下雨天，咖啡和音乐更配</view>
+      <!-- <view class="tag">规格：</view> -->
       <view class="askBtn">
         <view class="price">¥
           <text>{{item.salePrice/100}}</text>

@@ -1,3 +1,23 @@
 <view>
-  <text></text>
+  <view class="Zhaoshang-img">
+    <image src="http://www.shanxingniao.com/imgServer/images/use_test/nongyeshengtai/nyptzhaoshangtup.jpg"></image>
+  </view>
+  <view>
+  <text class="Shuo-txt">善小美农业生态平台招商说明:</text>
+<text class="txt">1、善小 美帮助生态农场、农庄、采摘园、种植养殖场、农业合作社，对接城市农产品经销商、社区社群团 购、农产品消费大户等组织，提高农产品流通效率，提升食品安全。</text>
+<text  class="txt">
+2、善小美推出健康生活去农场，吃喝玩乐去农庄，帮助农庄运营推广，引导城市居 民的健康消费需求，让农场、农庄成为附近城市居民消费、旅游、休闲娱乐的首选场所。
+</text>
+<text class="txt">
+3、善小美推动新农业各产业业态的品牌化经营，实现产业升级，消 费升级，帮助提升企业的盈利能力。
+</text>
+<text class="txt">
+4、通过善小美-新农业平台， 为生态农场、农庄、采摘园、种植养殖场、农业合作社等业态，建立基于微信的品牌推广与营销生 态圈，打造区域农业示范园，成为行业领头羊。
+</text>
+<text class="txt">
+5、善小美平台为农 场农庄搭建线上平台，同时提供线上线下相结合的品牌推广、产品运营等服务
+</text>
+<text  class="txt-foot">善小美提供以上服务，按照农场农庄规模及所需服务每年收取服务推广费3-5 万元
+其他合作方式：善小美考察农庄后，善小美合作相关鉴定部门认定农庄产品为绿色农产品后，可仅 合作渠道销售，善小美收取销售流水保障金，随着销售流水增加，保障金增加</text>
+</view> 
 </view>

@@ -1,46 +1,120 @@
-/* pages/index/shopList/shopList.wxss */
 
-page {
-  background: white;
-}
-
-.shopInfo {
+.shopList {
   display: flex;
-  padding: 30rpx 30rpx 30rpx 30rpx;
-  border-bottom: 1rpx solid #f4f4f4;
-  align-items: center
-}
-.shopstatus{
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
-  height: 64rpx;
-  width: 64rpx;
-  /* color: white;
-  font-size: 30rpx; */
-  /* background: #ff5c61; */
-  border-radius: 50%;
-}
-.shopInfodetail{
-  margin-left: 30rpx;
-  width: 84%;
-}
-.shopaddress{
-  margin-top: 16rpx;
-  font-size: 24rpx;
-  color: #666;
-}
-.shoptime{
-  font-size: 24rpx;
-  color: #666;
+  flex-direction: column;
 }
 .img{
   width: 14rpx;
   height: 26rpx;
+  margin-left:350rpx;
 }
+.shopItem {
+  background: #fff;
+  display: flex;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 15rpx 40rpx;
+}
+
+.shopItem:last-child {
+  border-bottom: none;
+}
+
+.shopImg {
+  /* width: 154rpx;
+  height: 154rpx; */
+  width: 146rpx;
+  height: 148rpx;
+  margin-right: 32rpx;
+  border-radius: 6rpx;
+}
+
+.shopInfo {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.infoText {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.up {
+  display: flex;
+  width: 493rpx;
+  justify-content: space-between;
+}
+
 .shopName {
-  font-family: PingFangSC-Medium;
-  font-size: 30rpx;
-  color: #151515;
-  line-height: 42rpx;
+  font-size: 28rpx;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 70%;
+}
+
+.shopText {
+  font-size: 22rpx;
+  display: flex;
+  color: #999;
+  align-items: center;
+}
+
+.shopTexts {
+  margin-top: 45rpx;
+}
+
+.shop1 {
+  color: #d58c88;
+  font-size: 20rpx;
+  padding: 10rpx;
+}
+
+.shop2 {
+  color: #104883;
+  font-size: 20rpx;
+  padding: 10rpx;
+}
+
+.shop3 {
+  color: #1d60a7;
+  font-size: 20rpx;
+  padding: 10rpx;
+}
+
+.st {
+  width: 450rpx;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.kk {
+  margin: 5rpx 0;
+  width: 240rpx;
+  border-radius: 3px;
+  border: 1rpx solid rgb(253, 153, 147);
+  font-size: 20rpx;
+  color: #fe8d87;
+  text-align: center;
+}
+
+.shopStatus {
+  padding: 10rpx;
+  background: linear-gradient(to right, #fe8d87, #ff6662);
+  border-radius: 6rpx;
+  color: white;
+  font-size: 18rpx;
+  text-align: center;
+}
+
+.statu {
+  font-size: 20rpx;
+}
+
+.location {
+  font-size: 24rpx;
 }

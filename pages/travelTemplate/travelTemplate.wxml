@@ -3,7 +3,7 @@
   <block wx:for='{{offcialList}}'>
     <!-- 灰条 -->
     <view style='background:#f4f4f4;height:8rpx;width:750rpx;'></view>
-    <view class='commWidth' bindtap='goTravelOfficial' data-entrance='{{entrance}}' data-scenicCode='{{item.scenicCode}}' data-type='{{item.type}}' data-lat='{{item.lat}}' data-lng='{{item.lng}}' data-code='{{item.code}}' data-name='{{item.name}}' data-touristCode='{{item.touristCode}}' >
+    <view class='commWidth' bindtap='goTravelOfficial' data-entrance='{{entrance}}' data-scenicCode='{{item.scenicCode}}' data-type='{{item.type}}' data-lat='{{item.lat}}' data-lng='{{item.lng}}' data-code='{{item.code}}' data-name='{{item.name}}' data-touristCode='{{item.touristCode}}' data-id='{{id}}' data-itid='{{item.id}}' data-true='false' data-pid="{{item.pid}}">
       <view class='travel'>
         <!-- 标题 -->
         <view class='travelTitle'>
@@ -21,7 +21,7 @@
             <text>{{item.exposureTimes < 5000?item.exposureTimes:'5000+'}}</text>
           </view>
           <view class='travelName'>
-            <image src='../../images/iconPhoto.jpg'></image>
+            <image src='../../images/loags.jpg'></image>
             {{item.name}}
           </view>
         </view>
@@ -29,12 +29,47 @@
     </view>
   </block>
 </template>
+<!-- 首页列表 -->
+
+  <template name="travelListIndex">
+  <block wx:for='{{offcialList}}'>
+    <!-- 灰条 -->
+    <view style='background:#f4f4f4;height:8rpx;width:750rpx;'></view>
+    <view class='commWidth' bindtap='goTravelOfficial' data-entrance='{{entrance}}' data-scenicCode='{{item.scenicCode}}' data-type='{{item.type}}' data-lat='{{item.lat}}' data-lng='{{item.lng}}' data-code='{{item.code}}' data-name='{{item.name}}' data-touristCode='{{item.touristCode}}' data-id='{{id}}' data-itid='{{item.id}}' data-true='false' data-pid="{{item.pid}}">
+      <view class='travel'>
+        <!-- 标题 -->
+        <view class='travelTitle'>
+          <text class='title'>{{item.title}}</text>
+          <image class='travelTitleImg' src='../../images/jiantou1.png'></image>
+        </view>
+        <!-- 大图 -->
+        <image class='mainImg' src='{{item.imgUrl}}'></image>
+        <!-- 底部 -->
+        <view class='travelFoot'>
+          <view class='travelTime'>
+            <image hidden='{{off}}' style='width:22rpx;height:30rpx;' src='../../images/dizhi.png'></image>
+            <text hidden='{{off}}' >{{item.distance/1000}}km</text>
+            <image style='width:30rpx;height:19rpx;' src='../../images/guancha.png'></image>
+            <text>{{item.exposureTimes < 5000?item.exposureTimes:'5000+'}}</text>
+          </view>
+          <view class='travelName'>
+            <image src='../../images/loags.jpg'></image>
+            {{item.name}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</template>
+
+
 <!-- banner -->
 <template name='banner'>
   <swiper class='banner' style='height:{{classData.bannerHeight}}rpx' indicator-dots='true' autoplay='true' interval='5000' circular='true'>
     <block wx:for="{{banner}}">
       <swiper-item>
-        <image bindtap="{{Bind?'':'goTravelOfficial'}}" data-name='{{item.shopName}}' class='bannImg' data-scenicCode='{{item.shopCode}}' src='{{item.imgUrl}}'></image>
+        <!-- <image bindtap="{{Bind?'':'goTravelOfficial'}}" data-name='{{item.shopName}}' class='bannImg' data-scenicCode='{{item.shopCode}}' src='{{item.imgUrl}}'></image> -->
+            <image data-name='{{item.shopName}}' class='bannImg' data-scenicCode='{{item.shopCode}}' src='{{item.imgUrl}}'></image>
       </swiper-item>
     </block>
   </swiper>
@@ -65,17 +100,32 @@
   </view>
 </template>
 <!--分类导航  -->
-<template name='classNav'>
+<!-- <template name='classNav'>
   <view class='nav'>
     <block wx:for='{{navList}}'>
-      <view class='itemClass' bindtap='getItemCode' data-code='{{item.typeCode}}' data-typeName='{{item.typeName}}'>
+      <view class='itemClass' bindtap='getItemCode' data-ty="{{item.ty}}" data-code='{{item.typeCode}}' data-typeName='{{item.typeName}}'>
         <image class='itemImg' src='{{item.imgUrl}}' ></image>
         <text class='itemText' data-code='{{item.code}}'>{{item.typeName}}</text>
       </view>
     </block>
-    <view class='ambitus'>庄园周边</view>
+    <view class='ambitus'>{{navTitle}}周边</view>
+  </view>
+</template> -->
+<template name='classNav'>
+  <view class='nav'>
+    <block wx:for='{{navList}}'>
+      <view class='itemClass' bindtap='getItemCode' data-ty="{{item.ty}}" data-code='{{item.typeCode}}' data-typeName='{{item.typeName}}' hidden='{{index > 4 && iconState == false}}'>
+        <image class='itemImg' src='{{item.imgUrl}}' ></image>
+        <text class='itemText' data-code='{{item.code}}'>{{item.typeName}}</text>
+      </view>
+    </block>
+    <text class="textFn" bindtap='ifShow' wx:if='{{iconState == false}}'>↓ 显示更多 ↓</text>
+    <text class="textFn" bindtap='ifShow' wx:if='{{iconState == true}}'>↑ 隐藏更多 ↑</text>
+
+    <view class='ambitus'>{{navTitle}}周边</view>
   </view>
 </template>
+
 
 <!-- 分类 -->
 <template name='classFily'>

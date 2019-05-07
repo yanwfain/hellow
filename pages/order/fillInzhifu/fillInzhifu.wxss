@@ -1,0 +1,212 @@
+.select,.selectList,.allPrice,.note{
+  background: #fff;
+}
+.select{
+  display: flex;
+  justify-content: space-between;
+  color: #333;
+  font-size: 30rpx;
+  padding: 32rpx 30rpx;
+}
+.select .palce{
+  width: 513rpx;
+  font-size: 30rpx;
+}
+.select .palceName{
+  color: #999;
+  font-size: 28rpx;
+}
+.select .palceName text{
+  margin-left: 32rpx;
+}
+.select image{
+  width: 16rpx;
+  height: 27rpx;
+  margin-top: 8rpx;
+}
+.selectList{
+  padding: 32rpx 14rpx;
+  display: flex;
+  margin-top: 16rpx;
+  border-bottom: 1rpx solid #E6E6E6; 
+  flex-wrap: wrap;
+}
+.selectImg{
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  width: calc(100%/4);
+  margin-bottom: 32rpx;
+}
+.selectImg image{
+  width: 140rpx;
+  height: 140rpx;
+  margin-bottom: 16rpx;
+  border: 1rpx solid #f4f4f4;
+  border-radius: 6rpx;
+}
+.selectImg text{
+  color: #333;
+  font-size: 28rpx;
+}
+
+.allPrice{
+  padding: 32rpx 30rpx;
+  margin-bottom: 16rpx;
+  color: #666;
+  font-size: 24rpx;
+}
+.allPrice .goodsPrice,.allPrice .freight{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24rpx; 
+}
+.allPrice .freight{
+  padding-bottom: 24rpx; 
+  border-bottom: 1rpx solid #E6E6E6;
+}
+.actualPay{
+  line-height: 90rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.actualPay .payForTxt{
+  color: #333;
+  font-size: 30rpx;
+}
+.actualPay .payFor{
+  color: #FF5E63;
+  font-size: 36rpx;
+}
+/* 备注信息 */
+.note{
+  padding: 32rpx 30rpx;
+}
+.note{
+  margin-bottom: 172rpx;
+}
+.note .information{
+  color: #333;
+  font-size: 28rpx;
+  
+}
+.note textarea{
+  font-size: 24rpx;
+  padding: 24rpx;
+  box-sizing: border-box;
+  border: 1rpx solid #D6D7D7;
+  background: #f4f4f4;
+  border-radius: 10rpx;
+  width: 100%;
+  height: 140rpx;
+  margin-top: 16rpx;
+}
+.weixin{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 32rpx; 
+}
+.weixin .wxImg{
+  width: 64rpx;
+  height: 64rpx;
+  margin-right: 24rpx;
+}
+ .weixin .wx text{
+  margin-top: 8rpx;
+  font-size: 30rpx;
+} 
+ .weixin .wx{
+  display: flex;
+  justify-content: center;
+} 
+.checked{
+  width: 38rpx!important;
+  height: 38rpx!important;
+}
+/* 底部固定定位 */
+.actalFix{
+  display: flex;
+  justify-content: space-between;
+  height: 98rpx;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 9999;
+}
+ .payfor{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 60%;  */
+  
+  font-size: 24rpx;
+}
+.desc_text{
+  background: #fff;
+  font-size: 24rpx;
+}
+ .maney{
+  display: inline;
+  color: #FF5E63;
+  font-size: 32rpx;
+  /* line-height: 98rpx; */
+  text-align: center
+}
+ .payment{
+  width: 40%; 
+  background: #FF5E63;
+  color: #fff;
+  font-size: 34rpx;
+  text-align: center;
+  line-height: 98rpx;
+}
+.paycontainer{
+  display: flex;
+  width: 60%;
+  flex-direction: column;
+  background: #fff;
+  align-items:center;
+  justify-content:center;
+}
+.downprice{
+font-size: 18rpx;
+color: #666666;
+}
+.withdraw{
+  display: flex;
+  justify-content:space-between;
+  padding: 0 30rpx;  
+  color:#333;
+  font-size: 30rpx;
+  box-sizing:border-box;
+  line-height: 100rpx;
+  flex-direction: column;
+  margin-top:20rpx;
+}
+.withdraw text{
+  white-space: nowrap
+}
+.withdraw image{
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 18rpx;
+}
+.lineBottom1 image{
+  width:49rpx;
+  height:50rpx;
+}
+.withdraw .account{
+  display: flex;
+}
+.withdraw .accountImg{
+  vertical-align: middle;
+  margin-right: 16rpx;
+  margin-top:23rpx;
+}
+.withdraw .withdrawImg{
+  vertical-align: middle;
+}
+.inputl{
+  border:1rpx solid gray;
+  padding: 20rpx;
+}

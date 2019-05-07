@@ -31,7 +31,6 @@
       </view>
     </block>
   </view>
-
   <!-- 搜索结果 -->
   <view class='wai' hidden='{{!nearImgStatus}}'>
     <!-- banner -->

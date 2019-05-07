@@ -1,0 +1,21 @@
+<view>
+<view class="top-img">
+  <image src="http://www.shanxingniao.com/imgServer/images/use_test/nongyeshengtai/gdsjlxwm.jpg" ></image>
+</view>
+  <view class="LianXi">
+    <text class="">善小美生态圈欢迎您</text>
+  </view>
+  <view>
+    <!-- <text class="text-adderrs">庄园地址：北京市通州区西集镇大学路耕读</text> -->
+  </view>
+  <!-- <view class="add-img">
+    <image src="../../images/1.png" bindtap='goMap'></image>
+  </view> -->
+  <view class="hot-rexian">
+    <text bindtap='tel'>官网客服热线：18301638089        <text class="tell">点击拨打</text></text>
+  </view>
+  <view class="Watch">
+    <text >官方客服微信：<text style="color:blue">(长按可添加)</text></text>
+    <image bindtap='previewImg' src="http://www.shanxingniao.com/imgServer/images/use_test/nongyeshengtai/gfwxzhewm.png"></image>
+  </view>
+</view>

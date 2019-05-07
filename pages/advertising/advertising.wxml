@@ -1,6 +1,6 @@
 <!-- 头部 -->
 <view class='adveTitle'>
-  <text bindtap='goTar' data-id='3'>明细</text>
+  <!-- <text bindtap='goTar' data-id='3'>明细</text> -->
   <view class='adveOne'>总余额</view>
   <view class='adveTwo'>{{total.balance}}</view>
   <view class='adveTwo'>累计收益：{{total.sumMonery}}</view>
@@ -13,29 +13,34 @@
 </view> -->
 <!-- 列表 -->
 <view class='list'>
+ 
   <view class='listOne' bindtap='goTar' data-id='1'>
-    <text>使用我的邀请码已开店</text>
+    <text>我的邀请码已开店</text>
     <image class='lietOneT' src='../../images/jiantou.png' style='width:20rpx;height:30rpx;margin:36rpx 10rpx;'></image>
     <text class='lietOneT'>{{total.invCountShop}}家</text>
   </view>
-  <view class='listOne' bindtap='goTar' data-id='2'>
-    <text>转让我的广告投放金</text>
-    <image class='lietOneT' src='../../images/jiantou.png' style='width:20rpx;height:30rpx;margin:36rpx 10rpx;'></image>
-
+  <view class='listOne' bindtap='goTar' data-id='3'>
+    <text>积分交易明细</text>
+      <image class='lietOneT' src='../../images/jiantou.png' style='width:20rpx;height:30rpx;margin:36rpx 10rpx;'></image>
   </view>
+  <view class='listOne' bindtap='goTar' data-id='2'>
+    <text>转让我的积分</text>
+    <image class='lietOneT' src='../../images/jiantou.png' style='width:20rpx;height:30rpx;margin:36rpx 10rpx;'></image>
+  </view>
+   
   <view class='listOne' bindtap='goTar' data-id='4'>
-    <text>使用我的广告投放金</text>
+    <text>使用我的积分</text>
     <image class='lietOneT' src='../../images/jiantou.png' style='width:20rpx;height:30rpx;margin:36rpx 10rpx;'></image>
   </view>
 </view>
 <!-- 投放金使用规则 -->
-<view class='adk'>
+<!-- <view class='adk'>
   <view>及及在身边广告投放金规则：</view>
-  <view>1、新用户可得到680的广告投放金；</view>
-  <view>2、开店，即获赠680广告投放金；</view>
-  <view>3、推荐1个朋友真实开店（发1个真实促销和1个真实产品即可），即获赠680广告投放金（推荐时将您的开店邀请码告知朋友）；</view>
+  <view>1、新用户可得到680的及及豆；</view>
+  <view>2、开店，即获赠680及及豆；</view>
+  <view>3、推荐1个朋友真实开店（发1个真实促销和1个真实产品即可），即获赠680及及豆（推荐时将您的开店邀请码告知朋友）；</view>
   <view>4、广告投放金可以转让给其他店；</view>
   <view>5、广告投放金只能用于投放广告、转让，不能用来购买商品、提现；</view>
   <view>6、1个开店邀请码最多能推荐300个朋友开店。</view>
-</view>
+</view> -->
 

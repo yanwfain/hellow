@@ -1,76 +1,97 @@
-  {
+{
   "pages": [
     "pages/snIndex/snIndex",
+    "pages/tabCuxiao/tabCuxiao",
+    "pages/travelPortal/travelPortal",
+    "pages/estate/estate",
+    "pages/mine/mine",
     "pages/mall/mall",
     "pages/shopMall/shopMall",
-    
-    
+    "pages/advertising/advertising",
+    "pages/advertising/transfer/transfer",
+    "pages/detail/detail",
+    "pages/inviteShop/inviteShop",
+    "pages/index/searchShopName/searchShopName",
+    "pages/nearBycuxiao/nearBycuxiao",
+    "pages/Nationalfarm/Nationalfarm",
+    "pages/index/index",
+    "pages/activeDetail/activeDetail",
+    "pages/openShop/openShop",
     "pages/estates/estates",
+    "pages/shopdeils/shopdeils",
+    "pages/travel/travel",
+    "pages/mesign/mesign",
+    "pages/signdeail/signdeail",
+    "pages/signm/signm",
+    "pages/mecanyu/mecanyu",
+    "pages/travelOfficial/travelOfficial",
+    "pages/TianDu/TianDu",
+    "pages/Contactus/Contactus",
     "pages/signIn/signIn",
+    "pages/earnpoints/earnpoints",
+    "pages/record/record",
     "pages/onGlod/onGlod",
     "pages/getDetail/getDetail",
-    "pages/estate/estate",
+    "pages/make/make",
+    "pages/Integral/Integral",
     "pages/index/aboutUs/aboutUs",
     "pages/attract/attract",
     "pages/travelIndex/index",
-    "pages/travelPortal/travelPortal",
+    "pages/switchcity/switchcity",
+    "pages/mine/address/address",
+    "pages/mine/addaddress/addaddress",
+    "pages/order/order",
+    "pages/orderDetails/orderDetails",
+    "pages/mine/mycollection/mycollection",
+    "pages/index/shopList/shopList",
+    "pages/mine/aboutGs/aboutGs",
+    "pages/details/details",
+    "pages/index/shopCar/shopCar",
+    "pages/order/fillIn/fillIn",
+    "pages/order/fillInzhifu/fillInzhifu",
+    "pages/order/fillInzhifuo/fillInzhifuo",
     "pages/travelTourism/travelTourism",
-    "pages/travel/travel",
     "pages/travelAgency/travelAgency",
     "pages/travelTemplate/travelTemplate",
     "pages/travelDetail/travelDetail",
-    "pages/travelOfficial/travelOfficial",
-    "pages/switchcity/switchcity",
+    "pages/travelDetailindex/travelDetailindex",
+    "pages/Healthyfarming/Healthyfarming",
+    "pages/travelOfficialshop/travelOfficialshop",
+    "pages/detailsShop/detailsShop",
+    "pages/shopCarlist/shopCarlist",
+    "pages/platformInprom/platformInprom",
+    "pages/platform/platform",
     "pages/travelScenic/travelScenic",
     "pages/platformIntrod/platformIntrod",
-    "pages/platformInprom/platformInprom",
     "pages/Agroecology/Agroecology",
-    
-    
-    "pages/inviteShop/inviteShop",
-    "pages/detail/detail",
     "pages/report/report",
     "pages/find/find",
-    "pages/tabCuxiao/tabCuxiao",
     "pages/template/template",
-    "pages/index/index",
-    "pages/advertising/advertising",
     "pages/advertising/shopList/shopList",
-    "pages/advertising/transfer/transfer",
-    "pages/index/shopCar/shopCar",
-    "pages/details/details",
-    "pages/mine/addaddress/addaddress",
-    "pages/order/order",
-    "pages/order/fillIn/fillIn",
-    "pages/mine/mine",
-    "pages/mine/address/address",
     "pages/mine/storeIntroduce/storeIntroduce",
-    "pages/orderDetails/orderDetails",
     "pages/index/searchProduct/searchProduct",
     "pages/guideOpenSetting/guideOpenSetting",
-    "pages/index/shopList/shopList",
     "pages/mine/locationmap/locationmap",
     "pages/mine/payInShop/payInShop",
-    "pages/index/searchShopName/searchShopName",
     "pages/snShopList/snShopList",
     "pages/serverText/serverText",
-    "pages/openShop/openShop",
     "pages/activeList/activeList",
-    "pages/activeDetail/activeDetail",
     "pages/goodStore/goodStore",
     "pages/lifeWisdom/lifeWisdom",
     "pages/lifeWisdom/wisdom/wisdom",
-    "pages/mine/mycollection/mycollection",
-    "pages/nearBycuxiao/nearBycuxiao",
-    "pages/mine/aboutGs/aboutGs",
     "pages/activeShopList/activeShopList"
-    
   ],
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#ff5c61",
     "navigationBarTextStyle": "white",
-    "backgroundColor": "#fafafa"
+    "backgroundColor": "#fafafa",
+    "enablePullDownRefresh": true
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
   },
   "tabBar": {
     "color": "#a9a9a9",
@@ -90,18 +111,18 @@
         "iconPath": "images/cuxiaoImgd1.jpg",
         "selectedIconPath": "images/cuxiaoImgd.jpg"
       },
-     {
-      "pagePath": "pages/travelPortal/travelPortal",
-      "text": "及及·行业",
-      "iconPath": "images/golds.jpg",
-      "selectedIconPath": "images/gold.jpg"
-    },
-    {
-      "pagePath": "pages/estate/estate",
-      "text": "地方产业",
-      "iconPath": "images/domains.jpg",
-      "selectedIconPath": "images/domain.jpg"
-    },
+      {
+        "pagePath": "pages/travelPortal/travelPortal",
+        "text": "生态·频道",
+        "iconPath": "images/s1.jpg",
+        "selectedIconPath": "images/s2.jpg"
+      },
+      {
+        "pagePath": "pages/estate/estate",
+        "text": "积分商城",
+        "iconPath": "images/domains.jpg",
+        "selectedIconPath": "images/domain.jpg"
+      },
       {
         "pagePath": "pages/mine/mine",
         "text": "我的",
@@ -113,7 +134,6 @@
   "navigateToMiniProgramAppIdList": [
     "wxf5b37370c57a2db9",
     "wx6c653b3b961fb92a"
-  ]
+  ],
+  "sitemapLocation": "sitemap.json"
 }
-
-

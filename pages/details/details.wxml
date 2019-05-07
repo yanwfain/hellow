@@ -1,11 +1,10 @@
-<!-- <swiper indicator-dots="{{indicatorDots}}"autoplay="true" interval="{{interval}}" duration="{{duration}}" circular='true'>
+<swiper indicator-dots="{{indicatorDots}}"autoplay="true" interval="{{interval}}" duration="{{duration}}" circular='true'>
   <block wx:for="{{product.coverList}}" wx:key="imgUrls">
     <swiper-item>
       <image src="{{item}}" mode='aspectFit' class="slide-image" width="355" height="150"/>
     </swiper-item>
   </block>
-</swiper> -->
-<image src='{{product.cover}}' class='coverImg'></image>
+</swiper>
 <!-- 名称 -->
 <view class='goodsTitle'>
   <view class='title'>{{product.name}}</view>
@@ -40,7 +39,7 @@
     <text>{{item.imgDes}}</text>
   </block>
 </view>
-
+<image src='{{product.cover}}' class='coverImg'></image>
 
 
 

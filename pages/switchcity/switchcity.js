@@ -1,3 +1,4 @@
+
 var city = require('../../utils/city.js');
 var DATAS = require('../../data.js');
 var app = getApp()
@@ -16,7 +17,10 @@ Page({
     hotcityList: [{ cityCode: 110000, city: '全国' }, { cityCode: 310000, city: '上海市' }, { cityCode: 440100, city: '广州市' }, { cityCode: 440300, city: '深圳市' }, { cityCode: 330100, city: '杭州市' }, { cityCode: 320100, city: '南京市' }, { cityCode: 420100, city: '武汉市' }, { cityCode: 410100, city: '郑州市' }, { cityCode: 120000, city: '天津市' }, { cityCode: 610100, city: '西安市' }, { cityCode: 510100, city: '成都市' }, { cityCode: 500000, city: '重庆市' }]
   },
   onLoad: function () {
-    
+    // 设置当前城市
+    this.setData({
+      city: app.globalData.city
+    })
     // 生命周期函数--监听页面加载
     var searchLetter = city.searchLetter;
     var cityList = city.cityList();
@@ -36,7 +40,7 @@ Page({
       itemH: itemH,
       searchLetter: tempObj,
       cityList: cityList,
-      city:DATAS.apps.city
+      // city:DATAS.apps.city
     })
 
   },
@@ -85,18 +89,30 @@ Page({
     this.setData({ city: e.currentTarget.dataset.city });
     var pageLen = getCurrentPages();
     var pageBack = pageLen[pageLen.length - 2];
+    console.log(pageLen, pageBack)
     pageBack.setData({
+      locationName: e.currentTarget.dataset.city,
       city: e.currentTarget.dataset.city
     });
+    app.globalData.city = e.currentTarget.dataset.city
     wx.navigateBack({
-      delta:1
+      delta: 1
     })
-    
+
   },
   //点击热门城市回到顶部
   hotCity: function () {
     this.setData({
       scrollTop: 0,
     })
-  }
+  },
+  onShareAppMessage: function (res) {
+    var that = this;
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+    }
+    return {
+      title: '快来善小美，悠享健康生活',
+    }
+  },
 })

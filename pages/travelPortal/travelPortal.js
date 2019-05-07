@@ -1,4 +1,4 @@
-var app = getApp();
+ var app = getApp();
 var req = require('../../js/require.js');
 var httpUtils = require('../../js/httpUtils.js');
 var constantFields = require('../../js/constantFields.js');
@@ -6,36 +6,53 @@ var Map = require('../../js/qqmap-wx-jssdk');
 var page = 1;
 var pageSize = 10;
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
+    bannerPortal:[
+      {
+        imgUrl:"http://www.shanxingniao.com/imgServer/images/use_test/leshuiyou/jjhy01.jpg"
+      },
+      {
+        imgUrl:"http://www.shanxingniao.com/imgServer/images/use_test/leshuiyou/jjhy02.jpg"
+      },
+      {
+        imgUrl:"http://www.shanxingniao.com/imgServer/images/use_test/leshuiyou/jjhy03.jpg"
+      }
+    ]
   },
   goChannel(e){
-
-    if (e.currentTarget.dataset.status == "NORMAL"){
+    console.log(e.currentTarget.dataset)
+    if (e.currentTarget.dataset.id == "6"){
       wx.navigateTo({
         url: '../travel/travel?platformCode=' + e.currentTarget.dataset.platformcode + `&id=${e.currentTarget.dataset.id}`
-
       });
-      return
     }
-    wx.showToast({
-      title: '敬请期待',
-    })
-  },
-  //乐水园
-  waterpack(){
-    wx.navigateTo({
-      url: '../travel/travel',
-    })
-  },
-  //农场
-  agroecology(){
-    wx.navigateTo({
-      url: "../Agroecology/Agroecology",
-    })
+    if (e.currentTarget.dataset.id == "4"){
+      wx.navigateTo({
+        url: '../travel/travel?platformCode=' + e.currentTarget.dataset.platformcode + `&id=${e.currentTarget.dataset.id}`
+      });
+    }
+    if (e.currentTarget.dataset.id == "7"){
+      // wx.showToast({
+      //   title: '敬请期待',
+      // })
+      wx.navigateTo({
+        url: '../travel/travel?platformCode=' + e.currentTarget.dataset.platformcode + `&id=${e.currentTarget.dataset.id}`
+      });
+    }
+    // if (e.currentTarget.dataset.id == "8") {
+    //   wx.navigateTo({
+    //     url: '../travel/travel?platformCode=' + e.currentTarget.dataset.platformcode + `&id=${e.currentTarget.dataset.id}`
+    //   });
+    // }
+    
+    if (e.currentTarget.dataset.status == "DELETED") {
+      wx.showToast({
+        title: '敬请期待',
+      })
+    }
   },
   more(){
     wx.showToast({
@@ -49,7 +66,6 @@ Page({
     // 频道入口
     channelList(that);
     },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -61,7 +77,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    
   },
 
   /**
@@ -84,7 +100,6 @@ Page({
   onPullDownRefresh: function () {
 
   },
-
   /**
    * 页面上拉触底事件的处理函数
    */
@@ -96,7 +111,7 @@ Page({
     if (res.from === 'button') {
     }
     return {
-      title: '精准匹配营销,生意及所能及',
+      title: '快来善小美，悠享健康生活',
     }
   },
 })
@@ -106,10 +121,10 @@ function channel(that){
   httpUtils.postRequest(url).then(function(res){
     that.setData({
       banner:res.data.body
+      
     })
   })
 }
-
 // 频道入口
 function channelList (that){
   let url = constantFields.channelList;
@@ -128,6 +143,5 @@ function channelList (that){
         title: res.data.head.errCode,
       })
     }
-    
   })
 }

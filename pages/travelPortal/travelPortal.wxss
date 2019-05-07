@@ -2,13 +2,14 @@
 /* 行业入口 */
 .portal{
   width:720rpx;
-  margin:15rpx 0 0 13rpx;
+  /* margin:15rpx 0 0 13rpx; */
+  margin-left:15rpx;
 }
 .portalFor{
   width:100%;
   border-radius: 5px;
   border: #666 1rpx solid;
-  margin-bottom: 20rpx;
+  margin-bottom: 10rpx;
 }
 .portalTitle{
   font-size: 28rpx;

@@ -1,13 +1,13 @@
 <view class='contents'>
   <!--分类导航  -->
-  <view class='nav'>
+  <!-- <view class='nav'>
     <block wx:for='{{navList}}'>
       <view class='itemClass' bindtap='getItemCode'>
         <image class='itemImg' src='{{item.imgUrl}}' data-sys='{{item.sysShopTypeInfos}}' data-code='{{item.code}}' data-typeName='{{item.typeName}}' data-typeCode='{{item.typeCode}}'></image>
         <text class='itemText'  data-sys='{{item.sysShopTypeInfos}}'  data-code='{{item.code}}' data-typeName='{{item.typeName}}' data-typeCode='{{item.typeCode}}'>{{item.typeName}}</text>
       </view>
     </block>
-  </view>
+  </view> -->
   <!--颜色分割条  -->
   <view class='slectColor'></view>
   <view id='flexs' class="{{scrollTop >= tops?'flex':''}} hei">

@@ -1,4 +1,4 @@
-<!--pages/mine/mine.wxml-->
+<!-- pages/mine/mine.wxml -->
 <view class='mineBox'>
   <image class='bgImg' src='../../images/minebg.png'></image>
   <!-- <image class='avatar' src='{{userInfo.avatarUrl}}'></image> -->
@@ -8,22 +8,39 @@
     <button wx:if="{{wxuser==null}}" open-type='getUserInfo' class='getUser' bindgetuserinfo='getWxUserInfo'>获取基本用户信息</button>
     <image class='userImg' src='{{wxuser.avatarUrl}}'></image>
     <text class='userName'>{{wxuser.nickName}}</text>
+    
   </view>
+  <view class='nav'>
+      <view class='itemClass' bindtap='goSign' data-types='{{item.types}}'>
+        <image class='itemImgq' src='../../images/qd.png' ></image>
+        <text class='itemText'>签 到</text>
+      </view>
+      <view class='itemClass' bindtap='goGold' data-types='{{item.types}}'>
+        <image class='itemImg' src='../../images/gold.png' ></image>
+        <text class='itemText'><text style='font-weight:400;font-size:28rpx;'>{{balance?balance:0}}</text></text>
+      </view>
+      <view class='itemClass' bindtap='goMyCollection' data-types='{{item.types}}'>
+        <image class='itemImg' src='../../images/phone.png' ></image>
+        <text class='itemText'>收 藏</text>
+      </view>
+  </view>
+   
+
 </view>
 <!-- 我的列表 -->
 <view class='userList'>
-  <view class='userOrder' bindtap='goGold'>
+  <!-- <view class='userOrder' bindtap='goGold'>
     <view class='userOrderLeft'>
       <image class='orderLeft' src='../../images/gold.png'></image>
-      <text class='shop'>我的广告投放金：<text style='color:#ff5c61;font-weight:900;font-size:32rpx;'>{{balance?balance:0}}</text></text><image class='orderLeft' src='../../images/gold.png'></image>
+      <text class='shop'>我的美豆：<text style='color:#ff5c61;font-weight:900;font-size:32rpx;'>{{balance?balance:0}}</text></text><image class='orderLeft' src='../../images/gold.png'></image>
     </view>
     <view class='rights'>
       <view>管理</view>
       <image class='orderRight' src='../../images/jiantou.png'></image>
     </view>
 
-  </view>
-  <view class='userOrder' bindtap='tishi'   data-id='0' >
+  </view>-->
+  <!-- <view class='userOrder' bindtap='tishi'   data-id='0' >
     <view class='userOrderLeft'>
       <image class='orderLeft' src='../../images/invite.png'></image>
       <text class='shop'>我的开店邀请码：<text style='font-weight:900;font-size:32rpx;'>{{invitatuonNum}}</text></text>
@@ -32,16 +49,81 @@
       <view style='color:#ff5c61;border: 1rpx solid #ff5c61;'>提示！</view>
       <image class='orderRight' src='../../images/jiantou.png'></image>
     </view>
+  </view>  -->
+<!-- 订单 -->
+  <view class="DingDan topo">
+    <text class="tit">订单管理</text>
+    <view class="lieBi">
+      <view class='itemClass' bindtap='goOrder' data-types='{{item.types}}'>
+        <image class='itemImg' src='../../images/order.png' ></image>
+        <text class='itemText'>我的订单</text>
+      </view>
+       <view class='itemClass' bindtap='goShopList' data-types='1'>
+        <image class='itemImg' src='../../images/rmb.png' ></image>
+        <text class='itemText'>我买过的店</text>
+      </view>
+      <view class='itemClass' bindtap='goToAddress' data-types=''>
+        <image class='itemImg' src='../../images/place.png' ></image>
+        <text class='itemText'>我的地址</text>
+      </view>
+      <view class='itemClass' bindtap='goShopList' data-types='2'>
+        <image class='itemImg' src='../../images/payInshop.png' ></image>
+        <text class='itemText'>浏览过的店</text>
+      </view>
+    </view>
+  </view>
+  <view class="DingDan imgUrl" >
+   <image src="http://www.shanxingniao.com/imgServer/images/use_test/qita/wodetiaofu.jpg" bindtap='jifen'></image>
+  </view>
+  <view class="DingDan">
+    <text class="tit">店铺管理</text>
+    <view class="lieBii">
+      <view class='itemClass' bindtap='openB' data-types='{{item.types}}'>
+        <image class='itemImg' src='../../images/guanli.png' ></image>
+        <text class='itemText'>管理我的店</text>
+      </view>
+       <view class='itemClass' bindtap='openShop' data-types=''>
+        <image class='itemImg' src='../../images/manage.png' ></image>
+        <text class='itemText'>我要开店</text>
+      </view>
+      <view class='itemClass' bindtap='' data-types=''>
+        <text style='font-weight:500;font-size:32rpx;color:red;'>{{invitatuonNum}}</text>
+        <text class='itemText'>我的邀请码</text>
+      </view>
+    </view>
+  </view>
+  <view class="DingDan bottom">
+    <text class="tit">关于我们</text>
+    <view class="lieBie" style="border:none;">
+      <view class='itemClassg' bindtap='aboutGs' data-types='{{item.types}}'>
+        <image class='itemImg' src='../../images/about.png' ></image>
+        <text class='itemText'>关于公司</text>
+      </view>
+       <view class='itemClassg' bindtap='zhaoshang' data-types='{{item.types}}'>
+        <image class='itemImg' src='../../images/zhaoshang.jpg' ></image>
+        <text class='itemText'>生态园招商</text>
+      </view>
+       <view class='itemClassg' bindtap='money' data-types='{{item.types}}'>
+        <image class='itemImg' src='../../images/shoukuan.png' ></image>
+        <text class='itemText'>收款码</text>
+      </view>
+       <view class='itemClassg' bindtap='signFn' data-types='{{item.types}}'>
+        <image class='itemImg' src='../../images/peixun.png' ></image>
+        <text class='itemText'>培训报名</text>
+      </view>
+    </view>
   </view>
 
-   <view class='nav'>
+
+
+   <!-- <view class='nav'>
     <block wx:for='{{navList}}'>
       <view class='itemClass' bindtap='{{item.click}}' data-types='{{item.types}}'>
         <image class='itemImg' src='{{item.icon}}' ></image>
         <text class='itemText'>{{item.name}}</text>
       </view>
     </block>
-  </view>
+  </view> -->
   <!-- <view class='userOrder' bindtap=''>
     <view class='userOrderLeft'>
       <image class='orderLeft11' src='' style='margin-right:35rpx'></image>
@@ -111,8 +193,8 @@
 <view class='tance' wx:if='{{sh == 0}}' bindtap='tishi' data-id='1'>
   <view class='tanceView'>
     <text>
-      他人使用您的邀请码开店，平台奖励给您：\n1、680广告投放金；\n2、对方每增加1笔广告投放金的10%；\n3、对方每1笔线上销售额的0.5%；\n4、奖励政策持续20年。
+      他人使用您的邀请码开店，平台奖励给您：\n1、680美豆；\n2、对方每增加1笔美豆的10%；\n3、对方每1笔线上销售额的0.5%；\n4、奖励政策持续20年。
     </text>
   </view>
 </view>
-<view style='weight100rpx;height:400rpx;'></view>
+<!-- <view style='weight100rpx;height:400rpx;'></view> -->

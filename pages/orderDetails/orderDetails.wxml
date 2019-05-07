@@ -1,17 +1,35 @@
-<view class='orderDetails'>
-  <view class='details_box'>
-    <view class='details_img' wx:for="{{orderDetail.retailOrderItemsList}}" wx:key="iconList">
-      <view class='details_left'>
-        <image class='icon' src='{{item.cover}}'></image>
-        <view class='product_title'>
-          <text class='ware'>{{item.productName}}</text>
-          <view class='prix'>x<text>{{item.buyCount}}</text></view>
+<view class="goodsBox">
+	<view class="goods" wx:key='goodsList'>
+      <image class="leftImg" src="{{orderDetail.shopImgUrlinfo}}"></image>
+    <view class="rightBox">
+      <text class="jinkou">{{orderDetail.shopName}}</text>
+      <!-- <view class="texture">
+        <text class="orange">净含量{{item.specStr}}</text>
+      </view> -->
+      <view class="editBody">
+        <view class="money">¥<text>{{orderDetail.salePrice/100/orderDetail.number}}</text></view>
+        <view class="edit">
+          购买数量: <text>{{orderDetail.number}}</text>
         </view>
       </view>
-    <view class='rate'>¥<text>{{item.salePrice*item.buyCount/100}}</text></view>
     </view>
   </view>
 </view>
+
+<!-- <view class='orderDetails'>
+  <view class='details_box'>
+    <view class='details_img' wx:key="iconList">
+      <view class='details_left'>
+        <image class='icon' src='{{orderDetail.shopImgUrlinfo}}'></image>
+        <view class='product_title'>
+          <text class='ware'>{{orderDetail.shopName}}</text>
+          <view class='prix'>x<text>{{orderDetail.number}}</text></view>
+        </view>
+      </view>
+    <view class='rate'>¥<text>{{orderDetail.salePrice*orderDetail.number/100}}</text></view>
+    </view>
+  </view>
+</view> -->
 <view class='cost'>
   <view class='packCost'>
     <text>包装费</text>
@@ -19,12 +37,13 @@
   </view>
   <view class='packCost'>
     <text>配送费</text>
-    <text>¥{{orderDetail.deliveryFee/100}}</text>
+    <!-- <text>¥{{orderDetail.deliveryFee/100}}</text> -->
+    <text>¥0.0</text>
   </view>
-  <view class='packCost packCostOne'>
+  <!-- <view class='packCost packCostOne'>
     <text>随机立减</text>
     <text>¥{{orderDetail.preferentialFee/100}}</text>
-  </view>
+  </view> -->
   <view class='actPackCost'>
     <text>实际支付</text>
     <text class='actCostNum'>¥{{orderDetail.salePrice/100}}</text>
@@ -52,7 +71,7 @@
     <view>    
       <text class='order_number'>{{orderDetail.orderSn}}</text>
       <text class='col_line'>|</text>
-      <text class='copy'>复制</text>
+      <text class='copy' data-ordeSn='{{orderDetail.orderSn}}' bindtap="copyTBL">复制</text>
     </view>   
   </view>
   <view class='time_box'>

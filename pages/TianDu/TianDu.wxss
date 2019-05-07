@@ -1,0 +1,40 @@
+.top-img{
+  text-align: center;
+}
+.top-img image{
+  width: 100%;
+}
+.LianXi{
+  width: 100%;
+  margin-left:30rpx;
+  margin-top:20rpx;
+  margin-bottom: 20rpx;
+  font-weight: 500;
+}
+.text-adderrs{
+  font-size: 26rpx;
+  margin: 20px;
+}
+.add-img{
+  text-align: center;
+}
+.add-img image{
+  width:90%;
+  margin-bottom: 20rpx;
+}
+.hot-rexian{
+  font-size: 26rpx;
+  margin: 20px;
+}
+.Watch{
+    font-size: 26rpx;
+  margin:20px;
+}
+.Watch image{
+  display: flex;
+  width: 450rpx;
+  height: 580rpx;
+  margin-left:17%;
+  margin-top:30rpx;
+  margin-bottom: 30rpx;
+}

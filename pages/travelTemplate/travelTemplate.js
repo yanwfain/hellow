@@ -1,4 +1,5 @@
 // pages/travelTemplate/travelTemplate.js
+const result = require('../../datas/jijihangye.js')
 Page({
 
   /**

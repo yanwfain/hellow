@@ -1,11 +1,11 @@
 
 .bgImg{
   width: 100%;
-  height: 100%;
+  height: 76%;
 }
 .mineBox{
-  position: relative;
-  height: 347rpx;
+  height: 400rpx;
+  /* border-bottom:1px solid #eee; */
 }
 .mineBox .userInfor{
    display: flex;
@@ -13,29 +13,42 @@
   align-items: center;
   position: absolute;
   left: 50%;
-  top: 50%; 
+  top: 14%; 
   transform: translate(-50%,-50%);
 }
 .userImg{
-  width: 180rpx;
-  height: 180rpx;
+  width: 170rpx;
+  height: 170rpx;
   border-radius: 50%;
   margin-bottom: 34rpx;
   margin-right: 20rpx;
+}
+.imgUrl{
+  width: 100%;
+  height:180rpx;
+  border-bottom: 1rpx solid #eee;
+
+}
+.imgUrl image{
+  width: 100%;
+  height: 160rpx;
+    border-radius: 10rpx;
 }
 .userName{
   color: #fff;
   font-size: 36rpx;
   margin-top: -25rpx;
+  margin-left:-10rpx;
 }
 /* 我的列表 */
 .userList{
   background: #fff;
   padding: 0 30rpx;
   font-size: 30rpx;
+  margin-top:40rpx;
 }
 .rights{
-  display: flex; 
+  display: flex;
 }
 .rights view{
   line-height: 40rpx;
@@ -149,26 +162,86 @@
 /* 分类导航 */
 .nav{
   display: flex;
+  justify-content:space-around;
   background: white;
   flex-wrap: wrap;
-  margin-top: 50rpx;
+  margin-top: 10rpx;
 }
+.DingDan{
+  /* border-top:1px solid #eee; */
+  padding-top:20rpx;
+}
+.bottom{
+  border:none;
+
+
+}
+.lieBi{
+    display: flex;
+  justify-content:space-around;
+  background: white;
+  flex-wrap: wrap;
+  margin-top: 10rpx;
+  padding-bottom: 30rpx;
+  padding-top:10rpx;
+  border-bottom: 1px solid #eee;
+}
+.lieBii{
+    display: flex;
+  justify-content:space-around;
+  background: white;
+  flex-wrap: wrap;
+  margin-top: 10rpx;
+  padding-bottom: 30rpx;
+  padding-top:10rpx;
+  /* margin-left:30rpx; */
+  border-bottom: 1px solid #eee;
+}
+.lieBie{
+      display: flex;
+  /* justify-content:space-around; */
+  background: white;
+  flex-wrap: wrap;
+  margin-top: 10rpx;
+  padding-bottom: 30rpx;
+  padding-top:10rpx;
+  border-bottom: 1px solid #eee;
+}
+.itemClassg{
+  display:flex;
+flex-direction:column;
+/* align-items:center; */
+margin-top:13rpx;
+margin-left:40rpx;
+/* justify-content:center; */
+}
+.itemClassg image{
+  margin-left:40rpx;
+}
+.tit{
+  font-size:28rpx;
+  font-weight: 500;
+}
+
 .itemClass{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* margin-right: 40rpx; */
-  margin-top: 30rpx;
-  margin-left: 10rpx;
-  justify-content: center;
+display:flex;
+flex-direction:column;
+align-items:center;
+margin-top:13rpx;
+margin-left:10rpx;
+justify-content:center;
 }
 /* .itemClass:nth-child(1),.itemClass:nth-child(6),.itemClass:nth-child(11){
   margin-left: 0;
 } */
 .itemImg{
-  width: 40rpx;
-  height: 40rpx;
+  width: 48rpx;
+  height: 52rpx;
   margin-bottom: 0rpx;
+}
+.itemImgq{
+   width: 54rpx;
+  height: 54rpx;
 }
 .itemText{
   font-size: 24rpx;
@@ -176,4 +249,8 @@
   width:127rpx;
     /* border:1rpx solid black;   */
   text-align:center;
+  margin-top:15rpx;
+}
+.topo{
+  border-top:1px solid #eee;
 }

@@ -6,7 +6,7 @@
 <!-- 收益部分 -->
 <view class='earnings'>
   <!-- <view bindtap='goMany' class="{{off == 2?'back':''}}" data-id='2'>转让明细</view> -->
-  <view >广告投放金转让</view>
+  <view >积分</view>
 
 </view>
 <!-- 明细部分 -->
@@ -38,8 +38,6 @@
     <view class='conts'>
       <button bindtap='accounts' class='buts' type='primary'>转出</button>
     </view>
-  
-  
-  </form>
+  </form> 
 </view>
 <view style='height:600px;width:100px;'></view>

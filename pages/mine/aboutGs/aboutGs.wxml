@@ -4,7 +4,7 @@
 
   <image src='https://www.shanxingniao.com/imgServer/images/xiaochengxu/xinlingshou/c/fang.jpg' class='lableImg'></image>
 
-  <view class='lable'>及及，在身边</view>
+  <view class='lable'>善小美</view>
 
   <view class='content' wx:for='{{contentList}}'>
     <view class='contentLable'>
@@ -13,5 +13,4 @@
     </view>
     <view class='contenText'>{{item.content}}</view>
   </view>
-
 </view>

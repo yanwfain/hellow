@@ -53,3 +53,21 @@
   width: 30rpx;
   height: 30rpx;
 }
+.sign{
+  position:fixed;
+  left:2%;
+  bottom: 20%;
+  z-index: 999;
+  background:#ccc;
+  border-radius: 20rpx;
+  padding: 10rpx;
+}
+.sign image{
+  width: 100rpx;
+  height: 100rpx;
+  margin-left: 10rpx;
+}
+.sign view{
+  font-size: 30rpx;
+  color: red;
+}

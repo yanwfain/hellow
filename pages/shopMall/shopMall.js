@@ -13,7 +13,7 @@ Page({
     ],
     navClass: [
       { name: '综合排序' },
-      { name: '广告投放金排序' },
+      { name: '美豆排序' },
       { name: '时间排序' },
       { name: '推荐' },
     ],
@@ -49,7 +49,6 @@ Page({
         getMakerIndexAdvList(that, constantFields.getActivityIndexTel);
       break;
     }
-    
   },
   // 切换分类
   bigClassTxt(e){
@@ -104,7 +103,6 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
   },
 
   /**

@@ -1,0 +1,70 @@
+<view class="topConduct">
+  <view class="{{selected?'red':'default'}}" bindtap="selected">全部</view>
+  <!-- <view class="{{selected1?'red':'default'}}" bindtap="selected1">进行中</view>
+  <view class="{{selected0?'red':'default'}}" bindtap="selected0">未开始</view> -->
+  <view class="{{selected2?'red':'default'}}" bindtap="selected2">我参与的</view>
+  <!-- <view class="{{selected3?'red':'default'}}" bindtap="selected3">我参与的</view> -->
+</view>
+<view class="{{selected?'show':'hidden'}}">
+
+<view class='shopList' >
+<view class='shopItem' wx:for='{{dateil}}'  data-activityCode='{{item.activityCode}}' data-shopCode='{{item.shopCode}}' data-count='{{item.count}}' bindtap='gobao'  >
+      <image src='{{item.activityImg}}' class='shopImg mycollectionImg' wx:if="{{item.sysShopImgInfos[0].length != 0}}"></image>
+      <view class='shopInfo'>
+        <view class='infoText'>
+          <view class='up'>
+            <text class='shopName'>{{item.title}}</text>
+          </view>
+            
+          <!-- <text style='' class='shopText st kk'>线上促销，到店消费/服务</text> -->
+         
+          <view class='shopText' style='height:30rpx'>
+           <text class='shopText st'>报名人数: {{item.count}}/{{item.number}}</text>
+            
+            <text class='shopText shop3' >金额: {{item.money}}元/人</text>
+            <text class='shopText shop2' style='padding:5rpx;' wx:if="{{item.state == 1}}">正在进行</text>
+             <text class='shopText shop2' style='padding:5rpx;' wx:if="{{item.state == 0}}">未开始</text>
+              <text class='shopText shop2' style='padding:5rpx;' wx:if="{{item.state == 2}}">已过期</text>
+            <!-- <image src='../../../images/collection.png' class='xingImg shopTexts shopText'></image> -->
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<view class="{{selected2?'show':'hidden'}}">
+
+<view class='shopList' >
+<view class='shopItem' wx:for='{{dateils}}' data-activityCode='{{item.activityCode}}' data-shopCode='{{item.shopCode}}' data-id="{{item.id}}" data-count='{{item.count}}' bindtap='gobao' >
+      <image src='{{item.activityImg}}' class='shopImg mycollectionImg' wx:if="{{item.sysShopImgInfos[0].length != 0}}"></image>
+      <view class='shopInfo'>
+        <view class='infoText'>
+          <view class='up'>
+            <text class='shopName'>{{item.title}}</text>
+          </view>
+            <view class='shopText' style='height:30rpx'>
+           <text class='shopText st'>报名人数: {{item.count}}/{{item.number}}</text>
+            
+            <text class='shopText shop3' >金额: {{item.money}}元/人</text>
+            <text class='shopText shop2' style='padding:5rpx;' wx:if="{{item.state == 1}}">正在进行</text>
+             <text class='shopText shop2' style='padding:5rpx;' wx:if="{{item.state == 0}}">未开始</text>
+              <text class='shopText shop2' style='padding:5rpx;' wx:if="{{item.state == 2}}">已过期</text>
+            <!-- <image src='../../../images/collection.png' class='xingImg shopTexts shopText'></image> -->
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<!-- 
+<view bindtap='opt'>
+11111222
+</view>
+
+<view bindtap='op'>
+11111
+</view> -->

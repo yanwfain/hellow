@@ -1,0 +1,76 @@
+<!-- 隐藏1 -->
+<view class='select' hidden='{{place.code !=undefined}}' bindtap="goToAddress">
+  <text>请选择收货地址</text>
+  <image src='../../../images/jiantou.png'></image>
+</view>
+<!-- 隐藏2 -->
+<view class='select' bindtap="goToAddress" hidden='{{place.code == undefined}}'>
+  <view class='selPlace'>
+    <view class='palce'>{{place.addrProvince+place.addrCity+place.addrArea+place.customerAddress}}</view>
+    <view class='palceName'>{{place.customerName}}
+      <text>{{place.customerMobile}}</text>
+    </view>
+  </view>
+  <image src='../../../images/jiantou.png'></image>
+</view>
+<view class='selectList'>
+  <view class='selectImg' wx:for="{{selectProducts}}" wx:key="orderImg">
+    <image class='' src="{{item.cover}}"></image>
+    <text>{{item.outPrice/100}}元*{{item.count}}</text>
+  </view>
+</view>
+
+<view class="withdraw" style="line-height:92rpx;">
+  <view class='lineBottom11'>
+  <!-- <text class='withdrawImg'>请输入核销码：</text> -->
+    <!-- <image class='withdrawImg' src='../../imgs/gold.png'></image> -->
+    <input type='number' placeholder='请输入渠道码' bindinput="getPhone" class="inputl"></input>
+    <!-- <view class='rights'> -->
+    <!-- <view style='color:#ff5c61;border: 1rpx solid #ff5c61;' bindtap='tishi' data-id='0'>提示！</view> -->
+    <!-- <button style="background:rgb(6,197,6);color:black;line-height:50rpx;font-size:28rpx;margin-left:156rpx;" bindtap='buttonFn'>核销</button> -->
+  </view>
+  <!-- </view> -->
+</view>
+<view class='allPrice'>
+  <view class='goodsPrice'>
+    <text class='goodsFreight'>商品总价</text>
+    <text class='goodsFreight' wx:for="{{selectProducts}}">¥{{item.outPrice/100*item.count}}</text>
+  </view>
+  <view class='goodsPrice'>
+    <text class='goodsFreight'>运费</text>
+    <text class='goodsFreight'>+ ¥{{tip}}</text>
+  </view>
+  <view class='freight'>
+    <text class='goodsFreight'>随机立减</text>
+    <text class='goodsFreight'>- ¥{{downprice}}</text>
+  </view>
+  <view class='actualPay'>
+    <text class='payForTxt'>实际支付</text>
+    <text class='payFor' wx:for="{{selectProducts}}">¥{{item.outPrice/100*item.count}}</text>
+  </view>
+</view>
+<!-- 备注信息 -->
+<view class='note'>
+  <text class='information'>备注信息</text>
+  <textarea placeholder='请输入备注留言（请少于100字）' name='mark' bindinput='remarkInput'></textarea>
+  <view class='weixin'>
+    <view class='wx'>
+      <image class='wxImg' src='../../../images/wx.png'></image>
+      <text>微信支付</text>
+    </view>
+    <image class='checked' src='../../../images/checked.png'></image>
+  </view>
+</view>
+<cover-view class='actalFix'>
+  <cover-view class='paycontainer'>
+    <cover-view class='payfor'>
+      <cover-view class='desc_text'>实付款</cover-view>
+      <cover-view class='maney' wx:for="{{selectProducts}}">￥{{item.outPrice/100*item.count}}</cover-view>
+    </cover-view>
+    <cover-view class='downprice'>(本次支付立减{{downprice}}元)</cover-view>
+  </cover-view>
+
+  <cover-view class='payment' bindtap='pay'>
+    支付
+  </cover-view>
+</cover-view>

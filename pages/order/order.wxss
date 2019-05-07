@@ -2,8 +2,15 @@
 
 .lable{
   display: flex;
+   /* height:84rpx; */
+  border-bottom:1rpx solid rgb(229, 229, 229)
 }
-
+.lable view{
+  height:88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  margin-top:1rpx;
+}
 .lableModule{
   display: flex;
   align-items: center;
@@ -11,8 +18,8 @@
 }
 
 .lableImgg1{
-  width: 60rpx;
-  height: 60rpx;
+  width: 100rpx;
+  height: 70rpx;
   display: block;
   border-radius: 50%;
   /* border: 1rpx solid; */
@@ -38,8 +45,8 @@
   justify-content: center; */
   text-align: center;
   font-size: 32rpx;
-  padding: 20rpx 0;
-  margin-bottom: 20rpx;
+  /* padding: 20rpx 0; */
+  /* margin-bottom: 20rpx; */
   background: white;
   border-top: 1rpx solid #e5e5e5;
 }
@@ -49,16 +56,17 @@
   color: white;
   flex: 1;
   font-size: 32rpx;
-  padding: 20rpx 0;
+  /* padding: 20rpx 0; */
   text-align: center;
-  margin-bottom: 20rpx;
+  /* margin-bottom: 20rpx; */
 }
 
 
 .order{
   background: #fff;
-  padding: 32rpx 24rpx 40rpx 24rpx;
+  padding: 32rpx 24rpx 18rpx 24rpx;
   margin-bottom: 16rpx;
+   border-bottom:1rpx solid rgb(229, 229, 229)
 }
 .order .orderTime{
   color: #999;
@@ -78,9 +86,10 @@
 .orderImg{
   display: flex;
   justify-content: center;
-  margin-bottom: 32rpx;
+  /* margin-bottom: 32rpx; */
   width: calc(100%/4);
   align-items: center;
+  margin-left:80rpx;
 }
 .orderImg image{
   width: 140rpx;

@@ -1,14 +1,14 @@
-<view class='cont'>
-  <view  style='width:320rpx;color:#666;text-align: center;'>投放金来源</view>
+<view class='cont cont1' >
+  <view  style='width:320rpx;color:#666;text-align: center;'>积分类型</view>
     <view style='width:100rpx;color:#666;text-align: center;'>时间</view>
     <view style='width:230rpx;color:#666;text-align: center;'>支出/收入</view>
   </view>
-  <view class='cont' wx:for="{{detail}}" wx:key='' bindtap='goGetdetail' data-advertisingCode ='{{item.advertisingCode}}'>
+  <view class='cont' wx:for="{{detail}}" wx:key='' bindtap='goGetdetail' data-id ='{{item.id}}' data-userCode ='{{item.userCode}}'>
     <view class='contName' style='width:320rpx'>
-      <image src='../../images/logos.png'></image>
+      <image src='../../images/loags.jpg'></image>
       <text>{{item.moneyDescribe}}</text>
     </view>
-    <view style='width:100rpx'>{{item.creatAt}}</view>
+    <view style='width:300rpx' class="times">{{item.creatAt}}</view>
     <view style='width:230rpx' class="{{item.type == 'free'?'':item.type == 'income'?'red':'green'}} contN">
       <view>
         <text>{{item.type == 'free'? item.free : item.type == 'income'?"+" + item.money : "-" + item.money}}</text>

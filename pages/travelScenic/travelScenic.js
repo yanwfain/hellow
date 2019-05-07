@@ -83,7 +83,7 @@ Page({
     if (res.from === 'button') {
     }
     return {
-      title: '精准匹配营销,生意及所能及',
+      title: '快来善小美，悠享健康生活',
     }
   },
 })

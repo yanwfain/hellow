@@ -1,0 +1,50 @@
+
+<view class="topIntegral">
+  <image src="{{detail.img}}"></image>
+</view>
+<view class="title">
+  <text>{{detail.coupon_name}}</text>
+  <view style="color:red"> {{detail.integral}}积分</view>
+  <text class="right">库存: <text style="color:red;">{{detail.count}}</text></text>
+</view>
+<view class="gray">
+</view>
+<view class="DuiTiao">
+<view style="position:relative;margin-bottom:20rpx;">
+  <view style="color:black">核销地址 :</view> <view>北京市通州区武夷花园百合湾里面的百合湾50米999号</view>
+  <text style="color:blue;position:absolute;right:40rpx;top:0rpx;font-size:30rpx;">去他家看看  >></text>
+</view>
+<text class="titxt">兑换说明 :</text>
+<view>
+1.兑换成功后请“兑换记录”或“我的-积分-积分交易记录”查看使用;
+</view>
+<view>2.兑换券需要对应商户核销后方可兑换该商品;</view> 
+<view>3.同一积分商品仅能兑换一次;</view> 
+<view>4. 一经兑换，积分不予退还;</view> 
+<view>5.兑换后商品，不找零，不兑现。</view> 
+</view>
+<view class="DuiTiao">
+<text class="titxt">兑换有效期 :</text>
+<view>兑换之日起半年之内有效</view>
+<view>兑换草莓、樱桃等应季水果，兑换日起15日之内有效</view>
+ 
+</view>
+<view class="DuiTiao">
+<text class="titxt">权益说明 :</text>
+<view>该兑换商品每个用户仅限兑换1次</view>
+<view style="color:#ccc">此兑换说明最终解释权归小程序账号主体所有</view>
+</view>
+<view class="kong" style="width:100%;height:100rpx;"></view>
+<view class="yellow" bindtap='duihuan' wx:if="{{currentJifen>integral||currentJifen==integral}}">
+  兑换
+</view>
+<view class="foot" wx:else  bindtap='not'>
+  积分不足
+</view>
+<!-- <view class="foot" >
+  次数上限
+</view> -->
+<!-- <view class="center" wx:if='isTrue' bindtap='cllk'>
+    <view class="center-txt">兑换成功</view>
+    <view class="cllk" bindtap='cllck'>确定</view>
+</view> -->

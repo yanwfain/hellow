@@ -635,7 +635,7 @@ overflow:hidden;
   padding: 30rpx;
 }
 .navLists{
-  width: 138rpx;
+  width: 180rpx;
   text-align: center;
 }
 .navLists image{

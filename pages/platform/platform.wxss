@@ -1,0 +1,46 @@
+.vie{
+  width: 100%;
+}
+.view-img{
+  width: 100%;
+  text-align: center;
+}
+.view-img image{
+  width: 100%;
+  /* margin-left:20%; */
+}
+.txt{
+  font-size: 30rpx;
+  text-align: center;
+}
+.Jie {
+  padding-left:30rpx;
+  padding-right:10rpx;
+  font-size: 30rpx;
+}
+.Jie text{
+  font-size: 28rpx;
+}
+.Jie image{
+  width: 94%;
+  margin-left:10rpx;
+}
+.fot-vie{
+  padding: 10rpx;
+  padding-left:30rpx;
+  font-size: 30rpx;
+}
+.tit-txt{
+  width: 100%;
+  text-align: center;
+}
+.fot-vie text{
+  font-size: 26rpx;
+}
+.fot-vie image{
+  width: 94%;
+  margin-left:10rpx;
+}
+.fot-vie view{
+ font-size: 26rpx;
+}

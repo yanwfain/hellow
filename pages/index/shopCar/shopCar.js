@@ -163,6 +163,7 @@ Page({
     })
   },
   navigateTo:function(e){
+    console.log(this.data.canIBuy + "-------------------")
     if(this.data.canIBuy){
       wx.navigateTo({
         url: '../../order/fillIn/fillIn',

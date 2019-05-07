@@ -80,9 +80,7 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-  
-  },
+
   location:function(e){
     wx.navigateTo({
       url: '../locationmap/locationmap',
@@ -164,5 +162,14 @@ Page({
     })
    
    
-  }
+  },
+  onShareAppMessage: function (res) {
+    var that = this;
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+    }
+    return {
+      title: '快来善小美，悠享健康生活',
+    }
+  },
 })

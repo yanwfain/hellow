@@ -1,0 +1,22 @@
+<!-- <view class="record">
+暂无数据
+</view> -->
+<view class='cont cont1' >
+  <view  style='width:320rpx;color:#666;text-align: center;'>积分类型</view>
+    <view style='width:100rpx;color:#666;text-align: center;'>时间</view>
+    <view style='width:230rpx;color:#666;text-align: center;'>支出/收入</view>
+  </view>
+  <view class='cont' wx:for="{{detail}}" wx:key='' bindtap='goGetdetail' data-id ='{{item.id}}' data-userCode ='{{item.userCode}}'>
+    <view class='contName' style='width:320rpx'>
+      <image src='../../images/loags.jpg'></image>
+      <text>{{item.moneyDescribe}}</text>
+    </view>
+    <view style='width:300rpx' class="times">{{item.creatAt}}</view>
+    <view style='width:230rpx' class="{{item.type == 'free'?'':item.type == 'income'?'red':'green'}} contN">
+      <view>
+        <text>{{item.type == 'free'? item.free : item.type == 'income'?"+" + item.money : "-" + item.money}}</text>
+        <text class='tishi' wx:if="{{item.type == 'free'}}">对方完善店铺信息后生效</text>
+      </view>
+      <image src='../../images/jiantou.png'></image>
+    </view>
+  </view>

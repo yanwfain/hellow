@@ -1,0 +1,266 @@
+@import '../template/template.wxss';
+page{
+  background: white;
+}
+
+/*
+  颜色分割条
+*/
+.slectColor{
+  background: #f4f4f4;
+  height: 10rpx;
+}
+
+/*大类  */
+.tabClass{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30rpx 30rpx 10rpx;
+}
+
+.tabItem{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 40rpx;
+  margin-bottom: 20rpx;
+}
+
+.tabItem:nth-child(5n+1){
+  margin-left: 0;
+}
+
+.itemImg{
+  width: 84rpx;
+  height: 84rpx;
+  /* border: 1rpx solid red; */
+  margin-bottom: 10rpx;
+  border-radius: 50%;
+}
+
+.itemText{
+  width: 104rpx;
+  font-size: 26rpx;
+  color: #333333;
+  text-align: center;
+}
+
+/*模块群  */
+.modules{
+  display: flex;
+  flex-direction: column;
+}
+
+.upmo{
+  display:flex;
+  flex:1;
+  padding:10rpx 18rpx;
+  background: white;
+}
+
+.mul{
+  display: flex;
+  flex: 1;
+} 
+
+.lifeWisdom,.nearbySales{
+  width: 100%;
+  height: 160rpx;
+  border-radius: 10rpx;
+}
+
+.lifeWisdom{
+  margin-right: 15rpx;
+}
+
+.nearbySales{
+  margin-left: 15rpx;
+}
+
+.shopModule{
+  display: flex;
+  flex: 1;
+}
+
+.publicStyle{
+  display: flex;
+  flex: 1;
+}
+
+.pubImg{
+  width: 100%;
+  height: 94rpx;
+  display: block;
+}
+
+.manageMyStore{
+  border-left: 1rpx solid #e5e5e5;
+  border-right: 1rpx solid #e5e5e5;
+}
+
+/*附近的促销、附近的店  */
+.nearStatus{
+  display: flex;
+}
+
+.nearCuxiao,.nearShop{
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.cuxiaoText,.shText{
+  height:60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  color: #A7A7A7;
+}
+
+.selectClass{
+  color: #FF5C61;
+  border-bottom: 1rpx solid #FF5C61;
+}
+
+/*展示列表--附近促销  */
+
+/*生活智慧  */
+.mam{
+  background: white;
+}
+
+.mamText{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20rpx;
+  border-bottom:1rpx solid #e5e5e5;
+}
+
+.wisdomView{
+  display: flex;
+  flex-direction: column;
+  padding: 30rpx;
+  border-bottom: 1rpx solid #E6E6E6;
+}
+
+.lifeList{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.lifeImg{
+  display: block;
+  width: 230rpx;
+  height: 150rpx;
+  margin-right: 25rpx;
+  
+}
+
+.lifeText{
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  height: 150rpx;
+  width: 376rpx;
+  font-size: 32rpx;
+  color: #333333;
+  font-weight: 600;
+  position: relative;
+}
+.conter{
+  width: 100%;
+  line-height: 38rpx;
+  height: 76rpx;
+  overflow: hidden;
+}
+.author{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size:32rpx;
+  color:#333333;
+  font-weight:400;
+  position: absolute;
+  bottom: 0;
+}
+.zuozhe{
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+  color: #666666;
+  margin-top: 10rpx;
+  justify-content: flex-end;
+}
+
+.zuozhe text:nth-child(1){
+  margin-right: 20rpx;
+}
+/* 排序 */
+.paixuClass{
+  display: flex;
+  padding: 0 30rpx 15rpx;
+}
+
+.tabT{
+  color: #666666;
+  font-size: 26rpx;
+  padding: 8rpx 15rpx;
+  border-radius:28rpx;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  margin-top: 10rpx;
+}
+
+/* .tabT:nth-child(2){
+  margin: 0 30rpx;
+} */
+
+.selectTabClass{
+  padding: 8rpx 15rpx;
+  background:rgba(255,92,97,0.2097);
+  border-radius:28rpx;
+  color: #FF5C61;
+  font-size: 26rpx;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  margin-top: 10rpx;
+}
+
+/*轮播图外框  */
+.lbImg{
+  width: 100%;
+  height: 406rpx;
+}
+/* .lbImga{
+  width: 100%;
+  height: 406rpx;
+  overflow: hidden;
+}
+.lbImgs{
+  width: 100%;
+  height: 1000rpx;
+  align-items: center;
+} */
+/*
+  contents
+*/
+.contents{
+  background: white;
+}
+
+.swip{
+  padding: 4rpx;
+  background: #f4f4f4;
+}
+/* 置顶 */
+.isTop{
+  opacity: .5;
+  width: 100rpx;
+  height: 100rpx;
+  position: fixed;
+  bottom: 100rpx;
+  right: 50rpx;
+}

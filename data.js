@@ -1,5 +1,6 @@
 var constantFields = require('./js/constantFields.js');
 var httpUtils = require('./js/httpUtils.js');
+var app = getApp();
 // ```````````````````````````````````````````景区介绍```````````````````
 
 //````````````````````````````````````````````请求类````````````````````
@@ -97,6 +98,35 @@ const scenicWeb = function scenicWeb(that, options){
     }
   })
 };
+
+// 商品列表  进店
+const scenicWebshop = function scenicWebshop(that, options) {
+
+  wx.showLoading({
+    title: '加载中',
+  })
+  let url = constantFields.scenicWebshop;
+  let data = {
+    'pageNo': 1,
+    "pageSize": 10,
+    "lat": apps.lat,
+    "lng": apps.lng,
+    "platfroCode": options.platformCode,//platformCode
+  }
+  httpUtils.postRequest(url, data).then(function (res) {
+    console.log(res)
+    wx.hideLoading();
+    if (res.data.head.errCode == 10000) {
+      that.setData({
+        offcialListshop: res.data.body
+      })
+    } else {
+      wx.showToast({
+        title: res.data.body.errMsg,
+      })
+    }
+  })
+};
 // 水平台导航列表
 const getTravelSearch = function (that, options, page) {
   wx.showLoading({
@@ -143,6 +173,33 @@ const getTravelSearch = function (that, options, page) {
     }
   })
 };
+const getOpenid = function(that) {
+  var url = constantFields.GET_OPENID;
+  // var url = 
+  console.log(that)
+  var params = {};
+  params.appId = constantFields.APP_ID;
+  console.log(params.appId);
+
+  var wxlogin = httpUtils.httpPromise(wx.login);
+  wxlogin().then(function (res) {
+    console.log(res)
+    params.code = res.code;
+    httpUtils.postRequest(url, params).then(function (res) {
+      console.log(res)
+      app.globalData.openId = res.data.body.openId;
+      console.log(app.globalData.openId + "------openid")
+      that.setData({
+        selectStatus: true,
+        openIds: res.data.body.openId
+      })
+      app.globalData.openId = that.data.openIds
+      // console.log(res.data.body.openId)
+      console.log(that.data.openIds)
+      console.log(app.globalData.openId)
+    })
+  })
+}
 // `````````````````````````````````````````````````仿app变量
 const apps = {};
 // `````````````输出
@@ -153,5 +210,6 @@ module.exports = {
   getBanner: getBanner,
   getShop: getShop,
   scenicWeb: scenicWeb,
-  getTravelSearch: getTravelSearch
+  getTravelSearch: getTravelSearch,
+  getOpenid: getOpenid
 }

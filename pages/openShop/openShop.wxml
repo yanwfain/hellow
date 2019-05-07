@@ -1,6 +1,6 @@
 <!--pages/openShop/openShop.wxml-->
 <!-- <text>pages/openShop/openShop.wxml</text> -->
-<image src='../../images/logos.png' class='logos'></image>
+<image src='../../images/dalogo.jpg' class='logos'></image>
 <view class='main'>
     <!--form表单  -->
     <form class='form' bindsubmit="formSubmit" wx:if='{{hidden}}'>

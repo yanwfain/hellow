@@ -1,58 +1,29 @@
-<!-- 轮播图 -->
- <swiper class='shop_swiper' indicator-dots autoplay="true" interval="3000" duration="1000" circular='true'  class='lbImg' bindtap='goActiveInfo'>
-    <block wx:for="{{lbList}}" wx:key="">
-      <swiper-item>
-        <image src="{{item.imgUrl}}" width='100%' height='150' class='lbImg' data-activecode="{{item.sysAdvertActivityInfo.activityCode}}"/>
-      </swiper-item>
-    </block>
-  </swiper>
-<!-- 位置选择 -->
-  <view class='seckregion' bindtap='sandh' data-sh='0'>
-    <view class='sekcen'>
-      <text>{{province}}</text>
-      <image src='../../images/xiala.png' class='xiala'></image>
-    </view>
-    <view class='sekcen'>
-      <text>{{city}}</text>
-      <image src='../../images/xiala.png' class='xiala'></image>
-    </view>
-    <view class='sekcen'>
-      <text>{{district}}</text>
-      <image src='../../images/xiala.png' class='xiala'></image>
-    </view>
+
+<view class="topIntegral">
+  <image src="http://www.shanxingniao.com/imgServer/images/use_test/qita/jf0.jpg"></image>
 </view>
-<!-- 选择城市弹出层 -->
-<view class='masking' bindtap='sandh' data-sh='1' wx:if="{{sh == 0}}">
-  <view class='masView'>
-    <scroll-view scroll-y class='masView1'>
-      <block wx:for='{{provinceList}}'>
-        <view data-province='{{item.fullname}}' class="{{item.fullname == province?'fontS':''}}" data-index='{{index}}' data-id="{{item.id}}" catchtap='province'>{{item.fullname}}</view>
-      </block>
-    </scroll-view>
-    <scroll-view scroll-y class='masView1'>
-      <block wx:for='{{cityList}}'>
-        <view data-city='{{item.fullname}}' class="{{item.fullname == city?'fontS':''}}" data-index='{{index}}' data-id="{{item.id}}" catchtap='city'>{{item.fullname}}</view>
-      </block>
-    </scroll-view>
-    <scroll-view scroll-y class='masView1'>
-      <block wx:for='{{districtList}}'>
-        <view data-district='{{item.fullname}}' class="{{item.fullname == district?'fontS':''}}" data-index='{{index}}'  data-fullname='{{item.fullname}}' data-location="{{item.location}}" data-id="{{item.id}}" catchtap='district'>{{item.fullname}}</view>
-      </block>
-    </scroll-view>
+<view class="butopen">
+  <view class="open" bindtap='zhuandou'>
+    <image src="../../images/gold.png"></image>
+    <text>赚积分</text>
+  </view>
+  <view class="open" bindtap='duihuan'>
+    <image src="../../images/order.png"></image>
+    <text>兑换记录</text>
   </view>
 </view>
-<!-- 精选 -->
-<!-- 列表 -->
-<view class='centers'>
-  <view class='cityArrs'>-城市-</view>
-    <view class='titles' wx:if="{{orgList.areas.length > 0}}">直辖市</view>
-    <view class='centerList'>
-      <view wx:for='{{orgList.areas}}'  data-location='{{item.location}}' bindtap='goProvince' data-id='{{item.id}}' data-fullname='{{item.fullname}}' class='listDan'>{{item.fullname}}</view>
-    </view>
-  <block wx:for='{{orgList.areay}}'>
-    <view class='titles'>{{item.fullname}}</view>
-    <view class='centerList'>
-      <view wx:for="{{item.areas}}"  data-location='{{item.location}}' bindtap='goProvince' data-id='{{item.id}}' data-fullname='{{item.fullname}}' class='listDan'>{{item.fullname}}</view>
-    </view>
-  </block>
+<view class="gray">
+</view>
+<view class="Dqian">
+  <view class="titd">
+    <text>当前可用积分:<text style='color:#ff5c61;font-weight:400;font-size:28rpx;'>{{balance?balance:0}}</text></text>
+  </view>
+</view>
+<view class="content" >
+  <view class="bgc" style="width:100%;height:10rpx;"></view>
+  <view class="cont" bindtap='jupmDeile' wx:for="{{dateil}}" data-id="{{item.id}}">
+    <image src="{{item.img}}"></image>
+    <text>{{item.coupon_name}}</text>
+    <text style="color:red;">{{item.integral}}积分</text>
+  </view>
 </view>

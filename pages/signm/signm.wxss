@@ -1,0 +1,32 @@
+.toptitle{
+  padding: 10rpx;
+  line-height: 50rpx;
+  font-size: 28rpx;
+  color: rgb(231, 202, 107);
+  background: rgb(250, 233, 178);
+  text-align: center;
+}
+.contion{
+  /* padding: 10rpx; */
+  font-size: 30rpx;
+   color: rgb(29, 28, 27);
+  background: rgb(216, 215, 214);
+}
+.txt{
+  padding: 10rpx;
+  padding-left:20rpx;
+  width: 98%;
+  line-height: 50rpx;
+}
+input{
+  padding: 10rpx;
+  padding-left:20rpx;
+  width: 98%;
+  background: white;
+  line-height: 50rpx;
+}
+.fixedPic{
+  width: 60%;
+  background: rgb(82, 151, 216);
+  margin-top:40rpx;
+}

@@ -1,0 +1,14 @@
+<view>
+
+<view class="title">
+  <button class="{{selected?'red':'default'}}" bindtap="selected">对公微信收款码</button>
+  <button class="{{selected1?'red':'default'}}" bindtap="selected1">对公支付宝收款码</button>
+</view>
+<view class="title">
+  <image class="{{selected?'show':'hidden'}}" bindtouchstart='timestart' bindtouchend='timeend' bindtap='previewImg' src="http://www.shanxingniao.com/imgServer/images/use_test/qita/wxskm.jpg"></image>
+  <image  class="{{selected1?'show':'hidden'}}" bindtouchstart='timestart1' bindtouchend='timeend1' bindtap='previewImg1' src="http://www.shanxingniao.com/imgServer/images/use_test/qita/zfbskm.jpg"></image>
+</view>
+</view>
+<view class="fack">
+  可点击保存二维码
+</view>

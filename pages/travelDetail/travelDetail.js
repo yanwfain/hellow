@@ -19,14 +19,17 @@ Page({
     })
   },
   // 去商店页
-  getShopCode: function(e) {
-    let code = e.currentTarget.dataset.code;
+  getShopCode: function (e) {
+    var shopCode = e.currentTarget.dataset.code;
     wx.navigateTo({
-      url: '../travelIndex/index?shopCode=' + code,
+      url: '../index/index?shopCode=' + shopCode + "&km=" + e.currentTarget.dataset.km,
     })
   },
+
   onLoad(options) {
     console.log(options)
+    app.globalData.indexName= options;
+    console.log(app.globalData.indexName)
     page = 1;
     options.distance = 30000;
     var that = this;
@@ -55,13 +58,13 @@ Page({
         break;
     };
   },
-  onShareAppMessage: function(res) {
+  onShareAppMessage: function (res) {
     var that = this;
     if (res.from === 'button') {
       // 来自页面内转发按钮
     }
     return {
-      title: '精准匹配营销,生意及所能及',
+      title: '快来善小美，悠享健康生活',
     }
   },
   //进入首页
@@ -99,7 +102,6 @@ Page({
         url: '../travel/travel?platformCode=TOURISMPLATFORM20181101231811068422'
       });
     }
-
   },
 })
 // 景点详情 

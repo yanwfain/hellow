@@ -339,7 +339,7 @@ Page({
       console.log("activeInfo", activeInfo);
     }
     return {
-      title: '精准匹配营销,生意及所能及',
+      title: '快来善小美，悠享健康生活',
     }
   },
 
@@ -430,10 +430,6 @@ function getTabList(that) {
         tabList: res.data.body
       })
       return;
-    }else{
-      wx.showToast({
-        title: '暂无数据',
-      })
     }
   })
 }
@@ -441,7 +437,6 @@ function getTabList(that) {
 function getActivityList(that) {
   // req.getshortDistance(that, page, pageSize);
 }
-
 // 上拉加载更多的活动数据
 function getMoreActive(that) {
   page = page + 1;
@@ -449,7 +444,6 @@ function getMoreActive(that) {
   wx.showLoading({
     title: '玩命加载中',
   })
-
   let url;
   switch (that.data.classList[2].sort) {
     case "距离排序":

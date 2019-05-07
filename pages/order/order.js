@@ -198,18 +198,31 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-  
-  },
+  // onShareAppMessage: function (res) {
+  //   var that = this;
+  //   if (res.from === 'button') {
+  //     // 来自页面内转发按钮
+  //   }
+  //   return {
+  //     title: '快来善小美，悠享健康生活',
+  //   }
+  // },
   /**
    * 再来一单，把该订单的商品列表传入fillIn页面
    */
   againBuy:function(e){
-    console.log(e)
-    var productArr = this.data.orderList[e.currentTarget.dataset.index].retailOrderItemsList;
-    var productArrStr = JSON.stringify(productArr);
+    // console.log(e)
+    // var productArr = this.data.orderList[e.currentTarget.dataset.index].retailOrderItemsList;
+    // console.log(productArr)
+    // var productArrStr = JSON.stringify(productArr);
+    // wx.navigateTo({
+    //   url: 'fillIn/fillIn?productStr=' + productArrStr + '&isagain=true&delta=1&downprice=' + this.data.orderList[e.currentTarget.dataset.index].preferentialFee,
+    // })
+    var that = this;
+    console.log(e.currentTarget.dataset.index);
+    var kindex = e.currentTarget.dataset.index;
     wx.navigateTo({
-      url: 'fillIn/fillIn?productStr=' + productArrStr + '&isagain=true&delta=1&downprice=' + this.data.orderList[e.currentTarget.dataset.index].preferentialFee,
+      url: 'fillInzhifuo/fillInzhifuo?index=' + e.currentTarget.dataset.index + '&code=' + e.currentTarget.dataset.code + "&shopCode=" + e.currentTarget.dataset.shopcode + '&salePrice=' + e.currentTarget.dataset.saleprice + '&number=' + e.currentTarget.dataset.number + '&shopName=' + e.currentTarget.dataset.shopname
     })
   },
   orderDetail:function(e){
@@ -220,22 +233,31 @@ Page({
         url: '../orderDetails/orderDetails?code=' + e.currentTarget.dataset.code,
       })
     }
+  
+  
   },
 
   // 付款
+
   gobuy: function(e){
     var that = this;
     console.log(e.currentTarget.dataset.index);
     var kindex = e.currentTarget.dataset.index;
-    var productArr = this.data.orderList[e.currentTarget.dataset.index];
-    var prokk = this.data.orderList[e.currentTarget.dataset.index].retailOrderItemsList;
-    var prokkStr = JSON.stringify(prokk);
+    wx.navigateTo({
+      url: 'fillInzhifuo/fillInzhifuo?index=' + e.currentTarget.dataset.index + '&code=' + e.currentTarget.dataset.code + "&shopCode=" + e.currentTarget.dataset.shopcode + '&salePrice=' + e.currentTarget.dataset.saleprice + '&number=' + e.currentTarget.dataset.number + '&shopName=' + e.currentTarget.dataset.shopname
+    })
+    // var productArr = this.data.orderList[e.currentTarget.dataset.index];
+    // console.log(productArr)
+    // console.log(productArr.code)
+    // var prokk = this.data.orderList[e.currentTarget.dataset.index].retailOrderItemsList;
+    // var prokkStr = JSON.stringify(prokk);
     
-    var orderSn = productArr.orderSn;
-    var orderCode = productArr.retailOrderItemsList[0].orderCode;
-    console.log(orderCode);
+    // var orderSn = productArr.orderSn;
+    // var orderCode = productArr.code;
+    // console.log()
 
-    buy(that, orderCode, orderSn, prokkStr, kindex);
+    // buy(that, orderCode, orderSn, prokkStr, kindex);
+   
   },
 
   // 选择tab
@@ -373,8 +395,6 @@ function getW(that){
 
   })
 }
-
-
 // 付款
 function buy(that, orderCode, orderSn, prokkStr, kindex){
   wx.showLoading({
@@ -383,9 +403,11 @@ function buy(that, orderCode, orderSn, prokkStr, kindex){
   var url = constantFields.GOPAY;
   var data = {
     "orderCode": orderCode,
-    "orderSn": orderSn
+    "orderSn": orderSn,
+    'appid': constantFields.APP_ID,
+    'openid': app.globalData.openId
   }
-
+  console.log(data)
   httpUtils.postRequest(url, data).then(function (res) {
     console.log(res.data.body);
 
@@ -395,7 +417,7 @@ function buy(that, orderCode, orderSn, prokkStr, kindex){
       console.log(res.data.body[0]);
       
       wx.navigateTo({
-        url: 'fillIn/fillIn?productStr=' + prokkStr + '&isagain=true&delta=1&downprice=' + that.data.orderList[kindex].preferentialFee,
+        url: 'fillInzhifu/fillInzhifu?productStr=' + prokkStr + '&isagain=true&delta=1&downprice=' + that.data.orderList[kindex].preferentialFee,
       })
       return;
     }

@@ -200,39 +200,47 @@ Page({
   /**
    * 用户点击右上角分享
    */
+  // onShareAppMessage: function (res) {
+  //   var that = this;
+  //   var pro = that.data.product;
+  //   if (res.from === 'button') {
+  //     // 来自页面内转发按钮
+  //     console.log(res.target)
+  //     console.log("shopCode", shopCode);
+  //   }
+  //   return {
+  //     title: pro.name,
+  //     path: '/pages/details/details?productCode=' + pro.code + '&shopCode=' + shopCode,
+  //     imageUrl: '',
+  //     success: function (res) {
+  //       console.log('转发成功');
+  //       wx.showToast({
+  //         title: '转发成功',
+  //       })
+  //       // 发送转发次数
+  //       let url = constantFields.SHARENUMBER;
+  //       let data = {
+  //         "shopCode": shopCode
+  //       }
+  //       httpUtils.postRequest(url, data).then(function (res) {
+  //         console.log(res.data.body,"转发次数");
+  //       })
+  //     },
+  //     fail: function (res) {
+  //       // 转发失败
+  //       console.log('转发失败');
+  //     }
+  //   }
+  // },
   onShareAppMessage: function (res) {
     var that = this;
-    var pro = that.data.product;
     if (res.from === 'button') {
       // 来自页面内转发按钮
-      console.log(res.target)
-      console.log("shopCode", shopCode);
     }
     return {
-      title: pro.name,
-      path: '/pages/details/details?productCode=' + pro.code + '&shopCode=' + shopCode,
-      imageUrl: '',
-      success: function (res) {
-        console.log('转发成功');
-        wx.showToast({
-          title: '转发成功',
-        })
-        // 发送转发次数
-        let url = constantFields.SHARENUMBER;
-        let data = {
-          "shopCode": shopCode
-        }
-        httpUtils.postRequest(url, data).then(function (res) {
-          console.log(res.data.body,"转发次数");
-        })
-      },
-      fail: function (res) {
-        // 转发失败
-        console.log('转发失败');
-      }
+      title: '快来善小美，悠享健康生活',
     }
   },
-
   //收藏
   goOpenShop: function(){
     

@@ -21,6 +21,7 @@ Page({
     this.setData({
       add: e.detail.value
     })
+    console.log(e.detail.value)
     console.log(this.data.add)
     getCollection(this)
   },
@@ -80,9 +81,15 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-  
-  },
+  // onShareAppMessage: function (res) {
+  //   var that = this;
+  //   if (res.from === 'button') {
+  //     // 来自页面内转发按钮
+  //   }
+  //   return {
+  //     title: '快来善小美，悠享健康生活',
+  //   }
+  // },
 
   // 跳转
   goShop: function(e){
@@ -128,6 +135,7 @@ function getCollection(that){
 
   httpUtils.postRequest(url, data).then(function (res) {
     console.log(res.data.body);
+    // console.log(res.customerActivityInfos[0].cover)
     if(res.data.body.length != 0){
       wx.showToast({
         title: '加载完成',

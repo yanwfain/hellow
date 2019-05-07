@@ -1,4 +1,4 @@
-var app = getApp();
+   var app = getApp();
 var page = 1;
 var pageSize = 10;
 var httpUtils = require('../../../js/httpUtils.js');
@@ -93,8 +93,10 @@ Page({
     datas.name = that.data.name;
     datas.openId = app.globalData.openId;
     datas.goldMonery = that.data.golds;
+    // datas.source = that.data.source;
     httpUtils.postRequest(url,datas).then(function(res){
       console.log(res)
+      console.log(datas)
       if(res.data.head.errCode == 10000){
         wx.showToast({
           title: '转出成功',
@@ -155,6 +157,7 @@ Page({
     };
     httpUtils.postRequest(url, datas).then(function (res) {
       console.log(res)
+      console.log(datas)
       var details = res.data.body;
       let int = 0;
       for(let i = 0;i<details.length;i++){
@@ -198,9 +201,15 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-
-  }
+  // onShareAppMessage: function (res) {
+  //   var that = this;
+  //   if (res.from === 'button') {
+  //     // 来自页面内转发按钮
+  //   }
+  //   return {
+  //     title: '快来善小美，悠享健康生活',
+  //   }
+  // },
 })
 // 模块监听
 function srick(id, fn){

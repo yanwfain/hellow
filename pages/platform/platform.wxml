@@ -1,0 +1,29 @@
+<view class="vie">
+  <view class="view-img">
+    <image src="http://www.shanxingniao.com/imgServer/images/use_test/nongyeshengtai/nyptjs0.jpg"></image>
+    <text class="txt">
+      善小美-新农业平台介绍
+    </text>
+  </view>
+  <view class="Jie">
+  <block wx:for="{{Jshao}}">
+  <text>
+   {{item.txt}}
+  </text>
+    <image src="{{item.imgUrl}} "></image>
+    </block>
+  </view>
+  <view class="fot-vie">
+    <text class="txt">善小美-发展背景：</text>
+    <text>
+善小美，2018年3月上线运营，主营附近6公里促销生态圈，提供基于距离定位的精准匹配营销服务。及及通过整合社区商铺、电商、微商、个人闲置及大型商场等业态的促销信息，实现了平台、商户、社团组织、大型商场之间的互相引流，进而实现流量叠加效应和裂变反应。
+    </text>
+    <image src="http://www.shanxingniao.com/imgServer/images/use_test/nongyeshengtai/nyptjs1.jpg "></image>
+    <view>5月28日腾讯公司12.66亿战略投资东华软件，6月29日东华软件旗下公司入股善鸟科技，实现多方资源整合。</view>
+    <image src="http://www.shanxingniao.com/imgServer/images/use_test/nongyeshengtai/nyptjs2.jpg "></image>
+    <view>
+      5年内，平台各种业态的注册商户将达到1500万家。
+    </view>
+  </view>
+
+</view>

@@ -1,22 +1,57 @@
 <view class='mans'>
-  <image class='imgs' src='../../images/logos.png'></image>
-  <view class='sys'>及及投放金明细</view>
-  <view class='sys'>-130000</view>
+  <image class='imgs' src='../../images/dalogo.jpg'></image>
+  <view class='sys'>积分交易明细</view>
+  <view class='sys' >{{detail.type == 'free'? detail.free : detail.type == 'income'?"+" + detail.money : "-" + detail.money}}</view>
   <view class='fontColor sys' >交易成功</view>
   <view class='cons'>
-    <text class='fontColor'>使用说明：</text>
-    <text>投放banner</text>
+    <text class='fontColor'>积分来源:</text>
+    <text>善小美平台</text>
   </view>
   <view class='cons'>
-    <text class='fontColor'>创建时间：</text>
-    <text>2018-10-19-21：16</text>
+    <text class='fontColor'>积分类型:</text>
+    <text>{{detail.moneyDescribe}}</text>
   </view>
   <view class='cons'>
-    <text class='fontColor'>发放明细：</text>
-    <text>及及在身边平台</text>
+    <text class='fontColor'>积分支出方:</text>
+    <text>{{detail.contactPhone}}</text>
   </view>
   <view class='cons'>
-    <text class='fontColor'>接收明细：</text>
-    <text>新人奖礼金</text>
+    <text class='fontColor'>积分收入方:</text>
+     <text>{{detail.phone == 0 ? "善小美平台" : detail.phone}}</text>
+
   </view>
+  <view class='cons'>
+    <text class='fontColor'>创建时间:</text>
+    <text>{{detail.creatAt}}</text>
+  </view>
+   <view class='cons'>
+    <text class='fontColor'>积分流水号:</text>
+    <text>{{detail.transfer}}</text>
+  </view >
+  <view wx:if='{{isShowNav}}'>
+   <button class='cons col' style="text-align:center; display:block;width:50%"  bindtap='isMoloadFn' data-typeInfo="{{typeInfo}}" wx:if="{{typeInfo == 'yes'}}">
+      已核销
+  </button>
+    <button class='cons col' style="text-align:center; display:block;width:50%" wx:else bindtap='isMoloadFn' data-typeInfo="{{typeInfo}}">
+     点我核销 
+  </button>
+  </view>   
+</view>
+
+ <view class="Moload" wx:if="{{isMoload}}">
+ </view>
+ <view class="poscenter" wx:if="{{isMoload}}" >
+    <view class="quanName top">兑换券名称 :<text class="blak">{{detail.couponName}}</text></view>
+    <view class="quanName">商户名称 :<text class="blak">{{detail.name}}</text></view>
+    <view class="quanName">兑换时间 :<text class="blak">{{detail.creatAt}}</text></view>
+    <!-- <view class="quanName">核销时间 :<text class="blak">{{detail.creatAt}}</text></view> -->
+    <view class="quanName">核销商户地址 :<text class="blak">{{detail.address}}</text></view>
+    <view class="quanName">核销序列号 :<text class="blak">{{detail.writeCode}}</text></view>
+    <view class="Mahe">
+      <text>核销码:</text>
+      <view><image src="{{img}}"></image>
+    </view></view>
+     <button class='cons col' style="text-align:center; display:block;width:50%" bindtap='isMoloadFn'>
+      确定
+  </button>
 </view>

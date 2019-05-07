@@ -8,7 +8,7 @@ Page({
     navClass:[
       { name: '综合排序', controller:""},
       { name: '距离排序', controller:"d"},
-      { name: '广告投放金排序', controller:"g" },
+      { name: '美豆', controller:"g" },
     ],
     navClassTitle:'',
     shopItemInfo:[],

@@ -18,28 +18,29 @@
         <text class='confirm'>{{item.statusType}}</text>  
     </view>
     <view class='forImg'>
-      <view class='orderImg' wx:for="{{item.retailOrderItemsList}}" wx:for-item="orderImgGroup" wx:key="orderImg">
-        <image mode="aspectFill"src="{{orderImgGroup.cover}}"></image>
+      <view class='orderImg'>
+        <!-- <image mode="aspectFill"src="{{orderImgGroup.cover}}"></image> -->
+        <image mode="aspectFill" src="{{item.shopImgUrlinfo}}"></image>
       </view>
     </view>
- 
     <view class='orderNum'>
       <view class='numMoney'>
         <view wx:if="{{item.updatedBy =='NEW_RETAIL_OFFLINE'}}">线下支付，实付 <text class='orderMoney'>¥ {{item.salePrice/100}}</text> </view>
-        <view wx:else>共{{item.retailOrderItemsList.length}}件商品，实付 <text class='orderMoney'>¥ {{item.salePrice/100}}</text> </view>
+        <!-- <view wx:else>共{{item.retailOrderItemsList.length}}件商品，实付 <text class='orderMoney'>¥ {{item.salePrice/100}}</text> </view> -->
+                <view wx:else>共{{item.number}}件商品，实付 <text class='orderMoney'>¥ {{item.salePrice/100}}</text> </view>
       </view>
     </view>
 
     <view class='oneMore' hidden="{{!selectStatuss1}}">
-     <view wx:if="{{item.status == '2'}}" catchtap='againBuy' data-index='{{index}}'>再来一单</view>
-     <view wx:if="{{item.status == '0'}}" catchtap='gobuy' data-index='{{index}}'>付款</view>
+     <view wx:if="{{item.status == '2'}}" catchtap='againBuy' data-index='{{index}}' data-code='{{item.code}}' data-shopcode="{{item.shopCode}}" data-salePrice="{{item.salePrice}}" data-number="{{item.number}}" data-shopName="{{item.shopName}}">再来一单</view>
+     <view wx:if="{{item.status == '0'}}" catchtap='gobuy' data-index='{{index}}'  data-code='{{item.code}}' data-shopcode="{{item.shopCode}}" data-salePrice="{{item.salePrice}}" data-number="{{item.number}}" data-shopName="{{item.shopName}}">付款</view>
     </view>
 
-    <view class='oneMore' catchtap='againBuy' hidden="{{!selectStatuss2}}" data-index='{{index}}'>
+    <view class='oneMore' catchtap='againBuy' hidden="{{!selectStatuss2}}" data-index='{{index}}' data-code='{{item.code}}' data-shopcode="{{item.shopCode}}" data-salePrice="{{item.salePrice}}" data-number="{{item.number}}" data-shopName="{{item.shopName}}">
      <view>再来一单</view>
     </view>
 
-    <view class='oneMore' catchtap='gobuy' hidden="{{!selectStatuss3}}" data-index='{{index}}'>
+    <view class='oneMore' catchtap='gobuy' hidden="{{!selectStatuss3}}" data-index='{{index}}' data-code='{{item.code}}'>
      <view>付款</view>
     </view>
 

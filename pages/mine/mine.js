@@ -3,7 +3,6 @@ var httpUtils = require('../../js/httpUtils.js');
 var constantFields = require('../../js/constantFields.js');
 var app = getApp();
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -52,7 +51,17 @@ Page({
         url: 'storeIntroduce/storeIntroduce',
       })
     }
-    
+  },
+  zhaoshang(e){
+    wx.navigateTo({
+      url: '../platformInprom/platformInprom'
+    })
+
+  },
+   signFn(){
+    wx.navigateTo({
+      url: '../mesign/mesign',
+    })
   },
   shopHone:function(){  //拨打电话
     if(this.data.phone == undefined){
@@ -73,6 +82,19 @@ Page({
       },
       fail: function () {
       }
+    })
+  },
+  jifen(e) {
+    console.log("1")
+    wx.switchTab({
+      url: '../estate/estate',
+    })
+
+    }, 
+  money(e){
+    console.log("1")
+    wx.navigateTo({
+      url: '../make/make',
     })
   },
   /**
@@ -96,7 +118,8 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
-
+    console.log(app.globalData)
+    
   },
 
   /**
@@ -140,6 +163,8 @@ Page({
     };
     httpUtils.postRequest(url, put).then(function (res) {
       console.log(res)
+      console.log(put)
+
       that.setData({
         balance: res.data.body.balance,
         invitatuonNum: res.data.body.invitationNum
@@ -178,9 +203,15 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-  
-  },
+  // onShareAppMessage: function (res) {
+  //   var that = this;
+  //   if (res.from === 'button') {
+  //     // 来自页面内转发按钮
+  //   }
+  //   return {
+  //     title: '快来善小美，悠享健康生活',
+  //   }
+  // },
   goOrder:function(){
     wx.navigateTo({
       url: '../order/order',

@@ -53,10 +53,6 @@ Page({
         img: 'https://www.shanxingniao.com/imgServer/images/activitys/jiji/shop_home_incon/785626992611745606_3.jpg'
       },
       {
-        name: "招商合作",
-        img: 'https://www.shanxingniao.com/imgServer/images/activitys/jiji/shop_home_incon/813981642935566396_4.jpg'
-      },
-      {
         name: "我们",
         img: 'https://www.shanxingniao.com/imgServer/images/activitys/jiji/shop_home_incon/291083987930022184_5.jpg'
       },
@@ -123,7 +119,8 @@ Page({
       var data = {
         "code": that.data.code,
         "enshrineType": "0",
-        "objCode": enshrine.code
+        "objCode": enshrine.code,
+        //  "userName": app.globalData.userInfo.nickName
       }
       httpUtils.postRequest(url, data).then(function(res) {
         console.log(that.data.off)
@@ -136,7 +133,6 @@ Page({
 
         })
       })
-
     } else {
       that.setData({
         off: 1
@@ -147,7 +143,8 @@ Page({
         "enshrineType": "0",
         "alias": "",
         "objCode": enshrine.code,
-        "user": ""
+        "user": "",
+        "userName": app.globalData.userInfo.nickName
       }
       httpUtils.postRequest(url, data).then(function(res) {
         console.log(res);
@@ -219,7 +216,7 @@ Page({
     })
   },
   plusPro: function(e) {
-    console.log(e);
+    
     var index = e.currentTarget.dataset.index;
     var selectedProduct = this.data.expertList[index]; //选中的商品
     //因为让后台添加了一个辅助字段：count,所以代码简化：
@@ -293,6 +290,7 @@ Page({
     } else {
       scene = options.shopCode; //扫码进入首页。获取shopCode
     }
+    console.log(options,scene)
     //获取店铺对应的code，请求数据展示商品
     var wxlogin = httpUtils.httpPromise(wx.login);
     wxlogin().then(function(res) {
@@ -313,12 +311,14 @@ Page({
       httpUtils.postRequest(bindShopUrl, bindparams)
       app.globalData.openId = res.data.body.openId;
       var shopInfoParams = {
-        'shopCode': scene,
+         'shopCode': scene,
         'version': 9,
         'openId': res.data.body.openId,
         'lat': app.globalData.latitude,
         'lng': app.globalData.longitude
       }
+
+      console.log(shopInfoParams)
       return httpUtils.postRequest(shopUrl, shopInfoParams);
     }).then(function(res) {
       console.log(res, '啦啦啦啦');
@@ -355,6 +355,7 @@ Page({
           }
           // 操作状态栏表提
           app.globalData.shopInfo = res.data.body.sysShopInfo;
+         console.log(res.data.body.sysShopInfo)
           var title = app.globalData.shopInfo.name;
           wx.setNavigationBarTitle({
             title: title,
@@ -437,39 +438,13 @@ Page({
       });
     }
   },
-  onShareAppMessage: function(res) {
+  onShareAppMessage: function (res) {
     var that = this;
-    console.log(that.data.expertList[0].cover)
-    var sIn = app.globalData.shopInfo;
-    console.log(sIn);
     if (res.from === 'button') {
       // 来自页面内转发按钮
     }
-    console.log(wx.getStorageSync('shopCode'));
     return {
-
-      // title: sIn.name,
-      title: '精准匹配营销,让生意及所能及',
-      imageUrl: that.data.expertList[0].cover,
-      path: '/pages/index/index?shopCode=' + wx.getStorageSync('shopCode'),
-      success: function(res) {
-        console.log(app.globalData.shopInfo);
-        wx.showToast({
-          title: '转发成功',
-        })
-        // 发送转发次数
-        let url = constantFields.SHARENUMBER;
-        let data = {
-          "shopCode": app.globalData.shopInfo.code
-        }
-        httpUtils.postRequest(url, data).then(function(res) {
-          console.log(res.data.body, "转发次数");
-        })
-      },
-      fail: function(res) {
-        // 转发失败
-        console.log('转发失败');
-      }
+      title: '快来善小美，悠享健康生活',
     }
   },
   // nav选择

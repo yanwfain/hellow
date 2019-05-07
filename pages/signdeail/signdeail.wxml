@@ -1,0 +1,114 @@
+<view class="topimg" >
+  <image src='{{dateil.sysShopActivity.activityImg}}'></image>
+</view>
+<view class="title">
+  {{dateil.sysShopActivity.title}}
+</view>
+<view class="stat" wx:if="{{dateil.sysShopActivity.state == 1}}">
+  [ 进行中 ]
+</view>
+<view class="stat" wx:if="{{dateil.sysShopActivity.state == 0}}">
+  [ 未开始 ]
+</view>
+<view class="stat" wx:if="{{dateil.sysShopActivity.state == 2}}">
+  [ 已过期 ]
+</view>
+
+<view class="time ll">
+ 报名时间：    {{dateil.sysShopActivity.startTime}} / {{dateil.sysShopActivity.endTime}}
+</view>
+<view class="money ll">
+ 报名费用：    {{dateil.sysShopActivity.money}}元 / 人
+</view>
+<view class="number ll">
+ 报名人数：    {{ren}} / {{dateil.sysShopActivity.number}}
+</view>
+<view class="adress ll">
+ 报名地址：    <text style="color:rgb(86, 117, 202);" bindtap='bindmap'>{{dateil.sysShopActivity.address}}</text>
+</view>
+<view style="width:100%;height:1rpx; background:#ccc;margin-top:10rpxmargin-bottom:10rpx;"></view>
+<view class="adress ll">
+ 发起人：  {{dateil.sysShopActivity.name}}
+</view>
+<view style="width:100%;height:1rpx; background:rgb(241, 241, 243);padding:10rpx;"></view>
+<view class="describe llt">
+  {{dateil.sysShopActivity.detail}}
+</view>
+<view class="topimg" wx:for="{{imgdeteil}}">
+  <image src='{{item.imgUrl}}'></image>
+</view>
+
+<view>
+
+<view class="baoman">
+
+  <view class="yibao">
+  已报名<text style="color:#ccc;font-size:26rpx;">(只展示前20个用户)</text>
+  </view>
+  
+</view>
+  <view class='shopList' >
+<view class='shopItem'  bindtap=''  wx:for="{{numren}}" wx:if="{{index<20}}">
+     <image class='shopImg mycollectionImg' src='{{item.wechatImg}}' ></image>
+      <view class='shopInfo'>
+        <view class='infoText'>
+          <view class='up'>
+            <text class='shopName' style="margin-right:40rpx;margin-left:10rpx">{{item.name}}</text>
+            <text class='shopName' style='margin-right:90rpx;'>报名成功</text>
+          </view>
+            
+         
+          <view class='shopText' style='height:30rpx; margin-left:10rpx;'>
+           <text class='shopText st'>报名时间: {{item.creatAt}}</text>
+            
+            <text class='shopText shop3' style="margin-left:80rpx;">No. {{item.sort}}</text>
+          
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+
+
+</view> 
+
+
+
+<view style="height:200rpx;"></view>
+  <view class='bottomBtn'>
+    <view class='flexItem' bindtap='isMoloadFn' data-scenicCode="{{}}">
+      <image src='../../images/ke.png' class='flexItemImg'></image>
+      <text class='flexItemText'>联系发起人</text>
+    </view>
+    <view class='flexItem btnPosition'>
+      <image src='../../images/fenxiang.png' class='flexItemImg'></image>
+      <text class='flexItemText'>分享</text>
+      <button class='positionBtn' plain='true' style='border:none;' open-type='share'></button>
+    </view>
+    <view class='flexItemRight' bindtap='goOpenbao' data-activityCode="{{dateil.sysShopActivity.activityCode}}" data-money="{{dateil.sysShopActivity.money}}" data-shopCode="{{dateil.sysShopActivity.shopCode}}" wx:if="{{dateil.sysShopActivity.state == 1 && dateil.state == 0}}" >我要报名</view>
+    <view class='flexItemRight' data-activityCode="{{dateil.sysShopActivity.activityCode}}" data-money="{{dateil.sysShopActivity.money}}" data-shopCode="{{dateil.sysShopActivity.shopCode}}" wx:elif="{{dateil.state == 1 && dateil.sysShopActivity.state == 1  }}" data-id="{{dateil.sysShopActivity.id}}" bindtap='pinzhen'>查看我的凭证</view>
+     <view class='flexItemRight'  data-activityCode="{{dateil.sysShopActivity.activityCode}}" data-money="{{dateil.sysShopActivity.money}}" data-shopCode="{{dateil.sysShopActivity.shopCode}}"  wx:if="{{dateil.sysShopActivity.state == 2}}" >报名结束</view>
+      <view class='flexItemRight'  data-activityCode="{{dateil.sysShopActivity.activityCode}}" data-money="{{dateil.sysShopActivity.money}}" data-shopCode="{{dateil.sysShopActivity.shopCode}}"  wx:if="{{dateil.sysShopActivity.state == 0}}" >未开始</view>
+  </view>
+
+
+  <view class="Moload" wx:if="{{isMoload}}">
+ </view>
+ <view class="poscenter" wx:if="{{isMoload}}" >
+    <view class="quanName top">发起人 :<text class="blak">{{dateil.sysShopActivity.name}}</text>             </view>
+    <view class="quanName">微信号 :<text class="blak">{{dateil.sysShopActivity.wechatNumber}}</text>    <text style="margin-left:16rpx;color:blue;" bindtap='copyText' data-wechatNumber='{{dateil.sysShopActivity.wechatNumber}}'>复制</text></view>
+    <view class="quanName">手机号 :<text class="blak">{{dateil.sysShopActivity.phone}}</text>     <text class="tell" bindtap='tel'>点击拨打</text></view>
+     <button class='cons col' style="text-align:center; display:block;width:50%" bindtap='isMoloadFn'>
+      确定
+  </button>
+</view>
+
+
+
+<!-- <view>
+   <view class='img'>
+    <image src='data:image/png;base64,{{src2}}'></image>
+   </view>
+</view> -->

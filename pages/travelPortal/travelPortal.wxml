@@ -1,12 +1,19 @@
 <!-- 轮播 -->
-<import src='../travelTemplate/travelTemplate.wxml' />
-<template is="banner" data='{{banner}}'></template>
+<!-- <import src='../travelTemplate/travelTemplate.wxml' />
+<template is="banner" data='{{banner}}'></template> -->
+<swiper class='banner' style='height:300rpx' indicator-dots='true' autoplay='true' interval='5000' circular='true'>
+    <block wx:for="{{bannerPortal}}">
+      <swiper-item>
+        <image bindtap="{{Bind?'':'goTravelOfficial'}}" class='bannImg'  src='{{item.imgUrl}}'></image>
+      </swiper-item>
+    </block>
+  </swiper>
 <!-- 行业入口 -->
-<view class='title'>—及及·行业—</view>
+<view class='title'>—生态·频道—</view>
 <view class='portal'>
   <block wx:for="{{channel}}">
     <view style='background:#f4f4f4;width:100vw;height:8rpx;margin-left:-15rpx;margin-bottom:15rpx;'></view>
-    <view class='portalFor {{item.dispark?"":"color"}}' data-platformCode='{{item.platformCode}}' bindtap='goChannel' data-status='{{item.status}}' data-id='{{item.id}}'>
+    <view class='portalFor {{item.dispark?"":"color"}}' data-platformCode='{{item.platformCode}}' bindtap='goChannel' data-status='{{item.status}}' data-id='{{item.id}}' data-status='{{item.status}}'>
       <view class='portalTitle {{item.dispark?"":"colors"}}'>{{item.title}}</view>
       <image class='portalImg' src='{{item.imgUrl}}'></image>
     </view>

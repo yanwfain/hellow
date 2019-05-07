@@ -44,6 +44,8 @@
 <!-- 附近的店列表 -->
 <template name='store'>
   <view class='shopList' wx:if='{{shopItemInfo[0].shopInfo.name}}'>
+      <!-- <view class='shopItem' bindtap='getShopCode' wx:for='{{shopItemInfo}}' data-code='{{item.typeCode}}'> -->
+
     <view class='shopItem' bindtap='getShopCode' wx:for='{{shopItemInfo}}' data-code='{{item.shopInfo.code}}'>
       <!-- <image src='http://www.shanniao.vip/imgServer/images/lijian.jpg?t=121354413' class='shopImg' wx:if='{{item.shopInfo.sysShopImgInfoList[0].imgUrl == null}}'></image> -->
       <image src='{{item.shopInfo.sysShopImgInfoList[0].imgUrl}}' class='shopImg'></image>
@@ -203,3 +205,7 @@
     </view>
   </view>
 </template>
+
+
+
+

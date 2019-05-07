@@ -68,6 +68,7 @@ Page({
     })
   },
   onLoad: function (options) {
+    console.log(options)
     var that = this;
     that.setData({
       options:options
@@ -141,25 +142,11 @@ Page({
    */
   onShareAppMessage: function (res) {
     var that = this;
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+    }
     return {
-      title: '精准匹配营销,让生意及所能及',
-      path: '/pages/activeDetail/activeDetail?shopName=' + activeInfo.shopName + '&activeCode=' + activeCode,
-      imageUrl: '',
-      success: function (res) {
-        wx.showToast({
-          title: '转发成功',
-        })
-        // 发送转发次数
-        let url = constantFields.SHAREACTIVENUMBER;
-        let data = {
-          "activityCode": activeInfo.code
-        }
-        httpUtils.postRequest(url, data).then(function (res) {
-        })
-      },
-      fail: function (res) {
-        // 转发失败
-      }
+      title: '快来善小美，悠享健康生活',
     }
   },
 

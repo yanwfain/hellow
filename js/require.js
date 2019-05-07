@@ -10,12 +10,12 @@ const tabListSingle = function(shopType) {
   }
   return httpUtils.postRequest(url, data);
 };
-// 默认距离
+// 默认距离w
 const getshortDistance = function(that, page, pageSize) {
   wx.showLoading({
     title: '玩命加载中',
   })
-  let url = constantFields.JULIZUIJIN;
+  let url = constantFields.getScenicIndex;
   wx.getLocation({
     success: function(res) {
       let city, lat,lng;
@@ -235,7 +235,10 @@ const articles = function(that, page, pageSize) {
         return;
       }
       // 回调函数  
-      var moment_list = that.data.getLifeWisdomList;
+      // getScenicIndex
+      // var moment_list = that.data.getLifeWisdomList;
+      var moment_list = that.data.getScenicIndex;
+
       for (var i = 0; i < res.data.body.length; i++) {
         moment_list.push(res.data.body[i]);
       }

@@ -1,0 +1,81 @@
+.ll{
+     width: 95%;
+  padding: 16rpx;
+
+  font-size: 32rpx;
+  color:rgb(40, 40, 41);
+  background: white;
+}
+.conten{
+  padding: 20rpx;
+  /* background: rgb(247, 242, 242); */
+  margin:0 auto;
+}
+.txt{
+  margin-top:10rpx;
+  color:rgb(214, 216, 216);
+  font-size: 26rpx;
+}
+
+.bgc{
+  background:rgb(247, 242, 242);
+
+}
+.cons{
+  display: flex;
+  justify-content: space-between;
+  font-size: 30rpx;
+  margin-top: 30rpx;
+  border-bottom: 1rpx solid #f4f4f4;
+}
+.col{
+  background: rgb(6, 197, 6);
+}
+.Moload{
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: .8;
+  position:fixed;
+  left:0;
+  top:0;
+   z-index: 99;
+}
+.poscenter{
+  padding: 30rpx;
+  position:absolute;
+
+  left:6%;
+  top:10%;
+  width:80%;
+  /* height:900rpx; */
+  background: white;
+  z-index: 999;
+  opacity: 1;
+  border-radius: 6rpx;
+}
+.quanName{
+  font-size:30rpx;
+  color:black;
+  padding-bottom: 16rpx;
+
+}
+.blak{
+  color:rgb(70, 68, 68);
+  margin-left:10rpx;
+  font-size:28rpx;
+}
+.top{
+  margin-top:10rpx;
+}
+.Mahe{
+  color:black;
+   font-size:28rpx;
+}
+.Mahe view{
+  text-align: center;
+}
+.Mahe image{
+  width: 82%;
+  height:480rpx;
+} 

@@ -32,6 +32,17 @@ page{
   background: #f4f4f4;
   flex: 1.7;
 }
+.lbImg{
+  width: 100%;
+  height:360rpx;
+  overflow: hidden;
+}
+.imgheight{
+  height:406rpx;
+}
+.imgheight image{
+  height:406rpx;
+}
 .shopname{
   height: 74rpx;
   /* width: 35%; */
@@ -97,12 +108,37 @@ page{
 .contents{
   background: white;
 }
+.imgCenter{
+  width:92%;
+  height:auto;
+  overflow:hidden;
+  display:flex;
+  justify-content:space-around;
+  margin:0 auto;
+  background:white;
+  flex-wrap:wrap;
+  border-bottom:1px solid #e5e5e5;
+}
+.imgCenter image{
+  display:flex;
+  width: 100%;
+  height:160rpx;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+margin-top:12rpx;
+margin-bottom:12rpx;
+
+}
 /*分类导航*/
 .nav{
   display: flex;
+  height: 280rpx;
+  overflow: hidden;
+  margin-top:10rpx;
   justify-content: space-around;
-  padding: 0 15rpx 5rpx;
-  margin: 20rpx 0;
+  /* padding: 0 15rpx 5rpx; */
+  /* margin: 20rpx 0; */
   background: white;
   flex-wrap: wrap;
   /* height: 440rpx; */
@@ -120,9 +156,9 @@ page{
   margin-left: 0;
 }
 .itemImg{
-  width: 75rpx;
-  height: 75rpx;
-  margin-bottom: 0rpx;
+  width: 85rpx;
+  height: 85rpx;
+  margin-bottom: 15rpx;
 }
 .itemText{
   font-size: 24rpx;
@@ -385,11 +421,64 @@ page{
   top: 0;
   text-align: center;
 }
+.huan{
+    width: 100vw;
+  height: 100vh;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  text-align: center;
+}
+.Index{
+  width: 92%;
+  height: auto;
+  overflow: hidden;
+   display:flex;
+justify-content:space-around;
+    margin:0 auto;
+    background:white;
+    flex-wrap:wrap;
+    border-top:1px solid #e5e5e5;
+    border-bottom:1px solid #e5e5e5;
+  margin-top:15rpx;
+
+}
+.indeximg{
+  width: 50%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  /* margin:12rpx; */
+  justify-content:center;
+  margin-top:12rpx;
+  margin-bottom:12rpx;
+
+}
+.indeximg:nth-child(3){
+   margin-top:0rpx;
+}
+.indeximg:nth-child(4){
+   margin-top:0rpx;
+}
+.indeximg image{
+ width:98%;
+ height: 170rpx;
+  border-radius: 10rpx;
+}
 .buttons view{
   display: inline-block;
   width: 250rpx;
   height: 270rpx;
   background: linear-gradient(to top, rgba(254, 141, 135, .7),rgba(254, 102, 98, .7));
+  border-radius: 10rpx;
+  margin-top: 600rpx;
+}
+.huan view{
+    display: inline-block;
+  width: 250rpx;
+  height: 270rpx;
+  background: rgba(254, 102, 98, .7);
   border-radius: 10rpx;
   margin-top: 600rpx;
 }
@@ -404,4 +493,203 @@ page{
   font-size: 24rpx;
   color: white;
   background: #ff5c61;
+}
+.huan .butt{
+    background: #ff5c61;
+}
+.getUser1{
+   font-size: 32rpx;
+  color: white;
+  /* background: #ff5c61; */
+   height: 270rpx;
+   line-height: 270rpx;
+    word-break: keep-all;
+    word-wrap: break-word;
+
+
+}
+/*展示列表--附近促销  */
+.showList {
+  padding: 0 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.showItem {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1rpx solid #e5e5e5;
+  padding: 20rpx 0;
+}
+
+.showItems {
+  height: 195rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1rpx solid #e5e5e5;
+  padding: 30rpx 0;
+  position: relative;
+}
+
+.itemTitle {
+  display: flex;
+  align-items: center;
+  height:400rpx;
+}
+.titleText {
+  color: #333;
+  font-size: 30rpx;
+  margin-right: 20rpx;
+  font-weight: 600;
+  width: 630rpx;
+  line-height: 42rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.titleTexts {
+  color: #333;
+  font-size: 30rpx;
+  margin-right: 20rpx;
+  font-weight: 400;
+  width: 450rpx;
+  /* height: 400rpx; */
+  line-height: 42rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.titleImg {
+  width: 14rpx;
+  height: 26rpx;
+  /* border: 1rpx solid black; */
+}
+
+.itk {
+  display: flex;
+  align-items: center;
+  margin: 10rpx 0;
+}
+
+.itk .itt {
+  width: 220rpx;
+  height: 146rpx;
+}
+
+.Imgwh {
+  width: 220rpx;
+  height: 146rpx;
+}
+
+.itk .itts {
+  width: 220rpx;
+  height: 146rpx;
+  position: absolute;
+  top: 20rpx;
+  right: 10rpx;
+}
+
+.itk .itt:nth-child(2) {
+  margin: 0 16rpx;
+}
+
+.itemDate {
+  display: flex;
+  justify-content: space-between;
+}
+
+.itemDates {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 5rpx;
+  justify-content: space-between;
+}
+
+.dateTime {
+  display: flex;
+  align-items: center;
+}
+
+.dateTimes {
+  display: flex;
+  align-items: center;
+}
+
+.dateTime text:last-child {
+  /* font-weight: 600; */
+  font-size: 28rpx;
+  color: #0c335c;
+  width: 350rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.dateTimes text:last-child {
+  /* font-weight: 600; */
+  font-size: 28rpx;
+  color: #0e3f74;
+  width: 350rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.dateFind {
+  float: right;
+  display: flex;
+  align-items: center;
+  width: 145rpx;
+  margin-right: 15rpx;
+  justify-content: flex-end;
+}
+
+.findImg {
+  width: 30rpx;
+  height: 19rpx;
+  /* border: 1rpx solid; */
+  margin-right: 10rpx;
+}
+
+.findText {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.dateLocation {
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  max-width: 230rpx;
+}
+
+.dateLocations {
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  max-width: 150rpx;
+}
+
+.locationImg {
+  width: 22rpx;
+  height: 30rpx;
+  /* border: 1rpx solid; */
+  margin-right: 10rpx;
+}
+
+.locationText {
+  font-weight: 400;
+  font-size: 28rpx;
+  color: #666;
 }

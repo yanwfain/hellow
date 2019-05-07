@@ -6,6 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    txtnum:null,
     iconList:[
       {
         icon:"../../images/right.png",
@@ -44,14 +45,32 @@ Page({
       })
     })
   },
-
+  copyTBL: function (e) {
+    console.log(e)
+    console.log(e.currentTarget.dataset.ordesn)
+    this.setData({
+      txtnum: e.currentTarget.dataset.ordesn
+    })
+    console.log(this.data.txtnum)
+    wx.setClipboardData({
+      data: this.data.txtnum,
+      success: function (res) {
+        wx.getClipboardData({
+          success: function (res) {
+            wx.showToast({
+              title: '复制成功'
+            })
+          }
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
     
   },
-
   /**
    * 生命周期函数--监听页面显示
    */

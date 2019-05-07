@@ -3,7 +3,6 @@ var constantFields = require('../../../js/constantFields.js');
 var showChoose = true;
 var app = getApp();
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -28,7 +27,13 @@ Page({
    * 选择地址
    */
   checkboxChange:function(e){
+    console.log(this.data.addressList)
+    console.log(e.detail.value)
     console.log(this.data.addressList[e.detail.value].inDelive);
+    console.log(app.globalData.shopInfo)
+    console.log(this.data.addressList[0])
+    // app.globalData.shopInfo = this.data.addressList[0]
+    app.globalData.shopInfoFn = this.data.addressList[0]
     if(!this.data.addressList[e.detail.value].inDelive){
       var pages = getCurrentPages();
       var currPage = pages[pages.length - 1];   //当前页面
@@ -194,9 +199,15 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-    
-  },
+  // onShareAppMessage: function (res) {
+  //   var that = this;
+  //   if (res.from === 'button') {
+  //     // 来自页面内转发按钮
+  //   }
+  //   return {
+  //     title: '快来善小美，悠享健康生活',
+  //   }
+  // },
   addAddress:function(e){
     if(app.globalData.shopInfo == undefined){
       wx.showModal({
@@ -208,6 +219,5 @@ Page({
         url: '../addaddress/addaddress',
       })
     }
-    
   }
 })

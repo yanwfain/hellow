@@ -1,0 +1,33 @@
+<view class='main'>
+  <view class='active'>
+    <view class='activeInfo'>
+      <image src='{{travelDetail.imgUrl}}' mode="widthFix" class='activeImg' bindtap='previewImg'></image>
+      <text class='activeName fontW' style='width:620rpx'>{{travelDetail.title}}</text>
+      <text class='titleFont conent'>{{options.entrance == 3?travelDetail.imgDescribe:travelDetail.touristDescribe}}</text>
+      <!-- 地图 -->
+      <image src='{{img}}' wx:if="{{img}}" mode="widthFix" class='activeImg' bindtap='goMap'></image>
+      <block wx:for='{{travelDetail.touristSpotImgs}}' wx:key=''>
+        <text class='titleFont titles'>{{item.name}}</text>
+        <image class='activeImg' src="{{item.imgUrl}}" data-url='{{item.imgUrl}}' mode="widthFix" bindtap='previewImg'></image>
+      </block>
+      <text class='hint activeAddress'>图片仅供参考，以实景为准。</text>
+    </view>
+  </view>
+  <view class='bottomBtn'>
+    <view class='flexItem' bindtap='goShop' data-scenicCode="{{}}">
+      <image src='../../images/shopImg.png' class='flexItemImg'></image>
+      <text class='flexItemText'>进入官网</text>
+    </view>
+    <view class='flexItem btnPosition'>
+      <image src='../../images/fenxiang.png' class='flexItemImg'></image>
+      <text class='flexItemText'>分享</text>
+      <button class='positionBtn' plain='true' style='border:none;' open-type='share'></button>
+    </view>
+    <view class='flexItemRight' bindtap='goOpenShop' data-id="{{dateil.id}}" data-platformCode="{{dateil.platformCode}}">进入平台</view>
+  </view>
+  <view class='recommend' hidden='{{off}}'>— 生态周边 —</view>
+  <!--店目录  -->
+   <import src="../template/template.wxml" />
+    <template is="store" data='{{shopItemInfo}}'></template>
+</view>
+<view style='width:112rpx;height:112rpx;'></view>

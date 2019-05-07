@@ -77,10 +77,15 @@ Page({
         pageSize: pageSize
       };
       httpUitls.postRequest(url, shopListParams).then(function (res) {
+        if(res.data.body== ''){
+          wx.showToast({
+            title: '暂无数据',
+          })
+        }
         console.log(res)
-        wx.showToast({
-          title: '加载完成',
-        })
+        // wx.showToast({
+        //   title: '加载完成',
+        // })
         that.setData({
           shopList: res.data.body
         })
@@ -158,9 +163,15 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-  
-  }
+  // onShareAppMessage: function (res) {
+  //   var that = this;
+  //   if (res.from === 'button') {
+  //     // 来自页面内转发按钮
+  //   }
+  //   return {
+  //     title: '快来善小美，悠享健康生活',
+  //   }
+  // },
 })
 
 

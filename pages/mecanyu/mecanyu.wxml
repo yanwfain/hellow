@@ -1,0 +1,83 @@
+
+  <view class="bgc">
+
+  <view class="conten">
+    <view class="time ll">
+ 培训名称： {{dateils.title}}
+</view>
+  <view class="time ll">
+ 开始时间：  {{dateils.startTime}} 
+</view>
+<view class="money ll">
+ 结束时间：{{dateils.endTime}} 
+</view>
+<view class="money ll">
+ 参与者：   {{dateil.name}}
+</view>
+<view class="adress ll">
+ 性别：    {{dateil.sex}}
+</view>
+<view class="adress ll">
+ 年龄：    {{dateil.age}}
+</view>
+<view class="adress ll">
+ 微信号：    {{dateil.wechatNumber}}
+</view>
+<view class="adress ll">
+ 邮箱：    {{dateil.mail}}
+</view>
+<view class="adress ll">
+ 地址：    {{dateil.address}}
+</view>
+  <view class="time ll">
+ 报名时间：   {{dateil.creatAt}}
+</view>
+<view class="money ll">
+ 报名费用：     {{dateils.money}}
+</view>
+<view class="adress ll">
+ 参与者手机号：    {{dateil.phone}}
+</view>
+<view class="adress ll">
+ 核销序列号：    {{dateil.writeCode}}
+</view>
+
+<view class="txt">
+  1.  请不要将信息分享给他人，以免被盗用
+  
+</view>
+<view class="txt">
+  2.  线下活动使用时， 请出示该凭证
+  
+</view>
+</view>
+  </view>
+  <view >
+   <button class='cons col' style="text-align:center; display:block;width:50%"  bindtap='isMoloadFn' data-typeInfo="{{typeInfo}}" wx:if="{{dateil.writeState == 'yes'}}">
+      查看二维码凭证
+  </button>
+    <button class='cons col' style="text-align:center; display:block;width:50%" bindtap='isMoloadFn' data-typeInfo="{{typeInfo}}" wx:else>
+     未核销 
+  </button>
+  </view>
+
+
+
+   <view class="Moload" wx:if="{{isMoload}}">
+ </view>
+ <view class="poscenter" wx:if="{{isMoload}}" >
+  <view class="quanName top">参与者 :<text class="blak">{{dateil.name}}</text></view>
+    <view class="quanName ">培训名称 :<text class="blak">{{dateils.title}}</text></view>
+   
+    <view class="quanName"> 开始时间 :<text class="blak"> {{dateils.startTime}} </text></view>
+    <view class="quanName">结束时间 :<text class="blak">{{dateils.endTime}} </text></view>
+    <!-- <view class="quanName">核销时间 :<text class="blak">{{detail.creatAt}}</text></view> -->
+    <view class="Mahe">
+      <text>核销码:</text>
+      <view><image src="{{dateilimg}}" bindtap='pceimg' data-dateilimg="{{dateilimg}}"></image>
+    </view></view>
+     <button class='cons col' style="text-align:center; display:block;width:50%" bindtap='isMoloadFn'>
+      确定
+  </button>
+</view>
+

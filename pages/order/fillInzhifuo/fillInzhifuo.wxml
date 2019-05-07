@@ -1,0 +1,64 @@
+<!-- 隐藏1 -->
+<view class='select' hidden='{{place.code !=undefined}}' bindtap="goToAddress">
+  <text>请选择收货地址</text>
+  <image src='../../../images/jiantou.png'></image>
+</view>
+<!-- 隐藏2 -->
+<view class='select' bindtap="goToAddress" hidden='{{place.code == undefined}}'>
+  <view class='selPlace'>
+    <view class='palce'>{{place.addrProvince+place.addrCity+place.addrArea+place.customerAddress}}</view>
+    <view class='palceName'>{{place.customerName}}
+      <text>{{place.customerMobile}}</text>
+    </view>
+  </view>
+  <image src='../../../images/jiantou.png'></image>
+</view>
+<view class='selectList'>
+  <view class='selectImg' wx:key="orderImg">
+    <image class='' src="{{orderDetail.shopImgUrlinfo}}"></image>
+    <text>{{orderDetail.salePrice/100/orderDetail.number}}元*{{orderDetail.number}}</text>
+  </view>
+</view>
+<view class='allPrice'>
+  <view class='goodsPrice'>
+    <text class='goodsFreight'>商品总价</text>
+    <text class='goodsFreight' >¥{{orderDetail.salePrice/100/orderDetail.number*orderDetail.number}}</text>
+  </view>
+  <view class='goodsPrice'>
+    <text class='goodsFreight'>运费</text>
+    <text class='goodsFreight'>+ ¥{{tip}}</text>
+  </view>
+  <view class='freight'>
+    <text class='goodsFreight'>随机立减</text>
+    <text class='goodsFreight'>- ¥{{downprice}}</text>
+  </view>
+  <view class='actualPay'>
+    <text class='payForTxt'>实际支付</text>
+    <text class='payFor' >¥{{orderDetail.salePrice/100/orderDetail.number*orderDetail.number}}</text>
+  </view>
+</view>
+<!-- 备注信息 -->
+<view class='note'>
+  <text class='information'>备注信息</text>
+  <textarea placeholder='请输入备注留言（请少于100字）' name='mark' bindinput='remarkInput'></textarea>
+  <view class='weixin'>
+    <view class='wx'>
+      <image class='wxImg' src='../../../images/wx.png'></image>
+      <text>微信支付</text>
+    </view>
+    <image class='checked' src='../../../images/checked.png'></image>
+  </view>
+</view>
+<cover-view class='actalFix'>
+  <cover-view class='paycontainer'>
+    <cover-view class='payfor'>
+      <cover-view class='desc_text'>实付款</cover-view>
+      <cover-view class='maney'>￥{{orderDetail.salePrice/100/orderDetail.number*orderDetail.number}}</cover-view>
+    </cover-view>
+    <cover-view class='downprice'>(本次支付立减{{downprice}}元)</cover-view>
+  </cover-view>
+
+  <cover-view class='payment' bindtap='pay'>
+    支付
+  </cover-view>
+</cover-view>

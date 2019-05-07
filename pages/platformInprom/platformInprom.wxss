@@ -1,0 +1,29 @@
+.Zhaoshang-img{
+  width: 100%;
+  text-align: center;
+}
+.Zhaoshang-img{
+  width: 400rpx;
+  height: 500rpx;
+  margin-left:50rpx;
+  margin-top:20rpx;
+  margin-bottom: 20rpx;
+}
+.Shuo-txt{
+  font-size: 34rpx;
+  margin:30rpx;
+  margin-bottom: 10rpx;
+  display: flex;
+}
+.txt{
+  display: flex;
+  color:gray;
+  font-size: 28rpx;
+  margin:20rpx;
+  /* margin-top:10rpx; */
+}
+.txt-foot{
+  display: flex;
+  font-size: 26rpx;
+  margin:20rpx;
+}

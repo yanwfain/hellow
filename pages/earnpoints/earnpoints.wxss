@@ -1,0 +1,20 @@
+.DuiTiao{
+  width:96%;
+  padding: 16rpx;
+  margin:0 auto
+}
+.DuiTiao .titxt{
+  font-size: 30rpx;
+}
+.DuiTiao view{
+  font-size: 28rpx;
+  color:rgb(65, 63, 63);
+  margin-top:10rpx;
+}
+.foot{
+  width: 96%;
+  padding: 18rpx;
+  font-size: 24rpx;
+  color:#ccc;
+  margin:0 auto
+}

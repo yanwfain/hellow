@@ -1,0 +1,542 @@
+.topimg{
+  width:100%;
+  height:480rpx;
+}
+.topimg image{
+  width: 100%;
+  height:100%;
+}
+.title{
+  width: 98%;
+  padding: 10rpx;
+  /* padding-left:30rpx; */
+  font-size: 34rpx;
+  color:black;
+
+
+}
+.stat{
+   width: 95%;
+  padding: 10rpx;
+  /* padding-left:30rpx; */
+  font-size: 28rpx;
+  color:rgb(86, 117, 202);
+}
+
+.ll{
+     width: 98%;
+  padding: 10rpx;
+  /* padding-left:30rpx; */
+  font-size: 28rpx;
+  color:rgb(40, 40, 41);
+}
+.bottomBtn{
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top: 1rpx solid #e5e5e5;
+  background: white;
+}
+.flexItem{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12rpx 0;
+}
+.flexItemImg{
+  width: 40rpx;
+  height: 40rpx;
+  display: block;
+}
+.flexItemText{
+  font-size: 28rpx;
+  color: #999999;
+  margin-top: 10rpx;
+}
+.flexItemRight{
+  flex: 2;
+  color: white;
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, rgb(136, 173, 230), rgb(124, 159, 233));
+}
+.btnPosition{
+  position: relative;
+}
+.positionBtn{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.Moload{
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: .8;
+  position:fixed;
+  left:0;
+  top:0;
+   z-index: 99;
+}
+.poscenter{
+  padding: 30rpx;
+  position:fixed;
+
+  left:6%;
+  top:28%;
+  width:80%;
+  /* height:900rpx; */
+  background: white;
+  z-index: 999;
+  opacity: 1;
+  border-radius: 6rpx;
+}
+.quanName{
+  font-size:30rpx;
+  color:black;
+  padding-bottom: 16rpx;
+
+}
+.blak{
+  color:rgb(70, 68, 68);
+  margin-left:10rpx;
+  font-size:28rpx;
+}
+.top{
+  margin-top:10rpx;
+}
+.Mahe{
+  color:black;
+   font-size:28rpx;
+}
+.Mahe view{
+  text-align: center;
+}
+.Mahe image{
+  width: 60%;
+  height:400rpx;
+} 
+.tell{
+  color:blue;
+  /* border:1rpx solid blue; */
+  /* border-radius: 10rpx; */
+  margin-left:20rpx;
+}
+.llt{
+  width:98%;
+padding:10rpx;
+/* padding-left:30rpx; */
+font-size:28rpx;
+color:rgb(40, 40, 41);
+
+}
+.baoman{
+border-top:1rpx solid #e5e5e5;
+  border-bottom:1rpx solid #e5e5e5;
+  padding: 14rpx;
+}
+.yibao{
+  width:96%;
+  margin: 0 auto;
+  font-size: 30rpx;
+  text-align: center;
+  color:rgb(109, 143, 206)
+}
+.showList {
+  padding: 0 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+.shopList {
+  display: flex;
+  flex-direction: column;
+}
+.shopItem {
+  background: #fff;
+  display: flex;
+  border-bottom: 1px solid #e5e5e5;
+  /* padding: 15rpx 40rpx; */
+  padding: 10rpx;
+}
+
+/* .shopItem:last-child {
+  border-bottom: none;
+} */
+
+.shopImg {
+  /* width: 154rpx;
+  height: 154rpx; */
+  width: 146rpx;
+  height: 148rpx;
+  margin-right: 32rpx;
+  border-radius: 6rpx;
+}
+
+.shopInfo {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.infoText {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.up {
+  display: flex;
+  /* width: 493rpx; */
+  justify-content: space-between;
+  margin-top:10rpx;
+}
+
+.shopName {
+  font-size: 28rpx;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /* width: 70%; */
+}
+
+.shopText {
+  font-size: 24rpx;
+  display: flex;
+  color: #999;
+  align-items: center;
+  margin-top:25rpx;
+
+}
+
+
+.shop1 {
+  color: #d58c88;
+  font-size: 24rpx;
+  padding: 10rpx;
+}
+
+.shop2 {
+  color: #104883;
+  font-size: 22rpx;
+  padding: 10rpx;
+}
+
+.shop3 {
+  color: #999;
+  font-size: 22rpx;
+  width: 180rpx;
+  /* padding: 10rpx; */
+}
+
+.st {
+  width: 320rpx;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.kk {
+  margin: 5rpx 0;
+  width: 240rpx;
+  border-radius: 3px;
+  border: 1rpx solid rgb(253, 153, 147);
+  font-size: 20rpx;
+  color: #fe8d87;
+  text-align: center;
+}
+
+.shopStatus {
+  padding: 10rpx;
+  background: linear-gradient(to right, #fe8d87, #ff6662);
+  border-radius: 6rpx;
+  color: white;
+  font-size: 18rpx;
+  text-align: center;
+}
+
+.statu {
+  font-size: 20rpx;
+}
+
+.location {
+  font-size: 24rpx;
+}
+
+
+.main{
+  display: flex;
+  flex-direction: column;
+}
+.one{
+  display: block;
+  align-items: center;
+    margin: 5rpx 0;
+  width: 240rpx;
+  border-radius: 3px;
+  border: 1rpx solid rgb(253, 153, 147);
+  font-size: 20rpx;
+  color: #fe8d87;
+  text-align: center;
+}
+.coo{
+  padding: 10rpx 30rpx 10rpx;
+}
+
+.collection{
+  display: flex;
+  padding: 14rpx 0;
+  align-items: center;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+
+.mycollectionImg{
+  width: 114rpx;
+  height: 114rpx;
+  /* border: 1px solid red; */
+  margin-right: 2rpx;
+  padding: 10rpx;
+  display: block;
+  /* border-radius:  */
+}
+
+.mycollectionText{
+  /* display: flex;
+  flex: 1; */
+  /* height: 114rpx; */
+  /* border: 1px solid black; */
+  display: block;
+  align-items: center;
+  width: 100%;
+  color: #333333;
+  font-size: 32rpx;
+  flex: 1;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.xingImg{
+  width: 42rpx;
+  height: 38rpx;
+  display: block;
+  margin-left:360rpx;
+}
+.title{
+  width: 100%;
+  text-align: center;
+  border: 1rpx solid #f4f4f4;
+}
+.picker{
+  line-height: 60rpx;
+  font-size: 34rpx;
+}
+.xiala{
+  width: 25rpx;
+  height: 25rpx;
+  margin-left: 10rpx;
+}
+.showList {
+  padding: 0 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.showItem {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1rpx solid #e5e5e5;
+  padding: 20rpx 0;
+}
+
+.showItems {
+  height: 195rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1rpx solid #e5e5e5;
+  padding: 30rpx 0;
+  position: relative;
+}
+
+.itemTitle {
+  display: flex;
+  align-items: center;
+}
+
+.titleText {
+  color: #333;
+  font-size: 30rpx;
+  margin-right: 20rpx;
+  font-weight: 600;
+  width: 630rpx;
+  line-height: 42rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.titleTexts {
+  color: #333;
+  font-size: 30rpx;
+  margin-right: 20rpx;
+  font-weight: 400;
+  width: 450rpx;
+  line-height: 42rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.titleImg {
+  width: 14rpx;
+  height: 26rpx;
+  /* border: 1rpx solid black; */
+}
+
+.itk {
+  display: flex;
+  align-items: center;
+  margin: 10rpx 0;
+}
+
+.itk .itt {
+  width: 220rpx;
+  height: 146rpx;
+}
+
+.Imgwh {
+  width: 220rpx;
+  height: 146rpx;
+}
+
+.itk .itts {
+  width: 220rpx;
+  height: 146rpx;
+  position: absolute;
+  top: 20rpx;
+  right: 10rpx;
+}
+
+.itk .itt:nth-child(2) {
+  margin: 0 16rpx;
+}
+
+.itemDate {
+  display: flex;
+  justify-content: space-between;
+}
+
+.itemDates {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 5rpx;
+  justify-content: space-between;
+}
+
+.dateTime {
+  display: flex;
+  align-items: center;
+}
+
+.dateTimes {
+  display: flex;
+  align-items: center;
+}
+
+.dateTime text:last-child {
+  /* font-weight: 600; */
+  font-size: 28rpx;
+  color: #0c335c;
+  width: 350rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.dateTimes text:last-child {
+  /* font-weight: 600; */
+  font-size: 28rpx;
+  color: #0e3f74;
+  width: 350rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.dateFind {
+  float: right;
+  display: flex;
+  align-items: center;
+  width: 145rpx;
+  margin-right: 15rpx;
+  justify-content: flex-end;
+}
+
+.findImg {
+  width: 30rpx;
+  height: 19rpx;
+  /* border: 1rpx solid; */
+  margin-right: 10rpx;
+}
+
+.findText {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.dateLocation {
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  max-width: 230rpx;
+}
+
+.dateLocations {
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  max-width: 150rpx;
+}
+
+.locationImg {
+  width: 22rpx;
+  height: 30rpx;
+  /* border: 1rpx solid; */
+  margin-right: 10rpx;
+}
+
+.locationText {
+  font-weight: 400;
+  font-size: 28rpx;
+  color: #666;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

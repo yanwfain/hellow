@@ -1,3 +1,83 @@
+.goodsBox{
+	padding: 20rpx 0 20rpx 30rpx;
+  background: #F8F8F8;
+}
+.goods{	
+	 /* padding-right: 30rpx;  */
+	/* padding-bottom: 30rpx; */
+  padding: 10rpx 30rpx 10rpx 10rpx;
+	display: flex;
+	border-bottom: 1rpx solid #e6e6e6;
+}
+.goods:last-of-type{
+  border-bottom:none;
+}
+.goodsImg{
+  width:30%;
+}
+.leftImg{
+	width: 164rpx;
+	height: 164rpx;
+	margin-right: 32rpx;
+}
+.goods .rightBox{
+	display: flex;
+	flex-direction: column;
+  width:77%
+}
+.goods .rightBox .jinkou{
+	font-size: 30rpx;
+	font-weight: 800;
+	color: #333;
+	margin-bottom: 4rpx;
+}
+.goods .rightBox .cream{
+	font-size: 20rpx;
+	color: #999;
+	margin-bottom: 10rpx;
+}
+.texture{
+	display: flex;
+	margin-bottom: 10rpx;
+}
+.texture text{
+	/* width: 96rpx; */
+	height: 32rpx;
+	line-height: 32rpx;
+	text-align: center;
+	font-size: 20rpx;
+	border-radius: 6rpx;
+}
+.texture .orange{
+	background: #fff7e4;
+	color: #fcb100;
+	margin-right: 16rpx;
+}
+.texture .green{
+	background: #ecf8f4;
+	color: #48c396;
+}
+.editBody{
+	display: flex;
+	justify-content: space-between;
+	height: 30rpx;
+}
+.editBody .money{
+	font-size: 24rpx;
+	color: #FF5A5F;
+	margin-top: -2rpx;
+}
+.editBody .money text{
+	font-size: 34rpx;
+	font-weight: 600;
+}
+.editBody .edit{
+	font-size: 30rpx;
+	margin-top: 10rpx;
+	color: #008ce0;
+}
+
+
 .orderDetails{
   background: #fff;  
 }
@@ -12,8 +92,8 @@
   margin-bottom: 0;
 }
 .orderDetails .details_img image{
-  width: 90rpx;
-  height: 90rpx;
+  width: 160rpx;
+  height: 120rpx;
 }
 .orderDetails .details_left{
   display: flex;

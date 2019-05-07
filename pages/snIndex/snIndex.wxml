@@ -1,8 +1,8 @@
-<!-- 搜索框 -->
+ <!-- 搜索框 -->
 <view class='searchBox'>
   <view class='shopname' bindtap='selectShop' data-locationName='{{locationName}}'>
     <image class='down' src='../../images/dinwei.png'></image>
-    <text class='name'>{{locationName}}</text>
+    <text class='name'>{{locationName}}</text>                            
   </view>
   <view class='search' bindtap='search'>
     <image class='searImg' src='../../images/ss.png'></image>
@@ -12,25 +12,93 @@
 <!-- 滚动固定定位块 -->
 <view class='main'>
   <!--轮播图  -->
-  <swiper class='shop_swiper' indicator-dots autoplay="true" interval="3000" duration="1000" circular='true' hidden='{{luboActive}}' class='lbImg' bindtap='goActiveInfo'>
-    <block wx:for="{{lbList}}" wx:key="">
-      <swiper-item>
-        <image src="{{lbk == 'true'?item.sysAdvertData.imgUrl:item.coverFirst}}" width='100%' height='150' class='lbImg' data-activecode="{{lbk == 'true'?item.sysAdvertActivityInfo.activityCode:item.code}}" data-activename="{{lbk == 'true'?'':item.activeName}}"/>
+  <swiper class='shop_swiper' indicator-dots autoplay="true" interval="3000" duration="1000" circular='true' hidden='{{luboActive}}' class='lbImg'  >
+    <block wx:for="{{detail}}" wx:key="" >
+      <swiper-item class="imgheight"> 
+        <image src="{{item.imgBanner}}" class='lbImg' data-platformCode='{{item.platformCode}}' data-status='{{item.status}}' data-id='{{item.id}}' bindtap='goChannel' />
       </swiper-item>
     </block>
   </swiper>
+  <!-- <view style="width:100%;height:300rpx;background:red;">
+    <block wx:for="{{detail}}" >
+        <view data-platformCode='{{item.platformCode}}' data-status='{{item.status}}' data-id='{{item.id}}'></view>
+    </block>
+  </view> -->
   <!-- nav 导航 -->
-  <import src="../template/template.wxml" />
+  <!-- <import src="../template/template.wxml" />
   <template is='navList' data='{{navList}}'></template>
+  getItemCode -->
+  <view class='nav'>
+    <block wx:for='{{navList}}'>
+      <view class='itemClass' bindtap='getItemCode'>
+        <image class='itemImg' src='{{item.imgUrl}}' data-sys='{{item.sysShopTypeInfos}}' data-code='{{item.code}}' data-typeName='{{item.typeName}}' data-typeCode='{{item.typeCode}}'></image>
+        <text class='itemText'  data-sys='{{item.sysShopTypeInfos}}'  data-code='{{item.code}}' data-typeName='{{item.typeName}}' data-typeCode='{{item.typeCode}}'>{{item.typeName}}</text>
+      </view>
+    </block>
+  </view>
+  <!--颜色分割条  -->
+  <view class='slectColor'></view>
+
+  <view class="Index">
+    <view class="indeximg" wx:for="{{navimg}}" >
+      <image src="{{item.imgUrl}}" data-id="{{item.id}}" bindtap='getItemCodeimg'></image>
+    </view>
+  </view>
   <view>
+  <!-- <view class="imgCenter">
+    <image src="http://www.shanxingniao.com/imgServer/images/use_test/qita/wodetiaofu.jpg"></image>
+  </view> -->
     <import src="../template/template.wxml" />
     <template is='classFily' data='{{classList,Citys,Sort,pull,claId,tabList,tabListSingle,wid,imges}}'></template>
   </view>
+  <!-- <import src="../template/template.wxml" />
+  <template is='{{listStatus?"":"activityList"}}' data='{{shopItemInfo}}'></template> -->
   <!--附近促销  -->
-  <import src="../template/template.wxml" />
-  <template is='{{listStatus?"":"activityList"}}' data='{{shopItemInfo}}'></template>
+  <!-- <import src="../template/template.wxml" />
+  <template is='{{activityListindex}}' data='{{shopItemInfo}}'></template> -->
+  
+   <view>
+    <!--展示列表  -->
+    <view class='showList'>
+      <!--附近促销  -->
+      <view class="showItems " wx:for='{{dateil}}' bindtap='goTravelOfficial' data-scenicCode="{{item.scenicCode}}" data-touristCode="{{item.touristCode}}" data-name="{{item.name}}" data-mapUrl="{{item.mapUrl}}" data-channelId="{{item.channelId}}" >
+        <!--店名称  -->
+        <view class='itemTitle'>
+          <text class="titleTexts">【线上促销，到店消费!】{{item.touristDescribe}}</text>
+          <image wx:if='{{(index + 1)%3 === 0}}' src='../../images/jiantou1.png' class='titleImg'></image>
+        </view>
+        <view class='itk'>
+          <view class="itts">
+            <image class='Imgwh' mode='aspectFill' src='{{item.imgUrl}}'></image>
+          </view>
+          <!-- <view wx:if='{{(index + 1)%3 === 0}}' class='itt'>
+            <image class='Imgwh' mode='aspectFill' src='{{item.advs[0].coverSecond}}'></image>
+          </view>
+          <view wx:if='{{(index + 1)%3 === 0}}' mode='aspectFill' class='itt'>
+            <image class='Imgwh' src='{{item.advs[0].coverThird}}'></image>
+          </view> -->
+        </view>
+        <!--店促销时间  -->
+        <view class="{{(index + 1)%3 !== 0?'itemDates':'itemDate'}}">
+          <view class="{{(index + 1)%3 !== 0?'dateTimes':'dateTime'}}">
+            <text>{{item.name}}</text>
+          </view>
+          <view>
+            <view class="dateFind">
+              <image src='../../images/guancha.png' class='findImg'></image>
+              <text class='findText'>{{item.exposureTimesReal < 5000?item.exposureTimesReal + '次':'5000+'}}</text>
+            </view>
+            <view class="dateLocation">
+              <image src='../../images/dizhi.png' class='locationImg'></image>
+              <text class='locationText'>{{item.exposureTimes/1000 < 0 ? "0" : item.exposureTimes/1000}}km</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
   <!-- 生活智慧 -->
-  <view class='main' hidden='{{!listStatus}}'>
+  <!-- <view class='main' hidden='{{!listStatus}}'>
     <view class='mamText'>生活智慧</view>
     <view wx:for='{{getLifeWisdomList}}' class='wisdomView'>
       <view class='lifeList' data-articlecode='{{item.code}}' bindtap='goLifeInfo'>
@@ -43,13 +111,20 @@
         </view>
       </view>
     </view>
-  </view>
+  </view> -->
 </view>
 <!-- 置顶 -->
 <image class='isTop' src='../../images/isTop.png' bindtap='isTop'></image>
 <view class='buttons' wx:if="{{!hasUserInfo}}" catchtouchmove='preventD'>
   <view class='butt'>
-    <image src='../../images/logos.png'></image>
+    <image src='../../images/loags.jpg'></image>
     <button size='mini' class='getUser' open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 请求微信授权 </button>
+  </view>
+</view>
+
+
+<view class='huan' wx:if='{{huan}}' bindtap='goHuan'>
+  <view class='butt'>
+    <text class='getUser1'>请点击绑定</text>
   </view>
 </view>

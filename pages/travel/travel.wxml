@@ -16,7 +16,7 @@
   <!-- 导航 -->
   <view class='funNav commWidth'>
     <view class='navView' wx:for='{{navViewList}}' wx:key='index'>
-        <image bindtap='goNav' data-id='{{item.id}}' src='{{item.imgUrl}}'></image>
+        <image bindtap='goNav' data-id='{{item.id}}' src='{{item.imgUrl}}' data-url='{{item.url}}'  ></image>
         <view>{{item.title}}</view>
     </view>
   </view>
@@ -30,7 +30,12 @@
     </block>
   </view>
   <!-- 旅游官方列表 -->
-  <view class='classTitle'>— 农场精选 —</view>
+  <view class='classTitle'>— {{navTitle}}精选 —</view>
   <import src='../travelTemplate/travelTemplate.wxml' />
-  <template is="travelList" data="{{offcialList}}"></template>
+  <template is="travelList" data="{{offcialList,id}}"></template>
+</view>
+
+<view class="sign" bindtap='signFn' wx:if="{{ishidde}}">
+    <image src='../../images/baoming.png'></image>
+    <view>报名入口</view>
 </view>
